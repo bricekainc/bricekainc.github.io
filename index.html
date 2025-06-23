@@ -20,6 +20,7 @@
       padding: 3rem 1rem 1rem;
       background-color: #002b5b;
       color: white;
+      position: relative;
     }
     header h1 {
       margin-bottom: 0.2rem;
@@ -28,8 +29,24 @@
     header p {
       font-size: 1.2rem;
     }
+    .status-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: #00b894;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .status-btn:hover {
+      background: #019875;
+    }
     section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       padding: 2rem;
     }
@@ -45,6 +62,7 @@
       padding: 1.5rem;
       margin: 1rem 0;
       transition: transform 0.3s ease;
+      cursor: pointer;
     }
     .card:hover {
       transform: translateY(-5px);
@@ -54,6 +72,16 @@
       text-decoration: none;
       font-weight: bold;
     }
+    .embed-container {
+      margin-top: 2rem;
+      display: none;
+    }
+    .embed-container iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 12px;
+    }
     footer {
       text-align: center;
       font-size: 0.9rem;
@@ -62,51 +90,65 @@
       color: #555;
     }
   </style>
+  <script>
+    function embedSite(url) {
+      const container = document.getElementById('embed-section');
+      const iframe = document.getElementById('embed-frame');
+      container.style.display = 'block';
+      iframe.src = url;
+      window.scrollTo({ top: container.offsetTop - 20, behavior: 'smooth' });
+    }
+  </script>
 </head>
 <body>
   <header>
     <h1>Welcome to Briceka Inc</h1>
     <p>Innovation meets utility. Explore our powerful platforms and tools.</p>
+    <button class="status-btn" onclick="window.open('https://status.briceka.com/', '_blank')">System Status</button>
   </header>
 
   <section>
     <h2>🌐 Our Platforms</h2>
 
-    <div class="card">
-      <h3><a href="https://briceka.com/" target="_blank">Briceka</a></h3>
+    <div class="card" onclick="embedSite('https://briceka.com/')">
+      <h3>Briceka</h3>
       <p>The creative tech hub behind all our innovations. Learn about our mission, teams, and future-driven web projects.</p>
     </div>
 
-    <div class="card">
-      <h3><a href="https://fansnub.com/" target="_blank">Fansnub</a></h3>
+    <div class="card" onclick="embedSite('https://fansnub.com/')">
+      <h3>Fansnub</h3>
       <p>The next-gen social platform for creators and communities to connect more intimately, away from mainstream chaos.</p>
     </div>
 
-    <div class="card">
-      <h3><a href="https://trimd.cc/" target="_blank">Trimd</a></h3>
+    <div class="card" onclick="embedSite('https://trimd.cc/')">
+      <h3>Trimd</h3>
       <p>Lightning-fast URL shortener with smart tracking and beautiful branded links. Perfect for campaigns and sharing.</p>
     </div>
 
-    <div class="card">
-      <h3><a href="https://snipn.cc/" target="_blank">Snipn</a></h3>
+    <div class="card" onclick="embedSite('https://snipn.cc/')">
+      <h3>Snipn</h3>
       <p>Visual bookmarking and smart link collection for teams and individuals. Never lose track of a great resource again.</p>
     </div>
 
     <h2>🛠️ Tools & Utilities</h2>
 
-    <div class="card">
-      <h3><a href="https://briceka.com/theme-detector/" target="_blank">Themespy</a></h3>
+    <div class="card" onclick="embedSite('https://briceka.com/theme-detector/')">
+      <h3>Themespy</h3>
       <p>Discover which theme or tech stack a website is using. Perfect for inspiration and competitive research.</p>
     </div>
 
-    <div class="card">
-      <h3><a href="https://briceka.com/tiktokdownloader/" target="_blank">TikTok Downloader</a></h3>
+    <div class="card" onclick="embedSite('https://briceka.com/tiktokdownloader/')">
+      <h3>TikTok Downloader</h3>
       <p>Download TikTok videos without watermarks in seconds. Fast, simple, and no app required.</p>
     </div>
 
-    <div class="card">
-      <h3><a href="https://briceka.com/bypasso-link-generator/" target="_blank">Bypasso</a></h3>
+    <div class="card" onclick="embedSite('https://briceka.com/bypasso-link-generator/')">
+      <h3>Bypasso</h3>
       <p>Generate bypass links for popular URL shorteners and get to your content faster — no waiting, no nonsense.</p>
+    </div>
+
+    <div id="embed-section" class="embed-container">
+      <iframe id="embed-frame" src=""></iframe>
     </div>
   </section>
 
