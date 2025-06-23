@@ -80,6 +80,7 @@
       padding: 2rem;
       flex: 1;
       transition: all 0.4s ease;
+      position: relative;
     }
     h1 {
       font-size: 2rem;
@@ -100,6 +101,18 @@
     }
     .dark-mode aside {
       background: #1e1e1e;
+    }
+    .spinner {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.2rem;
+      color: var(--primary);
+    }
+    .loading .spinner {
+      display: block;
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
@@ -163,17 +176,22 @@
       const key = window.location.hash.substring(1);
       if (SITES[key]) {
         const [url, title] = SITES[key];
-        embedSite(url, title);
+        embedSite(url, title, key);
       }
     }
 
-    function embedSite(url, title) {
+    function embedSite(url, title, key = '') {
       const main = document.querySelector('main');
+      main.classList.add('loading');
       main.innerHTML = `
         <h1>${title}</h1>
-        <div class='embed-container'><iframe src="${url}" loading="lazy" allowfullscreen></iframe></div>
+        <div class='spinner'>Loading ${title}...</div>
+        <div class='embed-container' style="display:none;"><iframe src="${url}" loading="lazy" allowfullscreen onload="this.parentElement.style.display='block'; document.querySelector('main').classList.remove('loading');"></iframe></div>
       `;
-      history.replaceState(null, '', `#${Object.keys(SITES).find(k => SITES[k][0] === url)}`);
+      if (key) {
+        history.replaceState(null, '', `#${key}`);
+        gtag('event', 'embed_load', { 'event_category': 'Embed', 'event_label': title });
+      }
     }
 
     function toggleDarkMode() {
