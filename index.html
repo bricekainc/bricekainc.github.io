@@ -147,29 +147,54 @@
     }
   </style>
   <script>
+    const SITES = {
+      briceka: ['https://briceka.com/', 'Briceka'],
+      fansnub: ['https://fansnub.com/', 'Fansnub'],
+      trimd: ['https://trimd.cc/', 'Trimd'],
+      snipn: ['https://snipn.cc/', 'Snipn'],
+      themespy: ['https://briceka.com/theme-detector/', 'Themespy'],
+      tiktok: ['https://briceka.com/tiktokdownloader/', 'TikTok Downloader'],
+      bypasso: ['https://briceka.com/bypasso-link-generator/', 'Bypasso'],
+      status: ['https://status.briceka.com/', 'System Status'],
+      contact: ['https://support.briceka.com/', 'Contact Us']
+    };
+
+    function embedSiteFromHash() {
+      const key = window.location.hash.substring(1);
+      if (SITES[key]) {
+        const [url, title] = SITES[key];
+        embedSite(url, title);
+      }
+    }
+
     function embedSite(url, title) {
       const main = document.querySelector('main');
       main.innerHTML = `
         <h1>${title}</h1>
-        <div class='embed-container'><iframe src="${url}" loading="lazy"></iframe></div>
+        <div class='embed-container'><iframe src="${url}" loading="lazy" allowfullscreen></iframe></div>
       `;
+      history.replaceState(null, '', `#${Object.keys(SITES).find(k => SITES[k][0] === url)}`);
     }
+
     function toggleDarkMode() {
       document.body.classList.toggle('dark-mode');
     }
+
+    window.addEventListener('load', embedSiteFromHash);
+    window.addEventListener('hashchange', embedSiteFromHash);
   </script>
 </head>
 <body>
   <aside>
-    <button class="aside-button" onclick="embedSite('https://briceka.com/', 'Briceka')">🌐 Briceka</button>
-    <button class="aside-button" onclick="embedSite('https://fansnub.com/', 'Fansnub')">👥 Fansnub</button>
-    <button class="aside-button" onclick="embedSite('https://trimd.cc/', 'Trimd')">🔗 Trimd</button>
-    <button class="aside-button" onclick="embedSite('https://snipn.cc/', 'Snipn')">📌 Snipn</button>
-    <button class="aside-button" onclick="embedSite('https://briceka.com/theme-detector/', 'Themespy')">🎨 Themespy</button>
-    <button class="aside-button" onclick="embedSite('https://briceka.com/tiktokdownloader/', 'TikTok Downloader')">🎵 TikTok Downloader</button>
-    <button class="aside-button" onclick="embedSite('https://briceka.com/bypasso-link-generator/', 'Bypasso')">🚀 Bypasso</button>
-    <button class="aside-button" onclick="embedSite('https://status.briceka.com/', 'System Status')">📶 Status</button>
-    <button class="aside-button" onclick="embedSite('https://support.briceka.com/', 'Contact Us')">📬 Contact</button>
+    <button class="aside-button" onclick="location.hash='briceka'">🌐 Briceka</button>
+    <button class="aside-button" onclick="location.hash='fansnub'">👥 Fansnub</button>
+    <button class="aside-button" onclick="location.hash='trimd'">🔗 Trimd</button>
+    <button class="aside-button" onclick="location.hash='snipn'">📌 Snipn</button>
+    <button class="aside-button" onclick="location.hash='themespy'">🎨 Themespy</button>
+    <button class="aside-button" onclick="location.hash='tiktok'">🎵 TikTok Downloader</button>
+    <button class="aside-button" onclick="location.hash='bypasso'">🚀 Bypasso</button>
+    <button class="aside-button" onclick="location.hash='status'">📶 Status</button>
+    <button class="aside-button" onclick="location.hash='contact'">📬 Contact</button>
     <button class="aside-button" onclick="toggleDarkMode()">🌓 Theme</button>
   </aside>
   <main>
