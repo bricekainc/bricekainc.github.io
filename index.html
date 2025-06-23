@@ -38,8 +38,8 @@
       background: var(--bg);
       color: var(--text);
       display: flex;
+      flex-direction: column;
       min-height: 100vh;
-      overflow-x: hidden;
       transition: background 0.5s, color 0.5s;
     }
     .dark-mode {
@@ -49,14 +49,17 @@
     aside {
       background: var(--primary);
       color: white;
-      width: 220px;
-      padding: 2rem 1rem;
+      padding: 1rem;
       display: flex;
       flex-direction: column;
       gap: 1rem;
       position: fixed;
-      height: 100vh;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 220px;
       overflow-y: auto;
+      z-index: 100;
     }
     .aside-button {
       background: transparent;
@@ -92,19 +95,6 @@
       border: none;
       border-radius: 12px;
     }
-    .btn-top {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      z-index: 999;
-      background: var(--accent);
-      color: white;
-      padding: 0.6rem 1rem;
-      border-radius: 8px;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-    }
     .dark-mode .embed-container iframe {
       background: #1e1e1e;
     }
@@ -125,10 +115,35 @@
       color: #ccc;
     }
     .hero-img {
+      width: 100%;
       max-width: 100%;
       border-radius: 12px;
       margin-top: 1rem;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      aside {
+        position: relative;
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 1rem;
+        height: auto;
+      }
+      .aside-button {
+        flex: 1;
+        white-space: nowrap;
+        font-size: 0.9rem;
+        padding: 0.6rem;
+      }
+      main {
+        margin-left: 0;
+        padding: 1rem;
+      }
     }
   </style>
   <script>
@@ -146,27 +161,23 @@
 </head>
 <body>
   <aside>
-    <h2 style="margin-bottom:1rem;">Briceka</h2>
     <button class="aside-button" onclick="embedSite('https://briceka.com/', 'Briceka')">🌐 Briceka</button>
     <button class="aside-button" onclick="embedSite('https://fansnub.com/', 'Fansnub')">👥 Fansnub</button>
     <button class="aside-button" onclick="embedSite('https://trimd.cc/', 'Trimd')">🔗 Trimd</button>
     <button class="aside-button" onclick="embedSite('https://snipn.cc/', 'Snipn')">📌 Snipn</button>
-    <hr>
     <button class="aside-button" onclick="embedSite('https://briceka.com/theme-detector/', 'Themespy')">🎨 Themespy</button>
     <button class="aside-button" onclick="embedSite('https://briceka.com/tiktokdownloader/', 'TikTok Downloader')">🎵 TikTok Downloader</button>
     <button class="aside-button" onclick="embedSite('https://briceka.com/bypasso-link-generator/', 'Bypasso')">🚀 Bypasso</button>
-    <hr>
-    <button class="aside-button" onclick="embedSite('https://status.briceka.com/', 'System Status')">📶 System Status</button>
-    <button class="aside-button" onclick="embedSite('https://support.briceka.com/', 'Contact Us')">📬 Contact Us</button>
-    <button class="aside-button" onclick="toggleDarkMode()">🌓 Toggle Theme</button>
+    <button class="aside-button" onclick="embedSite('https://status.briceka.com/', 'System Status')">📶 Status</button>
+    <button class="aside-button" onclick="embedSite('https://support.briceka.com/', 'Contact Us')">📬 Contact</button>
+    <button class="aside-button" onclick="toggleDarkMode()">🌓 Theme</button>
   </aside>
-
   <main>
     <h1>Welcome to Briceka Inc</h1>
-    <p>Explore our suite of creative platforms and powerful tools. Select an item from the left menu to begin.</p>
-    <img class="hero-img" src="https://briceka.com/wp-content/uploads/2025/06/pexels-photo-8438979.jpeg" alt="Briceka Platforms Overview">
+    <p>Briceka Inc is home to some of the most innovative tools and digital platforms available today. Whether you're trimming links, analyzing themes, bypassing links, or managing content—Briceka powers it all. We believe in utility, simplicity, and creativity.</p>
+    <p>Our platforms—<strong>Fansnub</strong>, <strong>Trimd</strong>, <strong>Snipn</strong>—each solve unique challenges across digital content, social engagement, and link optimization. And our tools like <strong>Themespy</strong> and <strong>Bypasso</strong> provide precise utilities tailored for modern creators and marketers.</p>
+    <img class="hero-img" src="https://briceka.com/wp-content/uploads/2025/06/pexels-photo-8438979.jpeg" alt="Briceka Platforms Overview" loading="lazy" width="800" height="400">
   </main>
-
   <footer>
     &copy; 2025 Briceka Inc — Built for speed, simplicity, and discovery.
   </footer>
