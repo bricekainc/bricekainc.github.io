@@ -6,19 +6,47 @@
   <meta name="description" content="Explore Briceka's creative platforms and web tools. Discover Fansnub, Trimd, Snipn, and powerful utilities like Themespy, Bypasso, and more.">
   <meta name="keywords" content="Briceka, Fansnub, Trimd, Snipn, Themespy, Bypasso, Tiktok Downloader, Web Tools, Social Media Tools">
   <meta name="author" content="Briceka Inc">
+  <meta property="og:title" content="Briceka Inc — Creative Platforms & Tools">
+  <meta property="og:description" content="Explore innovative platforms and utilities built by Briceka, including Trimd, Snipn, Fansnub and more.">
+  <meta property="og:url" content="https://bricekainc.github.io">
+  <meta property="og:image" content="https://briceka.com/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Briceka Inc">
+  <meta name="twitter:description" content="Briceka's powerful digital platforms and tools.">
+  <meta name="twitter:image" content="https://briceka.com/assets/og-image.jpg">
   <title>Briceka Inc — Creative Platforms & Powerful Tools</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
   <style>
+    :root {
+      --primary: #004b8d;
+      --accent: #00b894;
+      --bg: #f8fbff;
+      --dark-bg: #121212;
+      --text: #222;
+      --light-text: #eee;
+    }
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #f8fbff, #eef4f7);
-      color: #222;
-      line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+    .dark-mode {
+      background: var(--dark-bg);
+      color: var(--light-text);
     }
     header {
       text-align: center;
       padding: 3rem 1rem 1rem;
-      background-color: #002b5b;
+      background: var(--primary);
       color: white;
       position: relative;
     }
@@ -29,11 +57,11 @@
     header p {
       font-size: 1.2rem;
     }
-    .status-btn {
+    .btn {
       position: absolute;
       top: 1rem;
       right: 1rem;
-      background: #00b894;
+      background: var(--accent);
       color: white;
       padding: 0.5rem 1rem;
       border: none;
@@ -42,8 +70,12 @@
       cursor: pointer;
       transition: background 0.3s ease;
     }
-    .status-btn:hover {
+    .btn:hover {
       background: #019875;
+    }
+    .toggle-btn {
+      top: 1rem;
+      left: 1rem;
     }
     section {
       max-width: 1000px;
@@ -51,24 +83,27 @@
       padding: 2rem;
     }
     h2 {
-      color: #004b8d;
-      border-bottom: 2px solid #004b8d;
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
       padding-bottom: 0.3rem;
     }
     .card {
       background: white;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       padding: 1.5rem;
       margin: 1rem 0;
       transition: transform 0.3s ease;
       cursor: pointer;
     }
+    .dark-mode .card {
+      background: #1e1e1e;
+    }
     .card:hover {
-      transform: translateY(-5px);
+      transform: scale(1.02);
     }
     a {
-      color: #007acc;
+      color: var(--primary);
       text-decoration: none;
       font-weight: bold;
     }
@@ -89,6 +124,10 @@
       background: #f1f1f1;
       color: #555;
     }
+    .dark-mode footer {
+      background: #1a1a1a;
+      color: #ccc;
+    }
   </style>
   <script>
     function embedSite(url) {
@@ -98,50 +137,46 @@
       iframe.src = url;
       window.scrollTo({ top: container.offsetTop - 20, behavior: 'smooth' });
     }
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
   </script>
 </head>
 <body>
   <header>
     <h1>Welcome to Briceka Inc</h1>
     <p>Innovation meets utility. Explore our powerful platforms and tools.</p>
-    <button class="status-btn" onclick="window.open('https://status.briceka.com/', '_blank')">System Status</button>
+    <button class="btn" onclick="window.open('https://status.briceka.com/', '_blank')">System Status</button>
+    <button class="btn toggle-btn" onclick="toggleDarkMode()">🌓 Toggle Mode</button>
   </header>
 
   <section>
     <h2>🌐 Our Platforms</h2>
-
     <div class="card" onclick="embedSite('https://briceka.com/')">
       <h3>Briceka</h3>
       <p>The creative tech hub behind all our innovations. Learn about our mission, teams, and future-driven web projects.</p>
     </div>
-
     <div class="card" onclick="embedSite('https://fansnub.com/')">
       <h3>Fansnub</h3>
       <p>The next-gen social platform for creators and communities to connect more intimately, away from mainstream chaos.</p>
     </div>
-
     <div class="card" onclick="embedSite('https://trimd.cc/')">
       <h3>Trimd</h3>
       <p>Lightning-fast URL shortener with smart tracking and beautiful branded links. Perfect for campaigns and sharing.</p>
     </div>
-
     <div class="card" onclick="embedSite('https://snipn.cc/')">
       <h3>Snipn</h3>
       <p>Visual bookmarking and smart link collection for teams and individuals. Never lose track of a great resource again.</p>
     </div>
-
     <h2>🛠️ Tools & Utilities</h2>
-
     <div class="card" onclick="embedSite('https://briceka.com/theme-detector/')">
       <h3>Themespy</h3>
       <p>Discover which theme or tech stack a website is using. Perfect for inspiration and competitive research.</p>
     </div>
-
     <div class="card" onclick="embedSite('https://briceka.com/tiktokdownloader/')">
       <h3>TikTok Downloader</h3>
       <p>Download TikTok videos without watermarks in seconds. Fast, simple, and no app required.</p>
     </div>
-
     <div class="card" onclick="embedSite('https://briceka.com/bypasso-link-generator/')">
       <h3>Bypasso</h3>
       <p>Generate bypass links for popular URL shorteners and get to your content faster — no waiting, no nonsense.</p>
