@@ -16,18 +16,18 @@
   <meta name="twitter:image" content="https://briceka.com/assets/og-image.jpg">
   <title>Briceka Inc — Creative Platforms & Powerful Tools</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BWNBZFJNM6"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-BWNBZFJNM6');
   </script>
   <style>
     :root {
       --primary: #004b8d;
       --accent: #00b894;
-      --bg: #f8fbff;
+      --bg: linear-gradient(135deg, #e3f2fd, #ffffff);
       --dark-bg: #121212;
       --text: #222;
       --light-text: #eee;
@@ -37,79 +37,54 @@
       font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: var(--text);
-      transition: background 0.3s, color 0.3s;
+      display: flex;
+      min-height: 100vh;
+      overflow-x: hidden;
+      transition: background 0.5s, color 0.5s;
     }
     .dark-mode {
       background: var(--dark-bg);
       color: var(--light-text);
     }
-    header {
-      text-align: center;
-      padding: 3rem 1rem 1rem;
+    aside {
       background: var(--primary);
       color: white;
-      position: relative;
+      width: 220px;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
     }
-    header h1 {
-      margin-bottom: 0.2rem;
-      font-size: 2.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-    }
-    .btn {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background: var(--accent);
+    .aside-button {
+      background: transparent;
+      border: 2px solid white;
       color: white;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
+      padding: 0.8rem;
+      border-radius: 8px;
+      text-align: left;
+      font-size: 1rem;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: all 0.3s ease;
     }
-    .btn:hover {
-      background: #019875;
+    .aside-button:hover {
+      background: rgba(255,255,255,0.1);
     }
-    .toggle-btn {
-      top: 1rem;
-      left: 1rem;
-    }
-    section {
-      max-width: 1000px;
-      margin: auto;
+    main {
+      margin-left: 240px;
       padding: 2rem;
+      flex: 1;
+      transition: all 0.4s ease;
     }
-    h2 {
-      color: var(--primary);
-      border-bottom: 2px solid var(--primary);
-      padding-bottom: 0.3rem;
-    }
-    .card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      padding: 1.5rem;
-      margin: 1rem 0;
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-    .dark-mode .card {
-      background: #1e1e1e;
-    }
-    .card:hover {
-      transform: scale(1.02);
-    }
-    a {
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: bold;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
     .embed-container {
-      margin-top: 2rem;
-      display: none;
+      display: block;
+      animation: fadeIn 0.5s ease forwards;
     }
     .embed-container iframe {
       width: 100%;
@@ -117,25 +92,52 @@
       border: none;
       border-radius: 12px;
     }
+    .btn-top {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 999;
+      background: var(--accent);
+      color: white;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+    .dark-mode .embed-container iframe {
+      background: #1e1e1e;
+    }
+    .dark-mode aside {
+      background: #1e1e1e;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
     footer {
       text-align: center;
       font-size: 0.9rem;
       padding: 2rem 1rem;
-      background: #f1f1f1;
       color: #555;
     }
     .dark-mode footer {
-      background: #1a1a1a;
       color: #ccc;
+    }
+    .hero-img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-top: 1rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
   </style>
   <script>
-    function embedSite(url) {
-      const container = document.getElementById('embed-section');
-      const iframe = document.getElementById('embed-frame');
-      container.style.display = 'block';
-      iframe.src = url;
-      window.scrollTo({ top: container.offsetTop - 20, behavior: 'smooth' });
+    function embedSite(url, title) {
+      const main = document.querySelector('main');
+      main.innerHTML = `
+        <h1>${title}</h1>
+        <div class='embed-container'><iframe src="${url}" loading="lazy"></iframe></div>
+      `;
     }
     function toggleDarkMode() {
       document.body.classList.toggle('dark-mode');
@@ -143,52 +145,30 @@
   </script>
 </head>
 <body>
-  <header>
+  <aside>
+    <h2 style="margin-bottom:1rem;">Briceka</h2>
+    <button class="aside-button" onclick="embedSite('https://briceka.com/', 'Briceka')">🌐 Briceka</button>
+    <button class="aside-button" onclick="embedSite('https://fansnub.com/', 'Fansnub')">👥 Fansnub</button>
+    <button class="aside-button" onclick="embedSite('https://trimd.cc/', 'Trimd')">🔗 Trimd</button>
+    <button class="aside-button" onclick="embedSite('https://snipn.cc/', 'Snipn')">📌 Snipn</button>
+    <hr>
+    <button class="aside-button" onclick="embedSite('https://briceka.com/theme-detector/', 'Themespy')">🎨 Themespy</button>
+    <button class="aside-button" onclick="embedSite('https://briceka.com/tiktokdownloader/', 'TikTok Downloader')">🎵 TikTok Downloader</button>
+    <button class="aside-button" onclick="embedSite('https://briceka.com/bypasso-link-generator/', 'Bypasso')">🚀 Bypasso</button>
+    <hr>
+    <button class="aside-button" onclick="embedSite('https://status.briceka.com/', 'System Status')">📶 System Status</button>
+    <button class="aside-button" onclick="embedSite('https://support.briceka.com/', 'Contact Us')">📬 Contact Us</button>
+    <button class="aside-button" onclick="toggleDarkMode()">🌓 Toggle Theme</button>
+  </aside>
+
+  <main>
     <h1>Welcome to Briceka Inc</h1>
-    <p>Innovation meets utility. Explore our powerful platforms and tools.</p>
-    <button class="btn" onclick="window.open('https://status.briceka.com/', '_blank')">System Status</button>
-    <button class="btn toggle-btn" onclick="toggleDarkMode()">🌓 Toggle Mode</button>
-  </header>
-
-  <section>
-    <h2>🌐 Our Platforms</h2>
-    <div class="card" onclick="embedSite('https://briceka.com/')">
-      <h3>Briceka</h3>
-      <p>The creative tech hub behind all our innovations. Learn about our mission, teams, and future-driven web projects.</p>
-    </div>
-    <div class="card" onclick="embedSite('https://fansnub.com/')">
-      <h3>Fansnub</h3>
-      <p>The next-gen social platform for creators and communities to connect more intimately, away from mainstream chaos.</p>
-    </div>
-    <div class="card" onclick="embedSite('https://trimd.cc/')">
-      <h3>Trimd</h3>
-      <p>Lightning-fast URL shortener with smart tracking and beautiful branded links. Perfect for campaigns and sharing.</p>
-    </div>
-    <div class="card" onclick="embedSite('https://snipn.cc/')">
-      <h3>Snipn</h3>
-      <p>Visual bookmarking and smart link collection for teams and individuals. Never lose track of a great resource again.</p>
-    </div>
-    <h2>🛠️ Tools & Utilities</h2>
-    <div class="card" onclick="embedSite('https://briceka.com/theme-detector/')">
-      <h3>Themespy</h3>
-      <p>Discover which theme or tech stack a website is using. Perfect for inspiration and competitive research.</p>
-    </div>
-    <div class="card" onclick="embedSite('https://briceka.com/tiktokdownloader/')">
-      <h3>TikTok Downloader</h3>
-      <p>Download TikTok videos without watermarks in seconds. Fast, simple, and no app required.</p>
-    </div>
-    <div class="card" onclick="embedSite('https://briceka.com/bypasso-link-generator/')">
-      <h3>Bypasso</h3>
-      <p>Generate bypass links for popular URL shorteners and get to your content faster — no waiting, no nonsense.</p>
-    </div>
-
-    <div id="embed-section" class="embed-container">
-      <iframe id="embed-frame" src=""></iframe>
-    </div>
-  </section>
+    <p>Explore our suite of creative platforms and powerful tools. Select an item from the left menu to begin.</p>
+    <img class="hero-img" src="https://briceka.com/wp-content/uploads/2025/06/pexels-photo-8438979.jpeg" alt="Briceka Platforms Overview">
+  </main>
 
   <footer>
-    &copy; 2025 Briceka Inc — Building smart, scalable, human-first web tools.
+    &copy; 2025 Briceka Inc — Built for speed, simplicity, and discovery.
   </footer>
 </body>
 </html>
