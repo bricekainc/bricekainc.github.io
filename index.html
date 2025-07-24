@@ -1,330 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Briceka Search | Unified Content Explorer</title>
-  <meta name="description" content="Search across Briceka, TrendyMediaToday, and OnlyCrave content using a unified creative engine. Built for creators and readers."/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Briceka Network Search</title>
+  <meta name="description" content="Search across Briceka, TrendyMediaToday, OnlyCrave, and Trimd content."/>
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Briceka Inc Search",
-    "url": "https://bricekainc.github.io/search",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://bricekainc.github.io/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Briceka Network Search",
+    "url":"https://bricekainc.github.io/search",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://bricekainc.github.io/search?q={search_term_string}",
+      "query-input":"required name=search_term_string"
     }
   }
   </script>
   <style>
     :root {
-      --primary: #3B82F6;
-      --accent: #2563EB;
-      --bg: #ffffff;
-      --text: #111827;
-      --card-bg: #f9fafb;
+      --primary:#3B82F6;--accent:#2563EB;
+      --bg:#fff;--text:#111827;--card-bg:#f9fafb;
     }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #111827;
-        --text: #f3f4f6;
-        --card-bg: #1f2937;
-      }
+    @media(prefers-color-scheme:dark){
+      :root{--bg:#111827;--text:#f3f4f6;--card-bg:#1f2937}
     }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      margin: 0;
-      padding: 2rem;
-      line-height: 1.6;
-    }
-
-    main {
-      max-width: 960px;
-      margin: auto;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    form#multiSearchForm {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-bottom: 2rem;
-    }
-
-    input[type="search"] {
-      flex: 1;
-      min-width: 200px;
-      padding: 0.75rem 1rem;
-      border: 2px solid var(--primary);
-      border-radius: 10px;
-      font-size: 1rem;
-    }
-
-    button {
-      background: var(--primary);
-      color: #fff;
-      border: none;
-      padding: 0.75rem 1.25rem;
-      border-radius: 10px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    button:hover {
-      background: var(--accent);
-    }
-
-    .clear-btn {
-      background: transparent;
-      color: var(--primary);
-      border: 1px solid var(--primary);
-    }
-
-    #tagSuggestions {
-      margin-bottom: 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .tag {
-      background: var(--card-bg);
-      border: 1px solid #ccc;
-      padding: 0.3rem 0.75rem;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .tag:hover {
-      background: var(--primary);
-      color: #fff;
-    }
-
-    #searchResults {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: var(--card-bg);
-      padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      border: 1px solid #ddd;
-      transition: transform 0.2s;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-    }
-
-    .card h5 {
-      font-size: 0.9rem;
-      color: var(--accent);
-      margin: 0 0 0.25rem;
-    }
-
-    .card h6 {
-      font-size: 1.1rem;
-      margin: 0 0 0.5rem;
-    }
-
-    .card p {
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
-      color: #444;
-    }
-
-    .card a {
-      background: var(--primary);
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      display: inline-block;
-    }
-
-    .card a:hover {
-      background: var(--accent);
-    }
-
-    .spinner {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      font-size: 1.1rem;
-      margin-top: 1rem;
-    }
-
-    .ring {
-      border: 4px solid rgba(0,0,0,0.1);
-      border-top: 4px solid var(--primary);
-      border-radius: 50%;
-      width: 24px;
-      height: 24px;
-      animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-
-    .fallback {
-      margin-top: 2rem;
-      font-style: italic;
-      color: #999;
-    }
+    body{margin:0;padding:0;font-family:'Segoe UI',sans-serif;background:var(--bg);color:var(--text);display:flex;}
+    aside{width:220px;background:var(--primary);color:#fff;padding:1rem;display:flex;flex-direction:column;gap:.75rem;flex-shrink:0;}
+    .aside-button{background:transparent;color:#fff;border:2px solid #fff;padding:.6rem;border-radius:8px;text-align:left;cursor:pointer;transition:background .3s;}
+    .aside-button:hover{background:rgba(255,255,255,0.2);}
+    main{flex:1;padding:2rem;max-width:960px;margin:auto;}
+    h1{font-size:2rem;margin-bottom:1rem;}
+    form{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:1.5rem;}
+    input[type="search"]{flex:1;min-width:200px;padding:.75rem 1rem;border:2px solid var(--primary);border-radius:8px;font-size:1rem;}
+    button{background:var(--primary);color:#fff;border:none;padding:.75rem 1.25rem;border-radius:8px;cursor:pointer;font-weight:600;transition:background .3s;}
+    button:hover{background:var(--accent);}
+    .clear-btn{background:transparent;color:var(--primary);border:1px solid var(--primary);}
+    #tagSuggestions{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem;}
+    .tag{background:var(--card-bg);border:1px solid #ccc;padding:.3rem .75rem;border-radius:20px;font-size:.85rem;cursor:pointer;transition:background .3s;}
+    .tag:hover{background:var(--primary);color:#fff;}
+    #searchResults{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
+    .card{background:var(--card-bg);padding:1rem;border-radius:12px;border:1px solid #ddd;box-shadow:0 4px 8px rgba(0,0,0,0.05);transform:translateY(0);transition:transform .2s;}
+    .card:hover{transform:translateY(-4px);}
+    .card h5{font-size:.9rem;color:var(--accent);margin:0 0.25rem 0;}
+    .card h6{font-size:1.1rem;margin:.25rem 0;}
+    .card p{font-size:.95rem;color:#444;margin-bottom:1rem;}
+    .card a{background:var(--primary);color:#fff;padding:.5rem 1rem;border-radius:8px;text-decoration:none;font-size:.9rem;transition:background .3s;}
+    .card a:hover{background:var(--accent);}
+    .spinner{display:flex;align-items:center;gap:1rem;font-size:1.1rem;margin-top:1rem;}
+    .ring{border:4px solid rgba(0,0,0,0.1);border-top:4px solid var(--primary);border-radius:50%;width:24px;height:24px;animation:spin 1s linear infinite;}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .fallback{margin-top:2rem;font-style:italic;color:#999;}
+    @media(max-width:768px){aside{display:none;}body{padding:1rem;}main{padding:0}}
   </style>
 </head>
 <body>
-<main>
-  <h1>Briceka Content Search</h1>
-  <form id="multiSearchForm" role="search" aria-label="Search Briceka Network">
-    <input type="search" id="searchQuery" name="searchQuery" placeholder="Type a keyword..." required aria-label="Search field">
-    <button type="submit">Search</button>
-    <button type="button" class="clear-btn" id="clearResults" style="display:none;">Clear</button>
-  </form>
+  <aside>
+    <button class="aside-button" onclick="selectPlatform()">🔄 All Platforms</button>
+    <button class="aside-button" onclick="selectPlatform('Briceka')">🌐 Briceka</button>
+    <button class="aside-button" onclick="selectPlatform('Trendymediatoday')">📰 TrendyMedia</button>
+    <button class="aside-button" onclick="selectPlatform('OnlyCrave')">👥 OnlyCrave</button>
+    <button class="aside-button" onclick="selectPlatform('Trimd')">🔗 Trimd</button>
+    <button class="aside-button" onclick="toggleTheme()">🌓 Theme</button>
+  </aside>
+  <main>
+    <h1>Briceka Network Search</h1>
+    <form id="multiSearchForm" role="search" aria-label="Search">
+      <input type="search" id="searchQuery" placeholder="Type a keyword..." required minlength="3"/>
+      <button type="submit">Search</button>
+      <button type="button" class="clear-btn" id="clearResults" style="display:none;">Clear</button>
+    </form>
+    <div id="tagSuggestions" aria-label="Suggested topics"></div>
+    <section id="searchResults" aria-live="polite"></section>
+  </main>
 
-  <div id="tagSuggestions" aria-label="Suggested topics"></div>
+  <script>
+    let currentPlatform = null;
+    const rssFeeds = [
+      { site:"Briceka", url:"https://api.rss2json.com/v1/api.json?rss_url=https://briceka.com/feed/" },
+      { site:"Trendymediatoday", url:"https://api.rss2json.com/v1/api.json?rss_url=https://trendymediatoday.com/rss.xml" },
+      { site:"OnlyCrave (Creators)", url:"https://api.rss2json.com/v1/api.json?rss_url=https://onlycrave.com/rss/creators/feed/" },
+      { site:"OnlyCrave (Blog)", url:"https://api.rss2json.com/v1/api.json?rss_url=https://onlycrave.com/rss/" },
+      { site:"Trimd", url:"https://api.rss2json.com/v1/api.json?rss_url=https://trimd.cc/blog/rss.xml" }
+    ];
 
-  <section id="searchResults" aria-live="polite"></section>
-</main>
-
-<script>
-const rssFeeds = [
-  {
-    name: "Briceka",
-    feedUrl: "https://api.rss2json.com/v1/api.json?rss_url=https://briceka.com/feed/"
-  },
-  {
-    name: "Trendymediatoday",
-    feedUrl: "https://api.rss2json.com/v1/api.json?rss_url=https://trendymediatoday.com/rss.xml"
-  },
-  {
-    name: "OnlyCrave (Creators)",
-    feedUrl: "https://api.rss2json.com/v1/api.json?rss_url=https://onlycrave.com/rss/creators/feed/"
-  },
-  {
-    name: "OnlyCrave (Blog)",
-    feedUrl: "https://api.rss2json.com/v1/api.json?rss_url=https://onlycrave.com/rss/"
-  }
-];
-
-document.getElementById('multiSearchForm').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const query = document.getElementById('searchQuery').value.trim().toLowerCase();
-  if (!query) return;
-  const resultsContainer = document.getElementById('searchResults');
-  resultsContainer.innerHTML = `
-    <div class="spinner"><div class="ring"></div>
-    <div>Searching for "<strong>${query}</strong>"...</div></div>`;
-  document.getElementById('clearResults').style.display = 'inline-block';
-
-  const allResults = [];
-
-  for (const feed of rssFeeds) {
-    try {
-      const res = await fetch(feed.feedUrl);
-      const data = await res.json();
-
-      const matched = data.items.filter(item =>
-        item.title.toLowerCase().includes(query) ||
-        item.description.toLowerCase().includes(query)
-      );
-
-      matched.forEach(item => {
-        allResults.push({
-          site: feed.name,
-          title: item.title,
-          link: item.link,
-          snippet: item.description
-        });
-      });
-
-    } catch (err) {
-      console.warn(`Feed failed for ${feed.name}`, err);
-    }
-  }
-
-  if (allResults.length === 0) {
-    resultsContainer.innerHTML = `<p>No results found for "<strong>${query}</strong>".</p>
-      <div class="fallback">Try different keywords, or check spelling.</div>`;
-    return;
-  }
-
-  resultsContainer.innerHTML = '';
-  allResults.forEach(result => {
-    const isCreator = result.site.includes("OnlyCrave (Creators)");
-    const btnText = isCreator ? "View Creator" : "Read More";
-    const card = document.createElement("div");
-    card.className = "card";
-    card.setAttribute("itemscope", "");
-    card.setAttribute("itemtype", "https://schema.org/CreativeWork");
-
-    card.innerHTML = `
-      <h5 itemprop="sourceOrganization">${result.site}</h5>
-      <h6 itemprop="headline">${result.title}</h6>
-      <p itemprop="description">${stripHtml(result.snippet).substring(0, 140)}...</p>
-      <a href="${result.link}" target="_blank" rel="noopener noreferrer" itemprop="url">${btnText}</a>
-    `;
-    resultsContainer.appendChild(card);
-  });
-});
-
-document.getElementById('clearResults').addEventListener('click', () => {
-  document.getElementById('searchQuery').value = '';
-  document.getElementById('searchResults').innerHTML = '';
-  document.getElementById('clearResults').style.display = 'none';
-});
-
-function stripHtml(html) {
-  const div = document.createElement('div');
-  div.innerHTML = html;
-  return div.textContent || "";
-}
-
-// Auto-suggest tags from feeds
-(async function generateTags() {
-  const tagSet = new Set();
-  for (const feed of rssFeeds) {
-    try {
-      const res = await fetch(feed.feedUrl);
-      const data = await res.json();
-      data.items.slice(0, 5).forEach(item => {
-        item.title.split(/\s+/).forEach(word => {
-          if (word.length > 4) tagSet.add(word.toLowerCase());
-        });
-      });
-    } catch (err) {}
-  }
-  const tags = Array.from(tagSet).slice(0, 10);
-  const container = document.getElementById('tagSuggestions');
-  tags.forEach(tag => {
-    const span = document.createElement('span');
-    span.className = 'tag';
-    span.textContent = tag;
-    span.addEventListener('click', () => {
-      document.getElementById('searchQuery').value = tag;
-      document.getElementById('multiSearchForm').dispatchEvent(new Event('submit'));
+    document.getElementById('multiSearchForm').addEventListener('submit', searchAll);
+    document.getElementById('clearResults').addEventListener('click', () => {
+      document.getElementById('searchQuery').value=''; document.getElementById('searchResults').innerHTML=''; document.getElementById('clearResults').style.display='none';
     });
-    container.appendChild(span);
-  });
-})();
-</script>
+
+    async function searchAll(e){
+      e?.preventDefault();
+      const q = document.getElementById('searchQuery').value.trim().toLowerCase();
+      if(!q) return;
+      document.getElementById('clearResults').style.display='inline-block';
+      const resC = document.getElementById('searchResults');
+      resC.innerHTML = `<div class="spinner"><div class="ring"></div><div>Searching "<strong>${q}</strong>"...</div></div>`;
+      let allRes = [];
+      for(const fb of rssFeeds){
+        if(currentPlatform && !fb.site.includes(currentPlatform)) continue;
+        try {
+          const d = await (await fetch(fb.url)).json();
+          const matches = d.items.filter(i=>i.title.toLowerCase().includes(q)||i.description.toLowerCase().includes(q));
+          matches.forEach(item=>allRes.push({site:fb.site,title:item.title,link:item.link,snippet:item.description}));
+        } catch(err){}
+      }
+      if(!allRes.length){
+        resC.innerHTML = `<p>No results for "<strong>${q}</strong>".</p><div class="fallback">Try another keyword.</div>`;
+        return;
+      }
+      resC.innerHTML='';
+      allRes.forEach(r=>{
+        const creator = r.site.includes("Creators");
+        const card = document.createElement('div');
+        card.className='card';
+        card.innerHTML = `
+          <h5>${r.site}</h5><h6>${r.title}</h6>
+          <p>${stripHtml(r.snippet).substring(0,140)}...</p>
+          <a href="${r.link}" target="_blank" rel="noopener noreferrer">${creator?"View Creator":"Read More"}</a>`;
+        resC.appendChild(card);
+      });
+    }
+
+    function stripHtml(html){const d=document.createElement('div');d.innerHTML=html;return d.textContent||"";}
+
+    function selectPlatform(name=null){
+      currentPlatform = name;
+      document.getElementById('searchQuery').value='';
+      document.getElementById('searchResults').innerHTML = name
+        ? `<p>Platform filtered: <strong>${name}</strong>. Search now.</p>`
+        : `<p>Platform filter removed. Search all.</p>`;
+    }
+
+    function toggleTheme(){
+      document.body.classList.toggle('dark-mode');
+    }
+
+    (async()=>{
+      const ts=new Set();
+      for(const fb of rssFeeds){
+        try {
+          const d=await (await fetch(fb.url)).json();
+          d.items.slice(0,5).forEach(i=>i.title.split(/\s+/).filter(w=>w.length>4).forEach(w=>ts.add(w.toLowerCase())));
+        }catch{}
+      }
+      const arr=[...ts].slice(0,12);
+      const tc=document.getElementById('tagSuggestions');
+      arr.forEach(t=>{
+        const el=document.createElement('span');
+        el.className='tag'; el.textContent=t;
+        el.onclick = ()=>{document.getElementById('searchQuery').value=t; searchAll();}
+        tc.appendChild(el);
+      });
+    })();
+  </script>
 </body>
 </html>
