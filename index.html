@@ -2,295 +2,209 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explore Briceka's creative platforms and web tools." />
-  <meta name="keywords" content="Briceka, Onlycrave, Trimd, Snipn, Themespy, Bypasso" />
-  <meta name="author" content="Briceka Inc" />
-  <meta property="og:title" content="Briceka Inc — Creative Platforms & Tools" />
-  <meta property="og:description" content="Explore innovative platforms and utilities built by Briceka." />
-  <meta property="og:url" content="https://bricekainc.github.io" />
-  <meta property="og:image" content="https://briceka.com/assets/og-image.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Briceka Inc" />
-  <meta name="twitter:description" content="Briceka's powerful digital platforms and tools." />
-  <meta name="twitter:image" content="https://briceka.com/assets/og-image.jpg" />
-  <title>Briceka Inc — Creative Platforms & Powerful Tools</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BWNBZFJNM6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-BWNBZFJNM6');
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Briceka Search | Unified Content Explorer</title>
+  <meta name="description" content="Search across Briceka, TrendyMediaToday, and OnlyCrave content using a unified creative engine. Built for creators and readers."/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Briceka Inc Search",
+    "url": "https://bricekainc.github.io/search",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://bricekainc.github.io/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
   </script>
   <style>
     :root {
-      --primary: #004b8d;
-      --accent: #00b894;
-      --bg: linear-gradient(135deg, #e3f2fd, #ffffff);
-      --dark-bg: #121212;
-      --text: #222;
-      --light-text: #eee;
+      --primary: #3B82F6;
+      --accent: #2563EB;
+      --bg: #ffffff;
+      --text: #111827;
+      --card-bg: #f9fafb;
     }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111827;
+        --text: #f3f4f6;
+        --card-bg: #1f2937;
+      }
+    }
+
     body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background: var(--bg);
       color: var(--text);
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+
+    main {
+      max-width: 960px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    form#multiSearchForm {
       display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      transition: background 0.5s, color 0.5s;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
     }
-    .dark-mode {
-      background: var(--dark-bg);
-      color: var(--light-text);
+
+    input[type="search"] {
+      flex: 1;
+      min-width: 200px;
+      padding: 0.75rem 1rem;
+      border: 2px solid var(--primary);
+      border-radius: 10px;
+      font-size: 1rem;
     }
-    aside {
+
+    button {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.25rem;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: var(--accent);
+    }
+
+    .clear-btn {
+      background: transparent;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+
+    #tagSuggestions {
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      background: var(--card-bg);
+      border: 1px solid #ccc;
+      padding: 0.3rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .tag:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    #searchResults {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      border: 1px solid #ddd;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h5 {
+      font-size: 0.9rem;
+      color: var(--accent);
+      margin: 0 0 0.25rem;
+    }
+
+    .card h6 {
+      font-size: 1.1rem;
+      margin: 0 0 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    .card a {
       background: var(--primary);
       color: white;
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      width: 220px;
-      overflow-y: auto;
-      z-index: 100;
-    }
-    .aside-button {
-      background: transparent;
-      border: 2px solid white;
-      color: white;
-      padding: 0.8rem;
+      padding: 0.5rem 1rem;
       border-radius: 8px;
-      text-align: left;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
+      text-decoration: none;
+      font-size: 0.9rem;
+      display: inline-block;
     }
-    .aside-button:hover {
-      background: rgba(255,255,255,0.1);
+
+    .card a:hover {
+      background: var(--accent);
     }
-    main {
-      margin-left: 240px;
-      padding: 2rem;
-      flex: 1;
-      transition: all 0.4s ease;
-      position: relative;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .embed-container {
-      display: none;
-      animation: fadeIn 0.5s ease forwards;
-    }
-    .embed-container iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-      border-radius: 12px;
-      opacity: 0;
-      animation: iframeFadeIn 1s ease forwards;
-    }
+
     .spinner {
       display: flex;
-      flex-direction: column;
       align-items: center;
       gap: 1rem;
-      font-size: 1.2rem;
-      color: var(--primary);
-      padding-top: 3rem;
+      font-size: 1.1rem;
+      margin-top: 1rem;
     }
-    .spinner .ring {
-      width: 50px;
-      height: 50px;
-      border: 5px solid rgba(0, 75, 141, 0.3);
-      border-top: 5px solid var(--primary);
+
+    .ring {
+      border: 4px solid rgba(0,0,0,0.1);
+      border-top: 4px solid var(--primary);
       border-radius: 50%;
+      width: 24px;
+      height: 24px;
       animation: spin 1s linear infinite;
     }
-    .spinner .count {
-      font-size: 2.5rem;
-      font-weight: bold;
-      animation: pop 0.5s ease;
-    }
+
     @keyframes spin {
       to { transform: rotate(360deg); }
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes iframeFadeIn {
-      to { opacity: 1; }
-    }
-    @keyframes pop {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.3); }
-      100% { transform: scale(1); }
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      padding: 2rem 1rem;
-      color: #555;
-    }
-    .dark-mode footer {
-      color: #ccc;
-    }
-    .hero-img {
-      width: 100%;
-      max-width: 100%;
-      border-radius: 12px;
-      margin-top: 1rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-    @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-      }
-      aside {
-        position: relative;
-        width: 100%;
-        flex-direction: row;
-        overflow-x: auto;
-        white-space: nowrap;
-        padding: 1rem;
-        height: auto;
-      }
-      .aside-button {
-        flex: 1;
-        white-space: nowrap;
-        font-size: 0.9rem;
-        padding: 0.6rem;
-      }
-      main {
-        margin-left: 0;
-        padding: 1rem;
-      }
-    }
-    #site-search {
-  margin-top: 3rem;
-}
-#searchResults {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
-}
-.card {
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  background: #fff;
-  transition: box-shadow 0.3s;
-}
-.card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-.dark-mode .card {
-  background: #1e1e1e;
-  color: #f0f0f0;
-  border-color: #333;
-}
 
+    .fallback {
+      margin-top: 2rem;
+      font-style: italic;
+      color: #999;
+    }
   </style>
-  <script>
-    const SITES = {
-      briceka: ['https://briceka.com/', 'Briceka'],
-      onlycrave: ['https://briceka.com/onlycrave/', 'Onlycrave'],
-      trimd: ['https://briceka.com/trimd/', 'Trimd'],
-      snipn: ['https://briceka.com/snipn/', 'Snipn'],
-      themespy: ['https://briceka.com/theme-detector/', 'Themespy'],
-      tiktok: ['https://briceka.com/tiktokdownloader/', 'TikTok Downloader'],
-      bypasso: ['https://briceka.com/bypasso-link-generator/', 'Bypasso'],
-      status: ['https://status.briceka.com/', 'System Status'],
-      contact: ['https://support.briceka.com/', 'Contact Us']
-    };
-
-    function embedSite(url, title, key = '') {
-      const main = document.querySelector('main');
-      main.classList.add('loading');
-      main.innerHTML = `
-        <h1>${title}</h1>
-        <div class="spinner">
-          <div class="ring"></div>
-          <div class="count" id="countdown">3</div>
-          <div>Loading ${title}...</div>
-        </div>
-        <div class="embed-container"><iframe src="${url}" loading="lazy" allowfullscreen></iframe></div>
-      `;
-
-      let count = 3;
-      const countdown = document.getElementById('countdown');
-      const timer = setInterval(() => {
-        count--;
-        if (count === 0) {
-          clearInterval(timer);
-          document.querySelector('.spinner').style.display = 'none';
-          document.querySelector('.embed-container').style.display = 'block';
-        } else {
-          countdown.textContent = count;
-        }
-      }, 1000);
-
-      if (key) {
-        history.replaceState(null, '', `#${key}`);
-        gtag('event', 'embed_load', { 'event_category': 'Embed', 'event_label': title });
-      }
-    }
-
-    function embedSiteFromHash() {
-      const key = window.location.hash.substring(1);
-      if (SITES[key]) {
-        const [url, title] = SITES[key];
-        embedSite(url, title, key);
-      }
-    }
-
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-    }
-
-    window.addEventListener('load', embedSiteFromHash);
-    window.addEventListener('hashchange', embedSiteFromHash);
-  </script>
 </head>
 <body>
-  <aside>
-    <button class="aside-button" onclick="location.hash='briceka'">🌐 Briceka</button>
-    <button class="aside-button" onclick="location.hash='onlycrave'">👥 Onlycrave</button>
-    <button class="aside-button" onclick="location.hash='trimd'">🔗 Trimd</button>
-    <button class="aside-button" onclick="location.hash='snipn'">📌 Snipn</button>
-    <button class="aside-button" onclick="location.hash='themespy'">🎨 Themespy</button>
-    <button class="aside-button" onclick="location.hash='tiktok'">🎵 TikTok Downloader</button>
-    <button class="aside-button" onclick="location.hash='bypasso'">🚀 Bypasso</button>
-    <button class="aside-button" onclick="location.hash='status'">📶 Status</button>
-    <button class="aside-button" onclick="location.hash='contact'">📬 Contact</button>
-    <button class="aside-button" onclick="toggleDarkMode()">🌓 Theme</button>
-  </aside>
-  <main>
-  <section id="site-search">
-    <h2>Search Across Briceka Platforms</h2>
-    <form id="multiSearchForm" class="input-group mb-4" style="max-width:600px;">
-      <input type="search" id="searchQuery" class="form-control" placeholder="Type to search..." required minlength="3">
-        <button type="submit" class="btn btn-primary">Search</button>
-      </form>
-    <div id="searchResults" style="display:grid; gap:1rem;"></div>
-  </section>
+<main>
+  <h1>Briceka Content Search</h1>
+  <form id="multiSearchForm" role="search" aria-label="Search Briceka Network">
+    <input type="search" id="searchQuery" name="searchQuery" placeholder="Type a keyword..." required aria-label="Search field">
+    <button type="submit">Search</button>
+    <button type="button" class="clear-btn" id="clearResults" style="display:none;">Clear</button>
+  </form>
 
-    <h1>Welcome to Briceka Inc</h1>
-    <p>Briceka Inc is home to some of the most innovative tools and digital platforms available today. Whether you're trimming links, analyzing themes, bypassing links, or managing content—Briceka powers it all. We believe in utility, simplicity, and creativity.</p>
-    <p>Our platforms—<strong>Onlycrave</strong>, <strong>Trimd</strong>, <strong>Snipn</strong>—each solve unique challenges across digital content, social engagement, and link optimization. And our tools like <strong>Themespy</strong> and <strong>Bypasso</strong> provide precise utilities tailored for modern creators and marketers.</p>
-    <img class="hero-img" src="https://briceka.com/wp-content/uploads/2025/06/pexels-photo-8438979.jpeg" alt="Briceka Platforms Overview" loading="lazy" width="800" height="400">
-  </main>
-  <footer>
-    &copy; 2025 Briceka Inc — Built for speed, simplicity, and discovery.
-  </footer>
+  <div id="tagSuggestions" aria-label="Suggested topics"></div>
+
+  <section id="searchResults" aria-live="polite"></section>
+</main>
+
 <script>
 const rssFeeds = [
   {
@@ -311,25 +225,29 @@ const rssFeeds = [
   }
 ];
 
-document.getElementById('multiSearchForm').addEventListener('submit', async function (e) {
+document.getElementById('multiSearchForm').addEventListener('submit', async function(e) {
   e.preventDefault();
   const query = document.getElementById('searchQuery').value.trim().toLowerCase();
+  if (!query) return;
   const resultsContainer = document.getElementById('searchResults');
-  resultsContainer.innerHTML = `<p>Searching for "<strong>${query}</strong>"...</p>`;
+  resultsContainer.innerHTML = `
+    <div class="spinner"><div class="ring"></div>
+    <div>Searching for "<strong>${query}</strong>"...</div></div>`;
+  document.getElementById('clearResults').style.display = 'inline-block';
 
   const allResults = [];
 
   for (const feed of rssFeeds) {
     try {
-      const response = await fetch(feed.feedUrl);
-      const data = await response.json();
+      const res = await fetch(feed.feedUrl);
+      const data = await res.json();
 
-      const matchedItems = data.items.filter(item =>
+      const matched = data.items.filter(item =>
         item.title.toLowerCase().includes(query) ||
         item.description.toLowerCase().includes(query)
       );
 
-      matchedItems.forEach(item => {
+      matched.forEach(item => {
         allResults.push({
           site: feed.name,
           title: item.title,
@@ -339,30 +257,74 @@ document.getElementById('multiSearchForm').addEventListener('submit', async func
       });
 
     } catch (err) {
-      console.warn(`Failed to load feed for ${feed.name}`, err);
+      console.warn(`Feed failed for ${feed.name}`, err);
     }
   }
 
   if (allResults.length === 0) {
-    resultsContainer.innerHTML = `<p>No results found for "<strong>${query}</strong>".</p>`;
+    resultsContainer.innerHTML = `<p>No results found for "<strong>${query}</strong>".</p>
+      <div class="fallback">Try different keywords, or check spelling.</div>`;
     return;
   }
 
-  // Display cards
   resultsContainer.innerHTML = '';
   allResults.forEach(result => {
-    const card = document.createElement('div');
-    card.className = 'card p-3 shadow-sm';
+    const isCreator = result.site.includes("OnlyCrave (Creators)");
+    const btnText = isCreator ? "View Creator" : "Read More";
+    const card = document.createElement("div");
+    card.className = "card";
+    card.setAttribute("itemscope", "");
+    card.setAttribute("itemtype", "https://schema.org/CreativeWork");
+
     card.innerHTML = `
-      <h5>${result.site}</h5>
-      <h6>${result.title}</h6>
-      <p>${result.snippet.substring(0, 120)}...</p>
-      <a href="${result.link}" target="_blank" class="btn btn-outline-primary">Read More</a>
+      <h5 itemprop="sourceOrganization">${result.site}</h5>
+      <h6 itemprop="headline">${result.title}</h6>
+      <p itemprop="description">${stripHtml(result.snippet).substring(0, 140)}...</p>
+      <a href="${result.link}" target="_blank" rel="noopener noreferrer" itemprop="url">${btnText}</a>
     `;
     resultsContainer.appendChild(card);
   });
 });
-</script>
 
+document.getElementById('clearResults').addEventListener('click', () => {
+  document.getElementById('searchQuery').value = '';
+  document.getElementById('searchResults').innerHTML = '';
+  document.getElementById('clearResults').style.display = 'none';
+});
+
+function stripHtml(html) {
+  const div = document.createElement('div');
+  div.innerHTML = html;
+  return div.textContent || "";
+}
+
+// Auto-suggest tags from feeds
+(async function generateTags() {
+  const tagSet = new Set();
+  for (const feed of rssFeeds) {
+    try {
+      const res = await fetch(feed.feedUrl);
+      const data = await res.json();
+      data.items.slice(0, 5).forEach(item => {
+        item.title.split(/\s+/).forEach(word => {
+          if (word.length > 4) tagSet.add(word.toLowerCase());
+        });
+      });
+    } catch (err) {}
+  }
+  const tags = Array.from(tagSet).slice(0, 10);
+  const container = document.getElementById('tagSuggestions');
+  tags.forEach(tag => {
+    const span = document.createElement('span');
+    span.className = 'tag';
+    span.textContent = tag;
+    span.addEventListener('click', () => {
+      document.getElementById('searchQuery').value = tag;
+      document.getElementById('multiSearchForm').dispatchEvent(new Event('submit'));
+    });
+    container.appendChild(span);
+  });
+})();
+</script>
 </body>
 </html>
