@@ -179,7 +179,9 @@
   margin-top: 3rem;
 }
 #searchResults {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
 }
 .card {
   border: 1px solid #ddd;
@@ -289,30 +291,73 @@
   <footer>
     &copy; 2025 Briceka Inc — Built for speed, simplicity, and discovery.
   </footer>
-  <script>
-const searchEngines = [
-  { name: "Briceka", url: "https://briceka.com/?s=", param: "s" },
-  { name: "Trendymediatoday", url: "https://trendymediatoday.com/archive?s=", param: "s" },
-  { name: "Onlycrave", url: "https://onlycrave.com/creators?q=", param: "q" },
-  { name: "Trimd", url: "https://trimd.cc/blog/search?q=", param: "q" },
+<script>
+const rssFeeds = [
+  {
+    name: "Briceka",
+    feedUrl: "https://api.rss2json.com/v1/api.json?rss_url=https://briceka.com/feed/"
+  },
+  {
+    name: "Trendymediatoday",
+    feedUrl: "https://api.rss2json.com/v1/api.json?rss_url=https://trendymediatoday.com/rss.xml"
+  },
+  {
+    name: "OnlyCrave (Creators)",
+    feedUrl: "https://api.rss2json.com/v1/api.json?rss_url=https://onlycrave.com/rss/creators/feed/"
+  },
+  {
+    name: "OnlyCrave (Blog)",
+    feedUrl: "https://api.rss2json.com/v1/api.json?rss_url=https://onlycrave.com/rss/"
+  }
 ];
 
-document.getElementById('multiSearchForm').addEventListener('submit', function (e) {
+document.getElementById('multiSearchForm').addEventListener('submit', async function (e) {
   e.preventDefault();
-  const query = document.getElementById('searchQuery').value.trim();
+  const query = document.getElementById('searchQuery').value.trim().toLowerCase();
   const resultsContainer = document.getElementById('searchResults');
+  resultsContainer.innerHTML = `<p>Searching for "<strong>${query}</strong>"...</p>`;
+
+  const allResults = [];
+
+  for (const feed of rssFeeds) {
+    try {
+      const response = await fetch(feed.feedUrl);
+      const data = await response.json();
+
+      const matchedItems = data.items.filter(item =>
+        item.title.toLowerCase().includes(query) ||
+        item.description.toLowerCase().includes(query)
+      );
+
+      matchedItems.forEach(item => {
+        allResults.push({
+          site: feed.name,
+          title: item.title,
+          link: item.link,
+          snippet: item.description
+        });
+      });
+
+    } catch (err) {
+      console.warn(`Failed to load feed for ${feed.name}`, err);
+    }
+  }
+
+  if (allResults.length === 0) {
+    resultsContainer.innerHTML = `<p>No results found for "<strong>${query}</strong>".</p>`;
+    return;
+  }
+
+  // Display cards
   resultsContainer.innerHTML = '';
-
-  if (query.length < 3) return;
-
-  searchEngines.forEach(site => {
-    const searchURL = site.url + encodeURIComponent(query);
+  allResults.forEach(result => {
     const card = document.createElement('div');
     card.className = 'card p-3 shadow-sm';
     card.innerHTML = `
-      <h5>${site.name}</h5>
-      <p>Results for "<strong>${query}</strong>" on ${site.name}</p>
-      <a href="${searchURL}" target="_blank" class="btn btn-outline-primary">View Results</a>
+      <h5>${result.site}</h5>
+      <h6>${result.title}</h6>
+      <p>${result.snippet.substring(0, 120)}...</p>
+      <a href="${result.link}" target="_blank" class="btn btn-outline-primary">Read More</a>
     `;
     resultsContainer.appendChild(card);
   });
