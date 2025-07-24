@@ -175,6 +175,27 @@
         padding: 1rem;
       }
     }
+    #site-search {
+  margin-top: 3rem;
+}
+#searchResults {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  transition: box-shadow 0.3s;
+}
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.dark-mode .card {
+  background: #1e1e1e;
+  color: #f0f0f0;
+  border-color: #333;
+}
+
   </style>
   <script>
     const SITES = {
@@ -251,6 +272,15 @@
     <button class="aside-button" onclick="toggleDarkMode()">🌓 Theme</button>
   </aside>
   <main>
+  <section id="site-search">
+    <h2>Search Across Briceka Platforms</h2>
+    <form id="multiSearchForm" class="input-group mb-4" style="max-width:600px;">
+      <input type="search" id="searchQuery" class="form-control" placeholder="Type to search..." required minlength="3">
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    <div id="searchResults" style="display:grid; gap:1rem;"></div>
+  </section>
+
     <h1>Welcome to Briceka Inc</h1>
     <p>Briceka Inc is home to some of the most innovative tools and digital platforms available today. Whether you're trimming links, analyzing themes, bypassing links, or managing content—Briceka powers it all. We believe in utility, simplicity, and creativity.</p>
     <p>Our platforms—<strong>Onlycrave</strong>, <strong>Trimd</strong>, <strong>Snipn</strong>—each solve unique challenges across digital content, social engagement, and link optimization. And our tools like <strong>Themespy</strong> and <strong>Bypasso</strong> provide precise utilities tailored for modern creators and marketers.</p>
@@ -259,5 +289,35 @@
   <footer>
     &copy; 2025 Briceka Inc — Built for speed, simplicity, and discovery.
   </footer>
+  <script>
+const searchEngines = [
+  { name: "Briceka", url: "https://briceka.com/?s=", param: "s" },
+  { name: "Trendymediatoday", url: "https://trendymediatoday.com/archive?s=", param: "s" },
+  { name: "Onlycrave", url: "https://onlycrave.com/creators?q=", param: "q" },
+  { name: "Trimd", url: "https://trimd.cc/blog/search?q=", param: "q" },
+];
+
+document.getElementById('multiSearchForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const query = document.getElementById('searchQuery').value.trim();
+  const resultsContainer = document.getElementById('searchResults');
+  resultsContainer.innerHTML = '';
+
+  if (query.length < 3) return;
+
+  searchEngines.forEach(site => {
+    const searchURL = site.url + encodeURIComponent(query);
+    const card = document.createElement('div');
+    card.className = 'card p-3 shadow-sm';
+    card.innerHTML = `
+      <h5>${site.name}</h5>
+      <p>Results for "<strong>${query}</strong>" on ${site.name}</p>
+      <a href="${searchURL}" target="_blank" class="btn btn-outline-primary">View Results</a>
+    `;
+    resultsContainer.appendChild(card);
+  });
+});
+</script>
+
 </body>
 </html>
