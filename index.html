@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Briceka Network Search</title>
-  <meta name="description" content="Search across Briceka, TrendyMediaToday, OnlyCrave, and Trimd content."/>
+  <title>Briceka – Bold Ideas. Digital Brilliance.</title>
+  <meta name="description" content="Briceka Enterprise empowers creators and influencers with scalable digital platforms, reshaping monetization and content sharing through intuitive technology."/>
+  <meta name="keywords" content="Briceka, Briceka Enterprise, OnlyCrave, TrendyMediaToday, Trimd, influencers, content creation, monetization, digital platforms, creator tools, rss search, network search, creator economy"/>
+  <meta name="robots" content="index, follow"/>
+
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -18,139 +21,337 @@
     }
   }
   </script>
+
   <style>
     :root {
-      --primary:#3B82F6;--accent:#2563EB;
-      --bg:#fff;--text:#111827;--card-bg:#f9fafb;
+      --primary: #3B82F6;
+      --accent: #2563EB;
+      --bg: #fff;
+      --text: #111827;
+      --card-bg: #f9fafb;
     }
-    @media(prefers-color-scheme:dark){
-      :root{--bg:#111827;--text:#f3f4f6;--card-bg:#1f2937}
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111827;
+        --text: #f3f4f6;
+        --card-bg: #1f2937;
+      }
     }
-    body{margin:0;padding:0;font-family:'Segoe UI',sans-serif;background:var(--bg);color:var(--text);display:flex;}
-    aside{width:220px;background:var(--primary);color:#fff;padding:1rem;display:flex;flex-direction:column;gap:.75rem;flex-shrink:0;}
-    .aside-button{background:transparent;color:#fff;border:2px solid #fff;padding:.6rem;border-radius:8px;text-align:left;cursor:pointer;transition:background .3s;}
-    .aside-button:hover{background:rgba(255,255,255,0.2);}
-    main{flex:1;padding:2rem;max-width:960px;margin:auto;}
-    h1{font-size:2rem;margin-bottom:1rem;}
-    form{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:1.5rem;}
-    input[type="search"]{flex:1;min-width:200px;padding:.75rem 1rem;border:2px solid var(--primary);border-radius:8px;font-size:1rem;}
-    button{background:var(--primary);color:#fff;border:none;padding:.75rem 1.25rem;border-radius:8px;cursor:pointer;font-weight:600;transition:background .3s;}
-    button:hover{background:var(--accent);}
-    .clear-btn{background:transparent;color:var(--primary);border:1px solid var(--primary);}
-    #tagSuggestions{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem;}
-    .tag{background:var(--card-bg);border:1px solid #ccc;padding:.3rem .75rem;border-radius:20px;font-size:.85rem;cursor:pointer;transition:background .3s;}
-    .tag:hover{background:var(--primary);color:#fff;}
-    #searchResults{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
-    .card{background:var(--card-bg);padding:1rem;border-radius:12px;border:1px solid #ddd;box-shadow:0 4px 8px rgba(0,0,0,0.05);transform:translateY(0);transition:transform .2s;}
-    .card:hover{transform:translateY(-4px);}
-    .card h5{font-size:.9rem;color:var(--accent);margin:0 0.25rem 0;}
-    .card h6{font-size:1.1rem;margin:.25rem 0;}
-    .card p{font-size:.95rem;color:#444;margin-bottom:1rem;}
-    .card a{background:var(--primary);color:#fff;padding:.5rem 1rem;border-radius:8px;text-decoration:none;font-size:.9rem;transition:background .3s;}
-    .card a:hover{background:var(--accent);}
-    .spinner{display:flex;align-items:center;gap:1rem;font-size:1.1rem;margin-top:1rem;}
-    .ring{border:4px solid rgba(0,0,0,0.1);border-top:4px solid var(--primary);border-radius:50%;width:24px;height:24px;animation:spin 1s linear infinite;}
-    @keyframes spin{to{transform:rotate(360deg)}}
-    .fallback{margin-top:2rem;font-style:italic;color:#999;}
-    @media(max-width:768px){aside{display:none;}body{padding:1rem;}main{padding:0}}
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+    }
+    aside {
+      width: 80px;
+      background: var(--primary);
+      color: #fff;
+      padding: 1rem 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      flex-shrink: 0;
+    }
+    .aside-button {
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+      padding: 0.5rem;
+      border-radius: 8px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: background .3s;
+      width: 100%;
+    }
+    .aside-button:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 960px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    input[type="search"] {
+      flex: 1;
+      min-width: 200px;
+      padding: 0.75rem 1rem;
+      border: 2px solid var(--primary);
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    button {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background .3s;
+    }
+    button:hover {
+      background: var(--accent);
+    }
+    .clear-btn {
+      background: transparent;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+    #tagSuggestions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .tag {
+      background: var(--card-bg);
+      border: 1px solid #ccc;
+      padding: 0.3rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background .3s;
+    }
+    .tag:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+    #searchResults {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--card-bg);
+      padding: 1rem;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transform: translateY(0);
+      transition: transform .2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .card h5 {
+      font-size: .9rem;
+      color: var(--accent);
+      margin: 0 0 .25rem;
+    }
+    .card h6 {
+      font-size: 1.1rem;
+      margin: .25rem 0;
+    }
+    .card p {
+      font-size: .95rem;
+      color: #444;
+      margin-bottom: 1rem;
+    }
+    .card a {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: .9rem;
+      transition: background .3s;
+    }
+    .card a:hover {
+      background: var(--accent);
+    }
+    .spinner {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+    .ring {
+      border: 4px solid rgba(0,0,0,0.1);
+      border-top: 4px solid var(--primary);
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .fallback {
+      margin-top: 2rem;
+      font-style: italic;
+      color: #999;
+    }
+    .platform-btn {
+      background: var(--card-bg);
+      border: 1px solid #ccc;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .platform-btn:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+    .embed-wrapper {
+      animation: fadeIn 0.5s ease-in-out;
+      margin-top: 1rem;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 12px;
+      pointer-events: none;
+    }
+    @media (max-width: 768px) {
+      aside { display: none; }
+      body { padding: 1rem; }
+      main { padding: 0; }
+    }
   </style>
 </head>
 <body>
   <aside>
-    <button class="aside-button" onclick="selectPlatform()">🔄 All Platforms</button>
-    <button class="aside-button" onclick="selectPlatform('Briceka')">🌐 Briceka</button>
-    <button class="aside-button" onclick="selectPlatform('Trendymediatoday')">📰 TrendyMedia</button>
-    <button class="aside-button" onclick="selectPlatform('OnlyCrave')">👥 OnlyCrave</button>
-    <button class="aside-button" onclick="selectPlatform('Trimd')">🔗 Trimd</button>
-    <button class="aside-button" onclick="toggleTheme()">🌓 Theme</button>
+    <button class="aside-button" onclick="toggleTheme()">🌓</button>
   </aside>
   <main>
     <h1>Briceka Network Search</h1>
+
     <form id="multiSearchForm" role="search" aria-label="Search">
       <input type="search" id="searchQuery" placeholder="Type a keyword..." required minlength="3"/>
       <button type="submit">Search</button>
       <button type="button" class="clear-btn" id="clearResults" style="display:none;">Clear</button>
     </form>
+
     <div id="tagSuggestions" aria-label="Suggested topics"></div>
+
+    <!-- Platform Preview Buttons -->
+    <div id="platformPreviewSection">
+      <h2 style="font-size:1.3rem;margin-bottom:.5rem;">Preview Our Platforms</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-bottom:1rem;">
+        <button class="platform-btn" onclick="showPlatform('https://briceka.com/', 'Briceka')">🌐 Briceka</button>
+        <button class="platform-btn" onclick="showPlatform('https://trendymediatoday.com/', 'TrendyMedia')">📰 TrendyMedia</button>
+        <button class="platform-btn" onclick="showPlatform('https://onlycrave.com/', 'OnlyCrave')">👥 OnlyCrave</button>
+        <button class="platform-btn" onclick="showPlatform('https://trimd.cc/', 'Trimd')">🔗 Trimd</button>
+      </div>
+      <div id="platformEmbed" class="embed-wrapper" style="display:none;">
+        <div style="margin-bottom:.5rem;font-weight:600;" id="platformLabel"></div>
+        <iframe id="platformFrame" title="Platform Preview" loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <!-- Search Results -->
     <section id="searchResults" aria-live="polite"></section>
   </main>
 
   <script>
     let currentPlatform = null;
     const rssFeeds = [
-      { site:"Briceka", url:"https://api.rss2json.com/v1/api.json?rss_url=https://briceka.com/feed/" },
-      { site:"Trendymediatoday", url:"https://api.rss2json.com/v1/api.json?rss_url=https://trendymediatoday.com/rss.xml" },
-      { site:"OnlyCrave (Creators)", url:"https://api.rss2json.com/v1/api.json?rss_url=https://onlycrave.com/rss/creators/feed/" },
-      { site:"OnlyCrave (Blog)", url:"https://api.rss2json.com/v1/api.json?rss_url=https://onlycrave.com/rss/" },
-      { site:"Trimd", url:"https://api.rss2json.com/v1/api.json?rss_url=https://trimd.cc/blog/rss.xml" }
+      { site: "Briceka", url: "https://api.rss2json.com/v1/api.json?rss_url=https://briceka.com/feed/" },
+      { site: "Trendymediatoday", url: "https://api.rss2json.com/v1/api.json?rss_url=https://trendymediatoday.com/rss.xml" },
+      { site: "OnlyCrave (Creators)", url: "https://api.rss2json.com/v1/api.json?rss_url=https://onlycrave.com/rss/creators/feed/" },
+      { site: "OnlyCrave (Blog)", url: "https://api.rss2json.com/v1/api.json?rss_url=https://onlycrave.com/rss/" },
+      { site: "Trimd", url: "https://api.rss2json.com/v1/api.json?rss_url=https://trimd.cc/blog/rss.xml" }
     ];
 
     document.getElementById('multiSearchForm').addEventListener('submit', searchAll);
     document.getElementById('clearResults').addEventListener('click', () => {
-      document.getElementById('searchQuery').value=''; document.getElementById('searchResults').innerHTML=''; document.getElementById('clearResults').style.display='none';
+      document.getElementById('searchQuery').value = '';
+      document.getElementById('searchResults').innerHTML = '';
+      document.getElementById('clearResults').style.display = 'none';
     });
 
-    async function searchAll(e){
+    async function searchAll(e) {
       e?.preventDefault();
       const q = document.getElementById('searchQuery').value.trim().toLowerCase();
-      if(!q) return;
-      document.getElementById('clearResults').style.display='inline-block';
+      if (!q) return;
+      document.getElementById('clearResults').style.display = 'inline-block';
       const resC = document.getElementById('searchResults');
       resC.innerHTML = `<div class="spinner"><div class="ring"></div><div>Searching "<strong>${q}</strong>"...</div></div>`;
       let allRes = [];
-      for(const fb of rssFeeds){
-        if(currentPlatform && !fb.site.includes(currentPlatform)) continue;
+      for (const fb of rssFeeds) {
+        if (currentPlatform && !fb.site.includes(currentPlatform)) continue;
         try {
           const d = await (await fetch(fb.url)).json();
-          const matches = d.items.filter(i=>i.title.toLowerCase().includes(q)||i.description.toLowerCase().includes(q));
-          matches.forEach(item=>allRes.push({site:fb.site,title:item.title,link:item.link,snippet:item.description}));
-        } catch(err){}
+          const matches = d.items.filter(i => i.title.toLowerCase().includes(q) || i.description.toLowerCase().includes(q));
+          matches.forEach(item => allRes.push({ site: fb.site, title: item.title, link: item.link, snippet: item.description }));
+        } catch (err) { }
       }
-      if(!allRes.length){
+      if (!allRes.length) {
         resC.innerHTML = `<p>No results for "<strong>${q}</strong>".</p><div class="fallback">Try another keyword.</div>`;
         return;
       }
-      resC.innerHTML='';
-      allRes.forEach(r=>{
+      resC.innerHTML = '';
+      allRes.forEach(r => {
         const creator = r.site.includes("Creators");
         const card = document.createElement('div');
-        card.className='card';
+        card.className = 'card';
         card.innerHTML = `
           <h5>${r.site}</h5><h6>${r.title}</h6>
-          <p>${stripHtml(r.snippet).substring(0,140)}...</p>
-          <a href="${r.link}" target="_blank" rel="noopener noreferrer">${creator?"View Creator":"Read More"}</a>`;
+          <p>${stripHtml(r.snippet).substring(0, 140)}...</p>
+          <a href="${r.link}" target="_blank" rel="noopener noreferrer">${creator ? "View Creator" : "Read More"}</a>`;
         resC.appendChild(card);
       });
     }
 
-    function stripHtml(html){const d=document.createElement('div');d.innerHTML=html;return d.textContent||"";}
-
-    function selectPlatform(name=null){
-      currentPlatform = name;
-      document.getElementById('searchQuery').value='';
-      document.getElementById('searchResults').innerHTML = name
-        ? `<p>Platform filtered: <strong>${name}</strong>. Search now.</p>`
-        : `<p>Platform filter removed. Search all.</p>`;
+    function stripHtml(html) {
+      const d = document.createElement('div');
+      d.innerHTML = html;
+      return d.textContent || "";
     }
 
-    function toggleTheme(){
+    function toggleTheme() {
       document.body.classList.toggle('dark-mode');
     }
 
-    (async()=>{
-      const ts=new Set();
-      for(const fb of rssFeeds){
+    function showPlatform(url, label) {
+      const wrapper = document.getElementById('platformEmbed');
+      const iframe = document.getElementById('platformFrame');
+      const title = document.getElementById('platformLabel');
+      iframe.src = url;
+      title.textContent = `${label} (Preview Mode)`;
+      wrapper.style.display = 'block';
+    }
+
+    (async () => {
+      const ts = new Set();
+      for (const fb of rssFeeds) {
         try {
-          const d=await (await fetch(fb.url)).json();
-          d.items.slice(0,5).forEach(i=>i.title.split(/\s+/).filter(w=>w.length>4).forEach(w=>ts.add(w.toLowerCase())));
-        }catch{}
+          const d = await (await fetch(fb.url)).json();
+          d.items.slice(0, 5).forEach(i => i.title.split(/\s+/).filter(w => w.length > 4).forEach(w => ts.add(w.toLowerCase())));
+        } catch { }
       }
-      const arr=[...ts].slice(0,12);
-      const tc=document.getElementById('tagSuggestions');
-      arr.forEach(t=>{
-        const el=document.createElement('span');
-        el.className='tag'; el.textContent=t;
-        el.onclick = ()=>{document.getElementById('searchQuery').value=t; searchAll();}
+      const arr = [...ts].slice(0, 12);
+      const tc = document.getElementById('tagSuggestions');
+      arr.forEach(t => {
+        const el = document.createElement('span');
+        el.className = 'tag';
+        el.textContent = t;
+        el.onclick = () => { document.getElementById('searchQuery').value = t; searchAll(); }
         tc.appendChild(el);
       });
     })();
