@@ -1,35 +1,33 @@
-// Handle the form submission
-document.getElementById("searchForm").addEventListener("submit", function(event) {
-    event.preventDefault();  // Prevent page reload
+document.getElementById('searchForm').addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevent default form submission
 
-    const query = document.getElementById("searchInput").value;
-    const resultsContainer = document.getElementById("search-results");
+    const query = document.getElementById('searchInput').value;
+    if (!query) {
+        return alert('Please enter a search query!');
+    }
 
-    resultsContainer.innerHTML = "<p>Loading results...</p>";
-
-    // Fetch data from the backend (replace with actual backend URL)
-    fetch(`https://your-backend-url.com/search?q=${encodeURIComponent(query)}`)
+    // Send search query to Flask backend
+    fetch(`https://ofindr.onrender.com/search?q=${encodeURIComponent(query)}`)
         .then(response => response.json())
         .then(data => {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '';  // Clear previous results
+
             if (data.length === 0) {
-                resultsContainer.innerHTML = "<p>No models found for your search.</p>";
+                resultsDiv.innerHTML = 'No models found.';
             } else {
-                resultsContainer.innerHTML = "";
                 data.forEach(model => {
-                    const resultDiv = document.createElement("div");
-                    resultDiv.classList.add("result");
-
-                    const resultLink = document.createElement("a");
-                    resultLink.href = model.profile_url;
-                    resultLink.textContent = model.name;
-
-                    resultDiv.appendChild(resultLink);
-                    resultsContainer.appendChild(resultDiv);
+                    const modelElement = document.createElement('div');
+                    modelElement.innerHTML = `
+                        <p><strong>${model.name}</strong></p>
+                        <a href="${model.profile_url}" target="_blank">View Profile</a>
+                    `;
+                    resultsDiv.appendChild(modelElement);
                 });
             }
         })
         .catch(error => {
-            console.error('Error fetching data:', error);
-            resultsContainer.innerHTML = "<p>Error fetching results.</p>";
+            console.error('Error fetching search results:', error);
+            document.getElementById('results').innerHTML = 'An error occurred while fetching results.';
         });
 });
