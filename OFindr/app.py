@@ -1,53 +1,127 @@
-import os
-from flask import Flask, request, jsonify
 import requests
+from flask import Flask, render_template, request, jsonify
 from bs4 import BeautifulSoup
 
-# Create Flask app
 app = Flask(__name__)
 
-# Route to handle search requests
-@app.route('/search', methods=['GET'])
+# Route for the home page
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+# Route for the search functionality
+@app.route('/search')
 def search():
-    # Get the search query from the request
-    query = request.args.get('q')
-
-    # If no query is provided, return an empty list
+    query = request.args.get('q', '').strip()
+    
     if not query:
-        return jsonify([])
+        return jsonify({"error": "No query provided"}), 400
 
-    # Construct the URL for DudJob search page
-    search_url = f"https://dudjob.com/onlyfans-search?q={query}"
+    # Get search results from all sites
+    results = search_all_sites(query)
+    
+    # Find the best result (this could be based on relevance, ranking, or a simple criteria)
+    best_result = get_best_result(results)
+    
+    return jsonify(best_result)
 
-    # Send a GET request to DudJob's search page
+# Function to search all the websites
+def search_all_sites(query):
+    results = []
+
+    # List of search functions for each site
+    search_functions = [
+        search_dudjob,
+        search_fansmetrics,
+        search_juicysearch,
+        search_subseeker
+    ]
+
+    # Get results from each site
+    for search_function in search_functions:
+        results.extend(search_function(query))
+    
+    return results
+
+# Function to get the best result (this could be based on different factors like relevance, ranking, etc.)
+def get_best_result(results):
+    if not results:
+        return {"error": "No results found"}
+    
+    # Example of sorting by name or any other criteria you prefer
+    best_result = sorted(results, key=lambda x: x['name'].lower())[0]  # Just as an example, sorting alphabetically
+    return best_result
+
+# Function to search on DudJob
+def search_dudjob(query):
     try:
-        response = requests.get(search_url)
-        response.raise_for_status()  # Check for request errors
-    except requests.exceptions.RequestException as e:
-        return jsonify({"error": f"Failed to fetch data from DudJob: {str(e)}"}), 500
+        url = f"https://dudjob.com/onlyfans-search?q={query}"
+        response = requests.get(url)
+        if response.status_code == 200:
+            soup = BeautifulSoup(response.text, 'html.parser')
+            results = []
+            for model in soup.find_all('div', class_='model'):
+                model_name = model.find('a', class_='model-name').text.strip()
+                results.append({"name": model_name, "source": "DudJob", "url": url})
+            return results
+    except Exception as e:
+        print(f"Error during DudJob search: {str(e)}")
+    return []
 
-    # Parse the HTML content with BeautifulSoup
-    soup = BeautifulSoup(response.text, 'html.parser')
+# Function to search on FansMetrics
+def search_fansmetrics(query):
+    try:
+        url = f"https://fansmetrics.com/search/{query}"
+        response = requests.get(url)
+        if response.status_code == 200:
+            soup = BeautifulSoup(response.text, 'html.parser')
+            results = []
+            for model in soup.find_all('div', class_='model-info'):
+                model_name = model.find('a').text.strip()
+                results.append({"name": model_name, "source": "FansMetrics", "url": url})
+            return results
+    except Exception as e:
+        print(f"Error during FansMetrics search: {str(e)}")
+    return []
 
-    # List to store model names and their profile URLs
-    models = []
+# Function to search on JuicySearch
+def search_juicysearch(query):
+    try:
+        url = f"https://juicysearch.com/results/?q={query}"
+        response = requests.get(url)
+        if response.status_code == 200:
+            soup = BeautifulSoup(response.text, 'html.parser')
+            results = []
+            for model in soup.find_all('div', class_='result-item'):
+                model_name = model.find('h3').text.strip()
+                results.append({"name": model_name, "source": "JuicySearch", "url": url})
+            return results
+    except Exception as e:
+        print(f"Error during JuicySearch search: {str(e)}")
+    return []
 
-    # Example: Find model divs (Update the class as needed based on the actual page structure)
-    for model_div in soup.find_all('div', class_='model-class'):  # Replace with actual class
-        model_name = model_div.find('h3').text.strip()  # Update based on page structure
-        profile_url = model_div.find('a')['href'] if model_div.find('a') else ''
-        
-        # Append model data to list
-        models.append({
-            'name': model_name,
-            'profile_url': profile_url
-        })
+# Function to search on SubSeeker
+def search_subseeker(query):
+    try:
+        url = f"https://subseeker.co/search?q={query}"
+        response = requests.get(url)
+        if response.status_code == 200:
+            soup = BeautifulSoup(response.text, 'html.parser')
+            results = []
+            for model in soup.find_all('div', class_='profile'):
+                model_name = model.find('h4').text.strip()
+                results.append({"name": model_name, "source": "SubSeeker", "url": url})
+            return results
+    except Exception as e:
+        print(f"Error during SubSeeker search: {str(e)}")
+    return []
 
-    # Return the models as a JSON response
-    return jsonify(models)
+# Route for the "working" message
+@app.route('/status')
+def status():
+    return jsonify({
+        "message": "WooHoo, working! Visit https://briceka.com/onlyfans to try me!"
+    })
 
-
-# Start the Flask app
 if __name__ == '__main__':
-    # Make sure the app listens on port and host for Render
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+    app.run(debug=True)
