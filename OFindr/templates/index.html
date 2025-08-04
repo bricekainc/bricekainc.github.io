@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OFindr - OnlyFans Model Search</title>
-    <link rel="stylesheet" href="style.css">
+    <title>OnlyFans Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Search for OnlyFans Models</h1>
-    
-    <!-- Simple Search Form -->
-    <form id="searchForm">
-        <input type="text" id="searchInput" placeholder="Search by model name or user" required>
-        <button type="submit">Search</button>
-    </form>
+    <div class="container">
+        <h1>OnlyFans Finder</h1>
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Search for a model..." required />
+            <button type="submit">Search</button>
+        </form>
 
-    <div id="results">
-        <!-- Search results will appear here -->
+        <div id="results"></div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
