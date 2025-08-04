@@ -1,94 +1,58 @@
-/* General reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
     text-align: center;
 }
 
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    color: #333;
+    margin-top: 50px;
 }
 
 form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
+    margin-top: 20px;
 }
 
 input[type="text"] {
     padding: 10px;
-    font-size: 1rem;
-    width: 60%;
-    max-width: 400px;
+    width: 250px;
     margin-right: 10px;
-    border: 2px solid #007bff;
-    border-radius: 5px;
-    outline: none;
-}
-
-input[type="text"]:focus {
-    border-color: #0056b3;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #007bff;
+    padding: 10px;
+    background-color: #3498db;
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #2980b9;
 }
 
-#search-results {
+#results {
     margin-top: 30px;
-    width: 80%;
-    max-width: 800px;
-}
-
-.result {
+    padding: 20px;
     background-color: #fff;
-    padding: 15px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
-.result a {
+#results div {
+    margin-bottom: 10px;
+}
+
+#results a {
+    color: #3498db;
     text-decoration: none;
-    color: #007bff;
-    font-size: 1.2rem;
 }
 
-.result a:hover {
+#results a:hover {
     text-decoration: underline;
-}
-
-@media (max-width: 600px) {
-    input[type="text"] {
-        width: 80%;
-    }
-
-    button {
-        width: 30%;
-    }
 }
