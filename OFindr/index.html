@@ -8,12 +8,16 @@
 </head>
 <body>
     <h1>Search for OnlyFans Models</h1>
-    <form action="https://your-backend-url.com/search" method="GET">
-        <input type="text" name="q" placeholder="Search by model name or user" required>
+    
+    <!-- Simple Search Form -->
+    <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Search by model name or user" required>
         <button type="submit">Search</button>
     </form>
 
-    <div id="search-results"></div>
+    <div id="results">
+        <!-- Search results will appear here -->
+    </div>
 
     <script src="script.js"></script>
 </body>
