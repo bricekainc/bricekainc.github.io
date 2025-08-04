@@ -116,12 +116,5 @@ def search_subseeker(query):
         print(f"Error during SubSeeker search: {str(e)}")
     return []
 
-# Route for the "working" message
-@app.route('/status')
-def status():
-    return jsonify({
-        "message": "WooHoo, working! Visit https://briceka.com/onlyfans to try me!"
-    })
-
 if __name__ == '__main__':
     app.run(debug=True)
