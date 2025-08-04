@@ -1,33 +1,33 @@
 document.getElementById('searchForm').addEventListener('submit', function(event) {
-    event.preventDefault();  // Prevent default form submission
-
+    event.preventDefault();
+    
     const query = document.getElementById('searchInput').value;
+    
     if (!query) {
-        return alert('Please enter a search query!');
+        alert("Please enter a search query.");
+        return;
     }
-
-    // Send search query to Flask backend
-    fetch(`https://ofindr.onrender.com/search?q=${encodeURIComponent(query)}`)
+    
+    fetch(`/search?q=${query}`)
         .then(response => response.json())
         .then(data => {
             const resultsDiv = document.getElementById('results');
-            resultsDiv.innerHTML = '';  // Clear previous results
-
-            if (data.length === 0) {
-                resultsDiv.innerHTML = 'No models found.';
+            resultsDiv.innerHTML = '';
+            
+            if (data.error) {
+                resultsDiv.innerHTML = `<p>${data.error}</p>`;
             } else {
-                data.forEach(model => {
-                    const modelElement = document.createElement('div');
-                    modelElement.innerHTML = `
-                        <p><strong>${model.name}</strong></p>
-                        <a href="${model.profile_url}" target="_blank">View Profile</a>
-                    `;
-                    resultsDiv.appendChild(modelElement);
-                });
+                const resultItem = document.createElement('div');
+                resultItem.classList.add('result-item');
+                resultItem.innerHTML = `
+                    <strong>${data.name}</strong><br>
+                    <a href="${data.url}" target="_blank">Visit Profile</a>
+                `;
+                resultsDiv.appendChild(resultItem);
             }
         })
-        .catch(error => {
-            console.error('Error fetching search results:', error);
-            document.getElementById('results').innerHTML = 'An error occurred while fetching results.';
+        .catch(err => {
+            console.error(err);
+            alert("An error occurred. Please try again later.");
         });
 });
