@@ -3,337 +3,679 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Briceka – Bold Ideas. Digital Brilliance.</title>
-  <meta name="description" content="Briceka Enterprise empowers creators and influencers with scalable digital platforms, reshaping monetization and content sharing through intuitive technology." />
-  <meta name="keywords" content="Briceka, OnlyCrave, Trimd, Snipn, Themespy, Bypasso, TrendyMediaToday, Briceka Enterprise, Creator Tools, Monetization, Digital Tools, Social Tools, Web Tools, Briceka Platforms" />
+  <title>Briceka Universe - Digital Innovation Platform Ecosystem</title>
+  <meta name="description" content="Explore Briceka's powerful digital ecosystem including OnlyCrave creator platform, Trimd URL shortener, Snipn monetization tools, and more innovative solutions." />
+  <meta name="keywords" content="Briceka, OnlyCrave, Trimd, Snipn, Themespy, Bypasso, creator tools, monetization, digital innovation" />
   <meta name="author" content="Briceka Inc" />
-  <meta property="og:title" content="Briceka – Bold Ideas. Digital Brilliance." />
-  <meta property="og:description" content="Explore Briceka's powerful platforms like OnlyCrave, Trimd, Snipn, and more." />
-  <meta property="og:image" content="https://briceka.com/assets/og-image.jpg" />
-  <meta property="og:url" content="https://bricekainc.github.io/search" />
+  <meta property="og:title" content="Briceka Universe - Digital Innovation Platform Ecosystem" />
+  <meta property="og:description" content="Discover Briceka's suite of cutting-edge platforms for creators, developers, and digital innovators." />
+  <meta property="og:image" content="https://static.photos/technology/1200x630/1" />
+  <meta property="og:url" content="https://briceka.com" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Briceka – Bold Ideas. Digital Brilliance." />
-  <meta name="twitter:description" content="Scalable platforms and intuitive tools for creators and digital innovators." />
-  <meta name="twitter:image" content="https://briceka.com/assets/og-image.jpg" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BWNBZFJNM6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-BWNBZFJNM6');
-  </script>
+  <meta name="twitter:title" content="Briceka Universe - Digital Innovation Platform Ecosystem" />
+  <meta name="twitter:description" content="Powerful platforms and intuitive tools for creators and digital innovators." />
+  <meta name="twitter:image" content="https://static.photos/technology/1200x630/1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <style>
-    :root {
-      --primary: #3B82F6;
-      --accent: #2563EB;
-      --bg: #fff;
-      --text: #111827;
-      --card-bg: #f9fafb;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #111827;
-        --text: #f3f4f6;
-        --card-bg: #1f2937;
-      }
-    }
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      display: flex;
-    }
-    aside {
-      width: 220px;
-      background: var(--primary);
-      color: #fff;
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: .75rem;
-      flex-shrink: 0;
-    }
-    .aside-button {
-      background: transparent;
-      color: #fff;
-      border: 2px solid #fff;
-      padding: .6rem;
-      border-radius: 8px;
-      text-align: left;
-      cursor: pointer;
-      transition: background .3s;
-    }
-    .aside-button:hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
-    main {
-      flex: 1;
-      padding: 2rem;
-      max-width: 960px;
-      margin: auto;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    form {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .75rem;
-      margin-bottom: 1.5rem;
-    }
-    input[type="search"] {
-      flex: 1;
-      min-width: 200px;
-      padding: .75rem 1rem;
-      border: 2px solid var(--primary);
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-    button {
-      background: var(--primary);
-      color: #fff;
-      border: none;
-      padding: .75rem 1.25rem;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: background .3s;
-    }
-    button:hover {
-      background: var(--accent);
-    }
-    .clear-btn {
-      background: transparent;
-      color: var(--primary);
-      border: 1px solid var(--primary);
-    }
-    #tagSuggestions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .5rem;
-      margin-bottom: 1rem;
-    }
-    .tag {
-      background: var(--card-bg);
-      border: 1px solid #ccc;
-      padding: .3rem .75rem;
-      border-radius: 20px;
-      font-size: .85rem;
-      cursor: pointer;
-      transition: background .3s;
-    }
-    .tag:hover {
-      background: var(--primary);
-      color: #fff;
-    }
-    #searchResults {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-    .card {
-      background: var(--card-bg);
-      padding: 1rem;
-      border-radius: 12px;
-      border: 1px solid #ddd;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-    .card h5 { font-size: .9rem; color: var(--accent); margin: 0 0 0.25rem; }
-    .card h6 { font-size: 1.1rem; margin: .25rem 0; }
-    .card p { font-size: .95rem; color: #444; margin-bottom: 1rem; }
-    .card a {
-      background: var(--primary);
-      color: #fff;
-      padding: .5rem 1rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: .9rem;
-    }
-    .card a:hover { background: var(--accent); }
-    .spinner {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      font-size: 1.1rem;
-      margin-top: 1rem;
-    }
-    .ring {
-      border: 4px solid rgba(0,0,0,0.1);
-      border-top: 4px solid var(--primary);
-      border-radius: 50%;
-      width: 24px;
-      height: 24px;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .fallback { margin-top: 2rem; font-style: italic; color: #999; }
-    .platform-links {
-      margin: 2rem 0 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: .75rem;
-    }
-    .platform-links button {
-      background: var(--card-bg);
-      border: 1px solid #ccc;
-      color: var(--text);
-      padding: .5rem 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: .9rem;
-      transition: all .3s;
-    }
-    .platform-links button:hover {
-      background: var(--primary);
-      color: #fff;
-    }
-    .iframe-preview {
-      margin-top: 1.5rem;
-      width: 100%;
-      height: 600px;
-      border: none;
-      border-radius: 12px;
-      pointer-events: none;
-    }
-    @media (max-width:768px) {
-      aside { display: none; }
-      body { padding: 1rem; }
-      main { padding: 0; }
-    }
-  </style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+  border-radius: 4px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+/* Loading spinner */
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.ring {
+  border: 3px solid #e2e8f0;
+  border-top: 3px solid #8b5cf6;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Card animations */
+.card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Tag suggestions */
+.tag {
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  border: 1px solid #cbd5e1;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+/* Platform links */
+.platform-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 2rem 0 1rem;
+}
+
+.platform-links button {
+  background: white;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.platform-links button:hover {
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.2);
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-track {
+    background: #1e293b;
+  }
+  
+  .platform-links button {
+    background: #334155;
+    border-color: #475569;
+    color: #cbd5e1;
+  }
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Focus states for accessibility */
+button:focus,
+input:focus {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none;
+  }
+}
+    </style>
 </head>
-<body>
-  <aside>
-    <button class="aside-button" onclick="selectPlatform()">🔄 All Platforms</button>
-    <button class="aside-button" onclick="selectPlatform('Briceka')">🌐 Briceka</button>
-    <button class="aside-button" onclick="selectPlatform('Trendymediatoday')">📰 TrendyMedia</button>
-    <button class="aside-button" onclick="selectPlatform('OnlyCrave')">👥 OnlyCrave</button>
-    <button class="aside-button" onclick="selectPlatform('Trimd')">🔗 Trimd</button>
-    <button class="aside-button" onclick="toggleTheme()">🌓 Theme</button>
-  </aside>
-  <main>
-    <h1>Briceka Network Search</h1>
-    <form id="multiSearchForm">
-      <input type="search" id="searchQuery" placeholder="Type a keyword..." required minlength="3"/>
-      <button type="submit">Search</button>
-      <button type="button" class="clear-btn" id="clearResults" style="display:none;">Clear</button>
-    </form>
-
-    <div id="tagSuggestions"></div>
-
-    <section class="platform-links">
-      <button onclick="loadIframe('https://briceka.com/')">🌐 Briceka</button>
-      <button onclick="loadIframe('https://briceka.com/onlycrave/')">👥 OnlyCrave</button>
-      <button onclick="loadIframe('https://briceka.com/trimd/')">🔗 Trimd</button>
-      <button onclick="loadIframe('https://briceka.com/snipn/')">📌 Snipn</button>
-      <button onclick="loadIframe('https://briceka.com/theme-detector/')">🎨 Themespy</button>
-      <button onclick="loadIframe('https://briceka.com/tiktokdownloader/')">🎵 TikTok Downloader</button>
-      <button onclick="loadIframe('https://briceka.com/bypasso-link-generator/')">🚀 Bypasso</button>
+<body class="bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800 transition-colors duration-300">
+  <custom-navbar></custom-navbar>
+  
+  <main class="min-h-screen">
+    <!-- Hero Section -->
+    <section class="relative py-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-6">
+            <span class="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+            Briceka Universe
+          </span>
+        </h1>
+        <p class="text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-3xl mx-auto">
+            Empowering creators, innovators, and digital visionaries with cutting-edge platforms that transform ideas into reality.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button onclick="loadIframe('https://briceka.com/')" class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+            <i data-feather="globe" class="w-5 h-5 mr-2"></i>
+            Explore Briceka
+          </button>
+        </div>
+      </div>
     </section>
 
-    <iframe id="previewFrame" class="iframe-preview" style="display:none;" loading="lazy" allowfullscreen></iframe>
+    <!-- Platform Showcase -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-slate-900 dark:text-white mb-12">
+          Our Digital Ecosystem
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- OnlyCrave Card -->
+          <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+            <i data-feather="users" class="w-6 h-6 text-white"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">OnlyCrave</h3>
+          <p class="text-slate-600 dark:text-slate-300 mb-4">
+              Premium social platform for creators to monetize exclusive content and build loyal fan communities.
+            </p>
+            <button onclick="loadIframe('https://briceka.com/onlycrave/')" class="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium py-2.5 rounded-lg transition-all duration-300">
+              Launch Platform
+            </button>
+          </div>
+          
+          <!-- Trimd Card -->
+          <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-4">
+            <i data-feather="link" class="w-6 h-6 text-white"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">Trimd</h3>
+          <p class="text-slate-600 dark:text-slate-300 mb-4">
+              Powerful URL shortener with QR codes, link tracking, and comprehensive management tools.
+            </p>
+            <button onclick="loadIframe('https://briceka.com/trimd/')" class="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-medium py-2.5 rounded-lg transition-all duration-300">
+              Launch Platform
+            </button>
+          </div>
+          
+          <!-- Snipn Card -->
+          <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-4">
+            <i data-feather="dollar-sign" class="w-6 h-6 text-white"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">Snipn</h3>
+          <p class="text-slate-600 dark:text-slate-300 mb-4">
+              Monetize your links with our paid URL shortener featuring ad revenue sharing.
+            </p>
+            <button onclick="loadIframe('https://briceka.com/tools/snipn/index.php?embed=true')" class="w-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-medium py-2.5 rounded-lg transition-all duration-300">
+              Launch Platform
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section id="searchResults"></section>
+    <!-- Search Interface -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-800">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-slate-900 dark:text-white mb-8">
+          Unified Platform Search
+        </h2>
+        
+        <form id="multiSearchForm" class="mb-6">
+          <div class="flex flex-col sm:flex-row gap-3">
+            <input type="search" id="searchQuery" placeholder="Search across all Briceka platforms..." required minlength="3" class="flex-grow px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white" />
+            <button type="submit" class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl">
+              <i data-feather="search" class="w-5 h-5"></i>
+            </button>
+            <button type="button" class="clear-btn bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 font-medium px-4 py-3 rounded-xl transition-all duration-300" id="clearResults" style="display:none;">
+              Clear
+            </button>
+          </div>
+        </form>
+
+        <div id="tagSuggestions" class="flex flex-wrap gap-2 mb-6"></div>
+
+        <section id="searchResults" class="grid grid-cols-1 lg:grid-cols-2 gap-6"></section>
+      </div>
+    </section>
+
+    <!-- Platform Preview Area -->
+    <iframe id="previewFrame" class="w-full h-96 rounded-2xl shadow-xl border-0" style="display:none;" loading="lazy" allowfullscreen></iframe>
   </main>
+
+  <custom-footer></custom-footer>
 
   <script>
     let currentPlatform = null;
-    const rssFeeds = [
-      { site: "Briceka", url: "https://api.rss2json.com/v1/api.json?rss_url=https://briceka.com/feed/" },
-      { site: "Trendymediatoday", url: "https://api.rss2json.com/v1/api.json?rss_url=https://trendymediatoday.com/rss.xml" },
-      { site: "OnlyCrave (Creators)", url: "https://api.rss2json.com/v1/api.json?rss_url=https://onlycrave.com/rss/creators/feed/" },
-      { site: "OnlyCrave (Blog)", url: "https://api.rss2json.com/v1/api.json?rss_url=https://onlycrave.com/rss/" },
-      { site: "Trimd", url: "https://api.rss2json.com/v1/api.json?rss_url=https://trimd.cc/blog/rss.xml" }
-    ];
+const rssFeeds = [
+  { site: "Briceka", url: "https://api.rss2json.com/v1/api.json?rss_url=https://briceka.com/feed/" },
+  { site: "OnlyCrave (Blog)", url: "https://api.rss2json.com/v1/api.json?rss_url=https://onlycrave.com/rss/" },
+  { site: "Trimd", url: "https://api.rss2json.com/v1/api.json?rss_url=https://trimd.cc/blog/rss.xml" }
+];
 
-    document.getElementById('multiSearchForm').addEventListener('submit', searchAll);
-    document.getElementById('clearResults').addEventListener('click', () => {
-      document.getElementById('searchQuery').value = '';
-      document.getElementById('searchResults').innerHTML = '';
-      document.getElementById('clearResults').style.display = 'none';
-      document.getElementById('previewFrame').style.display = 'none';
-    });
+// DOM Content Loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize search form
+  document.getElementById('multiSearchForm').addEventListener('submit', searchAll);
+  document.getElementById('clearResults').addEventListener('click', clearResults);
+  
+  // Load tag suggestions
+  loadTagSuggestions();
+});
 
-    async function searchAll(e) {
-      e?.preventDefault();
-      const q = document.getElementById('searchQuery').value.trim().toLowerCase();
-      if (!q) return;
-      document.getElementById('clearResults').style.display = 'inline-block';
-      const resC = document.getElementById('searchResults');
-      resC.innerHTML = `<div class="spinner"><div class="ring"></div><div>Searching "<strong>${q}</strong>"...</div></div>`;
-      let allRes = [];
-      for (const fb of rssFeeds) {
-        if (currentPlatform && !fb.site.includes(currentPlatform)) continue;
-        try {
-          const d = await (await fetch(fb.url)).json();
-          const matches = d.items.filter(i => i.title.toLowerCase().includes(q) || i.description.toLowerCase().includes(q));
-          matches.forEach(item => allRes.push({ site: fb.site, title: item.title, link: item.link, snippet: item.description }));
-        } catch (err) {}
-      }
-      if (!allRes.length) {
-        resC.innerHTML = `<p>No results for "<strong>${q}</strong>".</p><div class="fallback">Try another keyword.</div>`;
-        return;
-      }
-      resC.innerHTML = '';
-      allRes.forEach(r => {
-        const creator = r.site.includes("Creators");
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `<h5>${r.site}</h5><h6>${r.title}</h6><p>${stripHtml(r.snippet).substring(0, 140)}...</p><a href="${r.link}" target="_blank">${creator ? "View Creator" : "Read More"}</a>`;
-        resC.appendChild(card);
+// Search functionality
+async function searchAll(e) {
+  e?.preventDefault();
+  const query = document.getElementById('searchQuery').value.trim().toLowerCase();
+  
+  if (!query) return;
+  
+  document.getElementById('clearResults').style.display = 'inline-block';
+  const resultsContainer = document.getElementById('searchResults');
+  
+  // Show loading state
+  resultsContainer.innerHTML = `
+    <div class="col-span-2 flex items-center justify-center py-12">
+      <div class="text-center">
+        <div class="ring mx-auto mb-4"></div>
+        <p class="text-slate-600 dark:text-slate-300">
+          Searching "<strong class="text-slate-900 dark:text-white">${query}</strong>" across all platforms...
+      </p>
+    </div>
+  `;
+  
+  let allResults = [];
+  
+  // Search through RSS feeds
+  for (const feed of rssFeeds) {
+    if (currentPlatform && !feed.site.includes(currentPlatform)) continue;
+    
+    try {
+      const response = await fetch(feed.url);
+      const data = await response.json();
+      
+      const matches = data.items.filter(item => 
+        item.title.toLowerCase().includes(query) || 
+        item.description.toLowerCase().includes(query)
+      );
+      
+      matches.forEach(item => {
+        allResults.push({
+          site: feed.site,
+          title: item.title,
+          link: item.link,
+          snippet: item.description
+        });
       });
+    } catch (error) {
+      console.error(`Error searching ${feed.site}:`, error);
     }
+  }
+  
+  // Display results
+  if (!allResults.length) {
+    resultsContainer.innerHTML = `
+      <div class="col-span-2 text-center py-12">
+        <p class="text-slate-600 dark:text-slate-300 mb-4">
+          No results found for "<strong class="text-slate-900 dark:text-white">${query}</strong>"
+        </p>
+        <p class="text-slate-500 dark:text-slate-400 text-sm">
+          Try using different keywords or check your spelling.
+        </p>
+      </div>
+    `;
+    return;
+  }
+  
+  // Render results
+  resultsContainer.innerHTML = '';
+  allResults.forEach(result => {
+    const isCreator = result.site.includes("Creators");
+    const card = document.createElement('div');
+    card.className = 'card bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300';
+    
+    card.innerHTML = `
+      <div class="flex items-start justify-between mb-3">
+        <span class="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white text-xs font-medium px-2 py-1 rounded-full">
+          ${result.site}
+        </span>
+        <i data-feather="${isCreator ? 'user' : 'file-text'}" class="w-4 h-4 text-slate-400"></i>
+      </div>
+      <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">
+          ${result.title}
+        </h3>
+      <p class="text-slate-600 dark:text-slate-300 text-sm mb-4">
+          ${stripHtml(result.snippet).substring(0, 120)}...
+        </p>
+      <a href="${result.link}" target="_blank" class="inline-block bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium px-4 py-2 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+          ${isCreator ? 'View Creator' : 'Read More'}
+        </a>
+    `;
+    
+    resultsContainer.appendChild(card);
+  });
+  
+  feather.replace();
+}
 
-    function stripHtml(html) {
-      const d = document.createElement('div');
-      d.innerHTML = html;
-      return d.textContent || "";
+// Clear results
+function clearResults() {
+  document.getElementById('searchQuery').value = '';
+  document.getElementById('searchResults').innerHTML = '';
+  document.getElementById('clearResults').style.display = 'none';
+  document.getElementById('previewFrame').style.display = 'none';
+}
+
+// Strip HTML tags
+function stripHtml(html) {
+  const temp = document.createElement('div');
+  temp.innerHTML = html;
+  return temp.textContent || temp.innerText || '';
+}
+
+// Load iframe preview
+function loadIframe(url) {
+  const iframe = document.getElementById('previewFrame');
+  iframe.src = url;
+  iframe.style.display = 'block';
+  document.getElementById('searchResults').innerHTML = '';
+  
+  // Scroll to iframe
+  iframe.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Load tag suggestions
+async function loadTagSuggestions() {
+  const tags = new Set();
+  
+  // Extract tags from RSS feeds
+  for (const feed of rssFeeds) {
+    try {
+      const response = await fetch(feed.url);
+      const data = await response.json();
+      
+      data.items.slice(0, 8).forEach(item => {
+      item.title.split(/\s+/).filter(word => word.length > 4).forEach(word => tags.add(word.toLowerCase()));
+    } catch (error) {
+      console.error(`Error loading tags from ${feed.site}:`, error);
     }
+  }
+  
+  const tagArray = [...tags].slice(0, 10);
+  const tagContainer = document.getElementById('tagSuggestions');
+  
+  tagArray.forEach(tag => {
+    const tagElement = document.createElement('span');
+    tagElement.className = 'tag';
+    tagElement.textContent = tag;
+    tagElement.onclick = () => {
+      document.getElementById('searchQuery').value = tag;
+      searchAll();
+    };
+    
+    tagContainer.appendChild(tagElement);
+  });
+}
 
-    function selectPlatform(name = null) {
-      currentPlatform = name;
-      document.getElementById('searchQuery').value = '';
-      document.getElementById('searchResults').innerHTML = name
-        ? `<p>Platform filtered: <strong>${name}</strong>. Search now.</p>`
-        : `<p>Platform filter removed. Search all.</p>`;
-      document.getElementById('previewFrame').style.display = 'none';
-    }
+// Theme toggle
+function toggleTheme() {
+  const html = document.documentElement;
+  html.classList.toggle('dark');
+  
+  // Update icon
+  feather.replace();
+}
 
-    function loadIframe(url) {
-      const iframe = document.getElementById('previewFrame');
-      iframe.src = url;
-      iframe.style.display = 'block';
-      document.getElementById('searchResults').innerHTML = '';
-    }
-
-    function toggleTheme() {
-      document.body.classList.toggle('dark-mode');
-    }
-
-    (async () => {
-      const ts = new Set();
-      for (const fb of rssFeeds) {
-        try {
-          const d = await (await fetch(fb.url)).json();
-          d.items.slice(0, 5).forEach(i => i.title.split(/\s+/).filter(w => w.length > 4).forEach(w => ts.add(w.toLowerCase())));
-        } catch { }
-      }
-      const arr = [...ts].slice(0, 12);
-      const tc = document.getElementById('tagSuggestions');
-      arr.forEach(t => {
-        const el = document.createElement('span');
-        el.className = 'tag';
-        el.textContent = t;
-        el.onclick = () => {
-          document.getElementById('searchQuery').value = t;
-          searchAll();
+// Performance monitoring
+window.addEventListener('load', function() {
+  // Lazy load images
+  const lazyImages = document.querySelectorAll('img[data-src]');
+  
+  if ('IntersectionObserver' in window) {
+    const lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          const lazyImage = entry.target;
+          lazyImage.src = lazyImage.dataset.src;
+      lazyImageObserver.unobserve(lazyImage);
         }
-        tc.appendChild(el);
       });
-    })();
+    });
+    
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+    });
+  }
+});
+    class CustomFooter extends HTMLElement {
+  connectedCallback() {
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.innerHTML = `
+      <style>
+        :host {
+          display: block;
+          width: 100%;
+        }
+        footer {
+          background: rgba(255, 255, 255, 0.8);
+          backdrop-filter: blur(12px);
+          border-top: 1px solid rgba(226, 232, 240, 0.2);
+        }
+        .footer-link {
+          transition: color 0.3s ease;
+        }
+        .footer-link:hover {
+          color: #8b5cf6;
+        }
+      </style>
+      <footer class="py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h4 class="font-semibold text-slate-900 dark:text-white mb-4">
+            Platform Ecosystem
+          </h4>
+              <ul class="space-y-2">
+                <li><a href="https://briceka.com/" target="_blank" class="footer-link text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300">
+                Briceka
+              </a></li>
+                <li><a href="https://onlycrave.com/" target="_blank" class="footer-link text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300">
+                OnlyCrave
+              </a></li>
+                <li><a href="https://trimd.cc/" target="_blank" class="footer-link text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300">
+                Trimd
+              </a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 class="font-semibold text-slate-900 dark:text-white mb-4">
+            Tools & Services
+          </h4>
+              <ul class="space-y-2">
+                <li><a href="https://briceka.com/tools/snipn/" target="_blank" class="footer-link text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300">
+                Snipn
+              </a></li>
+                <li><a href="https://briceka.com/theme-detector/" target="_blank" class="footer-link text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300">
+                Themespy
+              </a></li>
+                <li><a href="https://briceka.com/bypasso-link-generator/" target="_blank" class="footer-link text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300">
+                Bypasso
+              </a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 class="font-semibold text-slate-900 dark:text-white mb-4">
+            Resources
+          </h4>
+              <ul class="space-y-2">
+                <li><a href="https://support.briceka.com/" target="_blank" class="footer-link text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300">
+                Support
+              </a></li>
+                <li><a href="https://briceka.com/blog/" target="_blank" class="footer-link text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300">
+                Blog
+              </a></li>
+                <li><a href="https://briceka.com/about/" target="_blank" class="footer-link text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300">
+                About
+              </a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="pt-8 mt-8 border-t border-slate-200 dark:border-slate-700 text-center">
+            <p class="text-slate-600 dark:text-slate-400">
+              © 2025 Briceka Enterprise. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    `;
+    
+    feather.replace();
+  }
+}
+
+customElements.define('custom-footer', CustomFooter);
+    class CustomNavbar extends HTMLElement {
+  connectedCallback() {
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.innerHTML = `
+      <style>
+        :host {
+          display: block;
+          width: 100%;
+          z-index: 50;
+        }
+        nav {
+          background: rgba(255, 255, 255, 0.8);
+          backdrop-filter: blur(12px);
+          border-bottom: 1px solid rgba(226, 232, 240, 0.2);
+        }
+        .nav-link {
+          transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+          transform: translateY(-1px);
+        }
+        @media (max-width: 768px) {
+          .mobile-menu {
+            display: none;
+          }
+        }
+      </style>
+      <nav class="sticky top-0 px-4 sm:px-6 lg:px-8 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+          <a href="/" class="flex items-center gap-2 nav-link">
+            <i data-feather="zap" class="w-6 h-6 text-purple-600"></i>
+            <span class="text-xl font-bold text-slate-900 dark:text-white">
+          Briceka Universe
+        </span>
+          </a>
+          
+          <div class="hidden md:flex items-center gap-6">
+            <button onclick="toggleTheme()" class="nav-link bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-4 py-2 rounded-xl transition-all duration-300">
+            <i data-feather="moon" class="w-4 h-4"></i>
+          </button>
+        </div>
+        
+        <div class="md:hidden">
+          <button id="mobileMenuBtn" class="nav-link">
+              <i data-feather="menu" class="w-6 h-6"></i>
+            </button>
+          </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu absolute top-full left-0 right-0 bg-white dark:bg-slate-800 shadow-xl border-t border-slate-200 dark:border-slate-700">
+          <div class="px-4 py-6">
+            <button onclick="loadIframe('https://briceka.com/')" class="w-full text-left px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors duration-300">
+            <i data-feather="globe" class="w-4 h-4 mr-3"></i>
+            Briceka Main
+          </button>
+            <button onclick="loadIframe('https://briceka.com/onlycrave/')" class="w-full text-left px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors duration-300">
+            <i data-feather="users" class="w-4 h-4 mr-3"></i>
+            OnlyCrave
+          </button>
+            <button onclick="loadIframe('https://briceka.com/trimd/')" class="w-full text-left px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors duration-300">
+            <i data-feather="link" class="w-4 h-4 mr-3"></i>
+            Trimd
+          </button>
+            <button onclick="loadIframe('https://briceka.com/tools/snipn/index.php?embed=true')" class="w-full text-left px-4 py-3 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors duration-300">
+            <i data-feather="dollar-sign" class="w-4 h-4 mr-3"></i>
+            Snipn
+          </button>
+          </div>
+        </div>
+    `;
+    
+    // Mobile menu functionality
+    const mobileMenuBtn = this.shadowRoot.getElementById('mobileMenuBtn');
+    const mobileMenu = this.shadowRoot.getElementById('mobileMenu');
+    
+    mobileMenuBtn.addEventListener('click', function() {
+      mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (event) => {
+      if (!this.contains(event.target)) {
+        mobileMenu.style.display = 'none';
+      });
+    });
+    
+    feather.replace();
+  }
+}
+
+customElements.define('custom-navbar', CustomNavbar);
+    feather.replace();
   </script>
 </body>
 </html>
