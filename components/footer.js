@@ -64,7 +64,7 @@ class CustomFooter extends HTMLElement {
                 <li><a href="https://support.briceka.com/" target="_blank" class="footer-link text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300">
                 Support
               </a></li>
-                <li><a href="https://briceka.com/blog/" target="_blank" class="footer-link text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300">
+                <li><a href="https://briceka.com/digest/" target="_blank" class="footer-link text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300">
                 Blog
               </a></li>
                 <li><a href="https://briceka.com/about/" target="_blank" class="footer-link text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300">
