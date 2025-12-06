@@ -230,6 +230,16 @@
                             </div>
                             <i data-feather="external-link" class="ml-auto w-4 h-4 text-slate-400"></i>
                         </a>
+
+                         
+                        <a id="linkBriceka" href="#" target="_blank" class="flex items-center p-4 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-emerald-500 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-all group">
+                            <div class="mr-4 bg-emerald-100 text-emerald-600 p-2 rounded-lg"><i data-feather="file-text"></i></div>
+                            <div>
+                                <div class="font-semibold text-slate-900 dark:text-white group-hover:text-emerald-600">Search on Briceka</div>
+                                <div class="text-xs text-slate-500">briceka.com</div>
+                            </div>
+                            <i data-feather="external-link" class="ml-auto w-4 h-4 text-slate-400"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -281,10 +291,12 @@
             // Update Deep Links for fallback
             document.getElementById('linkOnlyCrave').href = `https://onlycrave.com/creators?q=${encodeURIComponent(query)}`;
             document.getElementById('linkTrimd').href = `https://trimd.cc/blog/search?q=${encodeURIComponent(query)}`;
+            document.getElementById('linkBriceka').href = `https://briceka.com/?s=${encodeURIComponent(query)}`;
 
             // Fetch RSS feeds (Briceka + OnlyCrave)
             const feeds = [
                 `https://api.rss2json.com/v1/api.json?rss_url=https://briceka.com/rss/&api_key=0`,
+                `https://api.rss2json.com/v1/api.json?rss_url=https://onlycrave.com/rss/creators/feed/&api_key=0`,
                 `https://api.rss2json.com/v1/api.json?rss_url=https://onlycrave.com/rss/&api_key=0`
             ];
 
