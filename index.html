@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <title>Briceka | The Digital Innovation Ecosystem</title>
-    <meta name="description" content="Briceka is the ultimate digital ecosystem for creators. Explore OnlyCrave, Trimd, Snipn, and powerful monetization tools designed to transform ideas into reality." />
-    <meta name="keywords" content="Briceka, OnlyCrave, Trimd URL Shortener, Snipn Monetization, Creator Economy, Digital Ecosystem, SaaS, Web Tools" />
+    <meta name="description" content="Briceka is the ultimate digital ecosystem. Search across OnlyCrave, Trimd, and Snipn to find creators, tools, and digital insights." />
+    <meta name="keywords" content="Briceka, OnlyCrave Search, Trimd Blog, Creator Tools, Digital Ecosystem, URL Shortener" />
     <meta name="author" content="Briceka Inc" />
     <link rel="canonical" href="https://briceka.com" />
     <meta name="theme-color" content="#0102FD" />
@@ -14,27 +14,18 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://briceka.com/" />
     <meta property="og:title" content="Briceka - Bold Ideas. Digital Brilliance." />
-    <meta property="og:description" content="Empowering creators and developers with a suite of cutting-edge platforms including OnlyCrave, Trimd, and Snipn." />
     <meta property="og:image" content="https://briceka.com/assets/og-image.jpg" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://briceka.com/" />
-    <meta name="twitter:title" content="Briceka - Bold Ideas. Digital Brilliance." />
-    <meta name="twitter:description" content="Empowering creators and developers with a suite of cutting-edge platforms." />
-    <meta name="twitter:image" content="https://briceka.com/assets/og-image.jpg" />
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Briceka",
-      "url": "https://briceka.com",
-      "logo": "https://briceka.com/logo.png",
-      "sameAs": [
-        "https://twitter.com/briceka",
-        "https://www.linkedin.com/company/briceka"
-      ],
-      "description": "A digital ecosystem offering tools for creators including URL shortening, content monetization, and social platforms."
+      "@type": "WebSite",
+      "url": "https://briceka.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://briceka.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     }
     </script>
 
@@ -46,7 +37,7 @@
                 extend: {
                     colors: {
                         brand: {
-                            DEFAULT: '#0102FD', // Your preferred blue
+                            DEFAULT: '#0102FD',
                             dark: '#0000b3',
                             light: '#4d4eff',
                         }
@@ -63,36 +54,21 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
     <style>
-        /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; }
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #0102FD; }
         
-        /* Glassmorphism Utilities */
         .glass-card {
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
         .dark .glass-card {
-            background: rgba(30, 41, 59, 0.7);
+            background: rgba(30, 41, 59, 0.8);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-
-        /* Gradient Animation */
-        @keyframes gradient-xy {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        .animate-gradient {
-            background-size: 200% 200%;
-            animation: gradient-xy 6s ease infinite;
-        }
         
-        /* Loader */
         .loader {
             border: 3px solid #f3f3f3;
             border-top: 3px solid #0102FD;
@@ -104,209 +80,129 @@
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
     </style>
 </head>
-<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans selection:bg-brand selection:text-white">
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans">
 
     <custom-navbar></custom-navbar>
    
-    <main class="min-h-screen relative overflow-hidden">
+    <main class="min-h-screen relative overflow-hidden flex flex-col">
         
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-            <div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-brand/20 rounded-full blur-[100px] opacity-50 dark:opacity-20"></div>
-            <div class="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-purple-500/20 rounded-full blur-[120px] opacity-50 dark:opacity-20"></div>
+            <div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-brand/10 rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-purple-500/10 rounded-full blur-[120px]"></div>
         </div>
 
-        <section class="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <section class="relative pt-32 pb-16 px-4 sm:px-6 lg:px-8">
             <div class="max-w-7xl mx-auto text-center">
-                <span class="inline-block py-1 px-3 rounded-full bg-brand/10 text-brand text-sm font-semibold mb-6 border border-brand/20">
-                    The Future of Digital Tools
-                </span>
                 <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-white mb-6 tracking-tight">
-                    Briceka <span class="bg-gradient-to-r from-brand to-purple-600 bg-clip-text text-transparent animate-gradient">Enterprise</span>
+                    Briceka <span class="text-brand">Enterprise</span>
                 </h1>
-                <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                    Empowering creators, innovators, and digital visionaries with an integrated ecosystem of platforms designed to monetize and magnify your impact.
+                <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-2xl mx-auto">
+                    Bold Ideas. Digital Brilliance. The ecosystem for creators.
                 </p>
                 
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <button onclick="openModal('https://briceka.com/')" class="group relative px-8 py-4 bg-brand hover:bg-brand-dark text-white font-bold rounded-xl shadow-lg hover:shadow-brand/50 transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
-                        <span class="relative z-10 flex items-center">
-                            <i data-feather="globe" class="w-5 h-5 mr-2"></i> Explore Briceka
-                        </span>
-                        <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                    </button>
-                    <a href="#ecosystem" class="text-slate-600 dark:text-slate-400 font-medium hover:text-brand dark:hover:text-brand-light transition-colors flex items-center">
-                        View Ecosystem <i data-feather="arrow-down" class="w-4 h-4 ml-1"></i>
-                    </a>
+                <button onclick="openModal('https://briceka.com/')" class="bg-brand hover:bg-brand-dark text-white font-bold px-8 py-3 rounded-xl transition-all shadow-lg shadow-brand/30">
+                    <i data-feather="globe" class="w-4 h-4 inline mr-2"></i> Explore Briceka
+                </button>
+            </div>
+        </section>
+
+        <section class="py-12 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card rounded-2xl p-6 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 bg-pink-100 dark:bg-pink-900/30 rounded-lg text-pink-600">
+                            <i data-feather="heart"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">OnlyCrave</h3>
+                    </div>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Monetize content and build communities.</p>
+                    <button onclick="openModal('https://briceka.com/onlycrave/')" class="text-brand font-semibold text-sm hover:underline">Launch OnlyCrave &rarr;</button>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg text-emerald-600">
+                            <i data-feather="scissors"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Trimd</h3>
+                    </div>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Smart URL shortening & analytics.</p>
+                    <button onclick="openModal('https://briceka.com/trimd/')" class="text-brand font-semibold text-sm hover:underline">Launch Trimd &rarr;</button>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 bg-orange-100 dark:bg-orange-900/30 rounded-lg text-orange-600">
+                            <i data-feather="dollar-sign"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Snipn</h3>
+                    </div>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Paid URL shortener for revenue.</p>
+                    <button onclick="openModal('https://briceka.com/tools/snipn/index.php?embed=true')" class="text-brand font-semibold text-sm hover:underline">Launch Snipn &rarr;</button>
                 </div>
             </div>
         </section>
 
-        <section id="ecosystem" class="py-20 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Our Digital Ecosystem</h2>
-                    <p class="text-slate-500 dark:text-slate-400">Everything you need to build, share, and earn.</p>
+        <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 mt-auto">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Unified Ecosystem Search</h2>
+                    <p class="text-slate-500">Search creators, blogs, and tools across the Briceka Universe.</p>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="glass-card rounded-2xl p-8 hover:border-brand/50 transition-all duration-300 group">
-                        <div class="w-14 h-14 bg-pink-100 dark:bg-pink-900/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <i data-feather="heart" class="w-7 h-7 text-pink-600 dark:text-pink-400"></i>
+                <form id="ecosystemSearchForm" class="relative max-w-2xl mx-auto mb-10">
+                    <div class="relative group">
+                        <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+                            <i data-feather="search" class="w-5 h-5 text-slate-400"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">OnlyCrave</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-                            Premium social platform for creators to monetize exclusive content and build loyal fan communities with subscription tiers.
-                        </p>
-                        <button onclick="openModal('https://briceka.com/onlycrave/')" class="w-full py-3 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-brand hover:text-brand dark:hover:text-brand-light dark:hover:border-brand-light font-semibold transition-all duration-300 flex items-center justify-center">
-                            Launch Platform <i data-feather="external-link" class="w-4 h-4 ml-2"></i>
+                        <input type="search" id="searchQuery" 
+                            placeholder="Type to search (e.g., 'Digital Marketing', 'Creator', 'Guides')" 
+                            class="w-full pl-12 pr-32 py-4 bg-slate-50 dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-full focus:ring-0 focus:border-brand dark:focus:border-brand text-slate-900 dark:text-white transition-all shadow-sm"
+                            required minlength="2" autocomplete="off" />
+                        <button type="submit" class="absolute right-2 top-2 bottom-2 bg-brand hover:bg-brand-dark text-white px-6 rounded-full font-medium transition-all shadow-md">
+                            Search
                         </button>
                     </div>
-                    
-                    <div class="glass-card rounded-2xl p-8 hover:border-brand/50 transition-all duration-300 group">
-                        <div class="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <i data-feather="scissors" class="w-7 h-7 text-emerald-600 dark:text-emerald-400"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">Trimd</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-                            Enterprise-grade URL shortener with generated QR codes, deep link analytics, and comprehensive campaign management.
-                        </p>
-                        <button onclick="openModal('https://briceka.com/trimd/')" class="w-full py-3 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-emerald-500 hover:text-emerald-600 dark:hover:text-emerald-400 font-semibold transition-all duration-300 flex items-center justify-center">
-                            Shorten Link <i data-feather="external-link" class="w-4 h-4 ml-2"></i>
-                        </button>
-                    </div>
-                    
-                    <div class="glass-card rounded-2xl p-8 hover:border-brand/50 transition-all duration-300 group">
-                        <div class="w-14 h-14 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <i data-feather="dollar-sign" class="w-7 h-7 text-orange-600 dark:text-orange-400"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">Snipn</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-                            Turn traffic into revenue. Monetize your links with our paid URL shortener featuring high-CPM ad revenue sharing.
-                        </p>
-                        <button onclick="openModal('https://briceka.com/tools/snipn/index.php?embed=true')" class="w-full py-3 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-orange-500 hover:text-orange-600 dark:hover:text-orange-400 font-semibold transition-all duration-300 flex items-center justify-center">
-                            Start Earning <i data-feather="external-link" class="w-4 h-4 ml-2"></i>
-                        </button>
+                </form>
+
+                <div id="searchLoader" class="hidden justify-center py-8">
+                    <div class="loader"></div>
+                </div>
+
+                <div id="searchResults" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+                
+                <div id="deepLinks" class="hidden mt-8 pt-8 border-t border-slate-200 dark:border-slate-700">
+                    <h3 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">Deep Search External Databases</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <a id="linkOnlyCrave" href="#" target="_blank" class="flex items-center p-4 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-pink-500 hover:bg-pink-50 dark:hover:bg-pink-900/10 transition-all group">
+                            <div class="mr-4 bg-pink-100 text-pink-600 p-2 rounded-lg"><i data-feather="users"></i></div>
+                            <div>
+                                <div class="font-semibold text-slate-900 dark:text-white group-hover:text-pink-600">Search OnlyCrave Creators</div>
+                                <div class="text-xs text-slate-500">Find specific profiles directly</div>
+                            </div>
+                            <i data-feather="external-link" class="ml-auto w-4 h-4 text-slate-400"></i>
+                        </a>
+
+                        <a id="linkTrimd" href="#" target="_blank" class="flex items-center p-4 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-emerald-500 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-all group">
+                            <div class="mr-4 bg-emerald-100 text-emerald-600 p-2 rounded-lg"><i data-feather="file-text"></i></div>
+                            <div>
+                                <div class="font-semibold text-slate-900 dark:text-white group-hover:text-emerald-600">Search Trimd Blog</div>
+                                <div class="text-xs text-slate-500">Browse technical guides</div>
+                            </div>
+                            <i data-feather="external-link" class="ml-auto w-4 h-4 text-slate-400"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white/50 dark:bg-black/20">
-            <div class="max-w-4xl mx-auto">
-                <div class="bg-white dark:bg-slate-800 rounded-3xl shadow-xl p-8 border border-slate-100 dark:border-slate-700">
-                    <h2 class="text-2xl font-bold text-center text-slate-900 dark:text-white mb-8">Unified Platform Search</h2>
-                    
-                    <form id="multiSearchForm" class="mb-6 relative">
-                        <div class="relative group">
-                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                <i data-feather="search" class="w-5 h-5 text-slate-400 group-focus-within:text-brand transition-colors"></i>
-                            </div>
-                            <input type="search" id="searchQuery" 
-                                placeholder="Search tools, analytics, creator features..." 
-                                class="w-full pl-12 pr-4 py-4 bg-slate-50 dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-xl focus:ring-0 focus:border-brand dark:focus:border-brand text-slate-900 dark:text-white transition-all duration-300 outline-none"
-                                required minlength="2" />
-                            <button type="submit" class="absolute right-2 top-2 bottom-2 bg-brand hover:bg-brand-dark text-white px-6 rounded-lg font-medium transition-colors">
-                                Find
-                            </button>
-                        </div>
-                    </form>
-                    
-                    <div id="searchResults" class="grid grid-cols-1 md:grid-cols-2 gap-4 hidden opacity-0 transition-opacity duration-300">
-                        </div>
-                </div>
-            </div>
-        </section>
+        <footer class="bg-white dark:bg-slate-800 py-6 text-center border-t border-slate-200 dark:border-slate-700">
+            <p class="text-slate-500 text-sm">
+                &copy; 2025 Briceka Enterprise. All rights reserved.
+            </p>
+        </footer>
 
     </main>
 
-    <custom-footer></custom-footer>
-
-    <div id="previewModal" class="fixed inset-0 z-50 hidden opacity-0 transition-opacity duration-300" aria-hidden="true">
-        <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm" onclick="closeModal()"></div>
-        
-        <div class="absolute inset-4 md:inset-10 bg-white dark:bg-slate-900 rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-slate-700">
-            <div class="flex items-center justify-between px-6 py-4 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900">
-                <h3 class="text-lg font-semibold text-slate-900 dark:text-white flex items-center">
-                    <span class="w-2 h-2 rounded-full bg-green-500 mr-2 animate-pulse"></span> Live Preview
-                </h3>
-                <div class="flex gap-2">
-                    <a id="modalExternalLink" href="#" target="_blank" class="p-2 text-slate-500 hover:text-brand transition-colors" title="Open in new tab">
-                        <i data-feather="external-link" class="w-5 h-5"></i>
-                    </a>
-                    <button onclick="closeModal()" class="p-2 text-slate-500 hover:text-red-500 transition-colors" title="Close">
-                        <i data-feather="x" class="w-5 h-5"></i>
-                    </button>
-                </div>
-            </div>
-            
-            <div class="flex-1 relative bg-slate-100 dark:bg-slate-950">
-                <div id="modalLoader" class="absolute inset-0 flex items-center justify-center z-10 bg-slate-50 dark:bg-slate-900">
-                    <div class="loader"></div>
-                </div>
-                <iframe id="modalFrame" class="w-full h-full border-0" allowfullscreen loading="lazy"></iframe>
-            </div>
-        </div>
-    </div>
-
-    <script type="module" src="components/navbar.js"></script>
-    <script type="module" src="components/footer.js"></script>
-    <script src="script.js"></script> 
-
-    <script>
-        // Initialize Icons
-        feather.replace();
-
-        // Modal Logic
-        const modal = document.getElementById('previewModal');
-        const modalFrame = document.getElementById('modalFrame');
-        const modalLoader = document.getElementById('modalLoader');
-        const externalLink = document.getElementById('modalExternalLink');
-
-        window.openModal = function(url) {
-            modal.classList.remove('hidden');
-            // Small delay to allow display:block to apply before opacity transition
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-            }, 10);
-            
-            modalLoader.style.display = 'flex';
-            modalFrame.src = url;
-            externalLink.href = url;
-
-            modalFrame.onload = function() {
-                modalLoader.style.display = 'none';
-            };
-            
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
-        };
-
-        window.closeModal = function() {
-            modal.classList.add('opacity-0');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                modalFrame.src = ''; // Stop loading
-                document.body.style.overflow = '';
-            }, 300);
-        };
-
-        // Close on Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                closeModal();
-            }
-        });
-
-        // Search Interaction (Mock)
-        const searchForm = document.getElementById('multiSearchForm');
-        const searchResults = document.getElementById('searchResults');
-        
-        searchForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const query = document.getElementById('searchQuery').value;
-            // Add your search logic here or in script.js
-            searchResults.classList.remove('hidden', 'opacity-0');
-            searchResults.innerHTML = `<div class="p-4 bg-blue-50 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200 rounded-lg col-span-full text-center">Searching for "${query}" across the ecosystem...</div>`;
-        });
-    </script>
-</body>
-</html>
+    <div id="previewModal" class="fixed inset-0 z-50 hidden opacity-0 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-slate-900/90 backdrop-blur-sm" onclick="closeModal()"></div>
