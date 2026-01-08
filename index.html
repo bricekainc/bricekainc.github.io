@@ -1,239 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- SEO -->
+  <meta charset="UTF-8">
   <title>Briceka Enterprise Inc</title>
+  <meta name="description" content="Briceka Enterprise is where creativity runs wild, technology connects, and innovation reshapes every niche we touch. Latest stories from Briceka, OnlyCrave Blog, and Creators. Fast, searchable, and beautifully curated media panel.">
+  <meta name="keywords" content="Briceka, OnlyCrave, Creators, Blog, Media Panel">
+  <meta name="author" content="Briceka">
+  <link rel="canonical" href="https://bricekainc.github.io/">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Social -->
+  <meta property="og:title" content="Briceka Media Panel">
+  <meta property="og:description" content="Latest stories from Briceka & OnlyCrave">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bricekainc.github.io/">
+
+  <!-- Performance -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- Tailwind (CDN is OK for GH Pages) -->
+  <script src="https://cdn.tailwindcss.com" defer></script>
+
+  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    :root { --brand: #0102FD; }
-    body { font-family: 'Plus Jakarta Sans', sans-serif; background: #f8fafc; scroll-behavior: smooth; }
-    .card { display: none; transition: all 0.3s ease; border-radius: 2rem; border: 1px solid #e2e8f0; background: white; }
-    .card.is-visible { display: flex; flex-direction: column; overflow: hidden; }
-    .card:hover { transform: translateY(-8px); border-color: var(--brand); box-shadow: 0 20px 30px -10px rgba(1,2,253,.15); }
-    .back-to-top { position: fixed; bottom: 30px; right: 30px; z-index: 99; opacity: 0; visibility: hidden; transition: .3s; }
-    .back-to-top.show { opacity: 1; visibility: visible; }
-    .modal-blur { backdrop-filter: blur(20px); background: rgba(15,23,42,.7); }
+    :root { --brand:#0102FD; }
+    body { font-family:'Plus Jakarta Sans',sans-serif; background:#f8fafc; }
+    .card { display:none; }
+    .card.is-visible { display:flex; animation:fadeUp .45s ease both; }
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(20px); }
+      to { opacity:1; transform:none; }
+    }
+    .back-to-top { opacity:0; visibility:hidden; transition:.3s; }
+    .back-to-top.show { opacity:1; visibility:visible; }
   </style>
 </head>
 
 <body class="antialiased">
 
-<button id="backToTop" onclick="window.scrollTo(0,0)"
-  class="back-to-top w-14 h-14 bg-[#0102FD] text-white rounded-2xl shadow-2xl flex items-center justify-center">
+<!-- Back to top -->
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+  class="back-to-top fixed bottom-8 right-8 w-14 h-14 bg-[var(--brand)] text-white rounded-2xl shadow-xl flex items-center justify-center">
   <i class="fas fa-arrow-up"></i>
 </button>
 
-<nav class="sticky top-0 z-[100] bg-white/80 backdrop-blur-xl border-b">
-  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-    <div class="flex items-center gap-4">
-      <div class="w-10 h-10 bg-[#0102FD] rounded-xl flex items-center justify-center">
-        <span class="text-white font-black text-xl">B</span>
-      </div>
-      <span class="font-black text-xl tracking-tighter uppercase hidden md:block">
-        Briceka <span class="text-[#0102FD]">Panel</span>
-      </span>
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b">
+  <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center gap-6">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 bg-[var(--brand)] rounded-xl flex items-center justify-center text-white font-black">B</div>
+      <h1 class="font-black tracking-tight text-lg hidden sm:block">Briceka Panel</h1>
     </div>
 
-    <div class="flex-1 max-w-md mx-6 relative">
-      <input id="searchInput" placeholder="Search site..."
-        class="w-full bg-slate-100 rounded-2xl py-2.5 pl-5 pr-12 text-sm">
-      <button onclick="globalSearch()"
-        class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-[#0102FD] text-white rounded-xl">
-        <i class="fas fa-search text-xs"></i>
-      </button>
+    <div class="flex-1 max-w-md relative">
+      <input id="searchInput" placeholder="Search stories..."
+        class="w-full bg-slate-100 rounded-2xl py-2.5 pl-5 pr-12 text-sm"
+      >
+      <i class="fas fa-search absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
     </div>
-
-    <div class="flex items-center gap-6">
-      <button onclick="switchTab('feed')" class="font-extrabold text-xs uppercase text-[#0102FD]">Feed</button>
-      <button onclick="switchTab('donate')" class="font-extrabold text-xs uppercase text-slate-400">Donate</button>
-    </div>
-  </div>
-</nav>
+  </nav>
+</header>
 
 <main class="max-w-7xl mx-auto px-6 py-10">
 
-<section id="feedSection">
-
-<div class="flex flex-wrap gap-2 justify-center mb-12">
-  <button id="filter-all" onclick="setFilter('all')" class="filter-btn bg-[#0102FD] text-white px-6 py-3 rounded-xl text-[10px] font-black">All Stories</button>
-  <button id="filter-Briceka" onclick="setFilter('Briceka')" class="filter-btn bg-white border px-6 py-3 rounded-xl text-[10px] font-black">Briceka</button>
-  <button id="filter-Onlycrave Blog" onclick="setFilter('Onlycrave Blog')" class="filter-btn bg-white border px-6 py-3 rounded-xl text-[10px] font-black">Onlycrave</button>
-  <button id="filter-Creators" onclick="setFilter('Creators')" class="filter-btn bg-white border px-6 py-3 rounded-xl text-[10px] font-black text-orange-600">🔥 Creators</button>
-</div>
-
-<div id="itemGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-
-<div class="mt-16 flex justify-center">
-  <button id="loadMoreBtn" onclick="renderFeed(false)"
-    class="bg-white border px-10 py-4 rounded-2xl font-black text-xs uppercase">
-    Load More Stories
-  </button>
-</div>
-
+<section aria-label="Filters" class="flex flex-wrap gap-2 justify-center mb-12">
+  <button id="filter-all" class="filter-btn bg-[var(--brand)] text-white px-6 py-3 rounded-xl text-[10px] font-black" data-filter="all">All Stories</button>
+  <button id="filter-Briceka" class="filter-btn bg-white border px-6 py-3 rounded-xl text-[10px] font-black" data-filter="Briceka">Briceka</button>
+  <button id="filter-Onlycrave Blog" class="filter-btn bg-white border px-6 py-3 rounded-xl text-[10px] font-black" data-filter="Onlycrave Blog">Onlycrave</button>
+  <button id="filter-Creators" class="filter-btn bg-white border px-6 py-3 rounded-xl text-[10px] font-black text-orange-600" data-filter="Creators">🔥 Creators</button>
 </section>
 
-<section id="donateSection" class="hidden">
-  <div class="max-w-4xl mx-auto bg-white p-2 rounded-[3.5rem] shadow-2xl">
-    <iframe src="https://briceka.com/tools/donate/" class="w-full h-[75vh] rounded-[3rem]"></iframe>
+<section>
+  <div id="itemGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+
+  <div class="mt-16 flex justify-center">
+    <button id="loadMoreBtn"
+      class="bg-white border px-10 py-4 rounded-2xl font-black text-xs uppercase transition hover:scale-105">
+      Load More Stories
+    </button>
   </div>
 </section>
 
 </main>
 
-<!-- MODAL -->
-<div id="viewModal" class="fixed inset-0 z-[200] hidden flex items-center justify-center p-4 modal-blur">
-  <div class="bg-white w-full max-w-5xl rounded-[3rem] overflow-hidden flex flex-col h-[90vh]">
-    <div class="flex items-center justify-between px-8 py-4 border-b">
-      <div class="flex gap-3">
-        <button id="btn-reader" onclick="toggleMode('reader')" class="text-[10px] font-black bg-[#0102FD] text-white px-5 py-2.5 rounded-xl">Reading Mode</button>
-        <button id="btn-live" onclick="toggleMode('live')" class="text-[10px] font-black text-slate-400 px-5 py-2.5">Live Page</button>
-      </div>
-      <button onclick="closeView()"><i class="fas fa-times"></i></button>
+<!-- Modal -->
+<div id="viewModal" class="fixed inset-0 hidden z-[200] bg-black/70 backdrop-blur flex items-center justify-center p-4">
+  <div class="bg-white max-w-5xl w-full rounded-[2.5rem] overflow-hidden flex flex-col h-[90vh]">
+    <header class="flex justify-between items-center px-8 py-4 border-b">
+      <h2 id="mv-title" class="font-black text-xl"></h2>
+      <button onclick="closeView()" class="text-slate-400 hover:text-red-500">
+        <i class="fas fa-times"></i>
+      </button>
+    </header>
+    <div class="flex-grow overflow-y-auto p-10">
+      <img id="mv-img" class="w-full h-96 object-cover rounded-2xl mb-8">
+      <div id="mv-content" class="prose max-w-none"></div>
     </div>
-
-    <div class="flex-grow overflow-hidden">
-      <div id="reader-view" class="h-full overflow-y-auto p-10">
-        <img id="mv-img" class="w-full h-96 object-cover rounded-[2.5rem] mb-10">
-        <h2 id="mv-title" class="text-4xl font-black mb-8"></h2>
-        <div id="mv-content" class="text-slate-600 text-lg"></div>
-      </div>
-      <iframe id="live-view" class="hidden w-full h-full"></iframe>
-    </div>
-
-    <div class="p-8 border-t flex justify-center">
+    <footer class="p-6 border-t text-center">
       <a id="mv-link" target="_blank"
-        class="flex items-center justify-center w-full max-w-md py-5 rounded-2xl font-black text-xs uppercase bg-[#0102FD] text-white">
+        class="inline-block bg-[var(--brand)] text-white px-10 py-4 rounded-xl font-black text-xs uppercase">
         Read on Official Site
       </a>
-    </div>
+    </footer>
   </div>
 </div>
 
 <script>
+/* ---------------- STATE ---------------- */
 let allItems = [];
-let currentFilter = 'all';
+let filteredItems = [];
 let visibleCount = 0;
 const batchSize = 12;
 
-const el = id => document.getElementById(id);
+/* ---------------- HELPERS ---------------- */
+const $ = id => document.getElementById(id);
+const params = new URLSearchParams(location.search);
 
+/* ---------------- FETCH DATA ---------------- */
 fetch('./panel_cache.json')
   .then(r => r.json())
   .then(data => {
     allItems = data;
-    renderItems();
-    renderFeed();
-  })
-  .catch(err => console.error('Failed to load feed:', err));
-
-function renderItems() {
-  const grid = el('itemGrid');
-  grid.innerHTML = '';
-
-  allItems.forEach(item => {
-    const isNew = (Date.now() / 1000 - item.date) < 86400;
-
-    grid.insertAdjacentHTML('beforeend', `
-      <div class="card article-box" data-source="${item.source}" data-title="${item.title.toLowerCase()}">
-        <div class="h-60 overflow-hidden relative group">
-          <img src="${item.image}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-          ${isNew ? `<div class="absolute top-4 right-4 bg-[#0102FD] text-white text-[9px] px-3 py-1 rounded-full">NEW</div>` : ''}
-          <div class="absolute top-4 left-4 px-2 py-1 bg-white/80 rounded text-[8px] font-bold uppercase">
-            ${item.source}
-          </div>
-        </div>
-        <div class="p-8 flex flex-col flex-grow">
-          <h2 class="text-lg font-black mb-3">${item.title}</h2>
-          <p class="text-slate-500 text-xs mb-8">${item.preview}</p>
-          <button onclick='openView(${JSON.stringify(item).replace(/'/g, "&apos;")})'
-            class="mt-auto bg-slate-900 text-white px-6 py-2.5 rounded-xl text-[9px] font-black uppercase">
-            Open
-          </button>
-        </div>
-      </div>
-    `);
-  });
-}
-
-function renderFeed(reset = true) {
-  const cards = [...document.querySelectorAll('.article-box')];
-  if (reset) {
-    visibleCount = 0;
-    cards.forEach(c => c.classList.remove('is-visible'));
-  }
-
-  let shown = 0;
-  cards.forEach(card => {
-    const match =
-      (currentFilter === 'all' || card.dataset.source === currentFilter);
-
-    if (match && !card.classList.contains('is-visible') && shown < batchSize) {
-      card.classList.add('is-visible');
-      shown++;
-      visibleCount++;
-    }
+    initFromURL();
+    applyFilters();
+    renderNext();
   });
 
-  el('loadMoreBtn').style.display =
-    visibleCount >= cards.filter(c =>
-      currentFilter === 'all' || c.dataset.source === currentFilter
-    ).length
-      ? 'none'
-      : 'block';
-}
+/* ---------------- FILTER + SEARCH ---------------- */
+function applyFilters() {
+  const filter = params.get('filter') || 'all';
+  const q = (params.get('q') || '').toLowerCase();
 
-function setFilter(src) {
-  currentFilter = src;
-  renderFeed(true);
-}
-
-function globalSearch() {
-  const q = el('searchInput').value.trim();
-  if (!q) return;
-  window.open(
-    `https://www.google.com/search?q=site:briceka.com OR site:onlycrave.com ${encodeURIComponent(q)}`,
-    '_blank'
+  filteredItems = allItems.filter(i =>
+    (filter === 'all' || i.source === filter) &&
+    i.title.toLowerCase().includes(q)
   );
+
+  visibleCount = 0;
+  $('itemGrid').innerHTML = '';
 }
 
-function openView(item) {
-  el('mv-img').src = item.image;
-  el('mv-title').innerText = item.title;
-  el('mv-content').innerHTML = item.full_html;
-  el('live-view').src = item.link;
-  el('mv-link').href = item.link;
+function renderNext() {
+  const slice = filteredItems.slice(visibleCount, visibleCount + batchSize);
+  slice.forEach(renderCard);
+  visibleCount += slice.length;
+  $('loadMoreBtn').style.display = visibleCount >= filteredItems.length ? 'none' : 'block';
+}
 
-  toggleMode('reader');
-  el('viewModal').classList.remove('hidden');
+function renderCard(item) {
+  $('itemGrid').insertAdjacentHTML('beforeend', `
+    <article class="card is-visible bg-white rounded-3xl border overflow-hidden shadow hover:shadow-xl transition">
+      <img src="${item.image}" alt="${item.title}" class="h-56 w-full object-cover">
+      <div class="p-6 flex flex-col h-full">
+        <h3 class="font-black mb-2">${item.title}</h3>
+        <p class="text-slate-500 text-sm mb-6">${item.preview}</p>
+        <button onclick='openView(${JSON.stringify(item).replace(/'/g,"&apos;")})'
+          class="mt-auto text-xs font-black uppercase text-[var(--brand)]">
+          Open →
+        </button>
+      </div>
+    </article>
+  `);
+}
+
+/* ---------------- EVENTS ---------------- */
+$('loadMoreBtn').onclick = renderNext;
+
+$('searchInput').oninput = e => {
+  params.set('q', e.target.value);
+  history.replaceState(null, '', '?' + params);
+  applyFilters();
+  renderNext();
+};
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.onclick = () => {
+    params.set('filter', btn.dataset.filter);
+    history.replaceState(null, '', '?' + params);
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('bg-[var(--brand)]','text-white'));
+    btn.classList.add('bg-[var(--brand)]','text-white');
+    applyFilters();
+    renderNext();
+  };
+});
+
+/* ---------------- MODAL ---------------- */
+function openView(item){
+  $('mv-img').src = item.image;
+  $('mv-title').textContent = item.title;
+  $('mv-content').innerHTML = item.full_html;
+  $('mv-link').href = item.link;
+  $('viewModal').classList.remove('hidden');
   document.body.style.overflow = 'hidden';
 }
-
-function closeView() {
-  el('viewModal').classList.add('hidden');
-  el('live-view').src = '';
-  document.body.style.overflow = 'auto';
+function closeView(){
+  $('viewModal').classList.add('hidden');
+  document.body.style.overflow = '';
 }
 
-function toggleMode(mode) {
-  el('reader-view').classList.toggle('hidden', mode === 'live');
-  el('live-view').classList.toggle('hidden', mode === 'reader');
+/* ---------------- INIT ---------------- */
+function initFromURL(){
+  const f = params.get('filter');
+  if(f){
+    const b = document.querySelector(`[data-filter="${f}"]`);
+    b && b.click();
+  }
 }
 
-function switchTab(v) {
-  el('feedSection').classList.toggle('hidden', v !== 'feed');
-  el('donateSection').classList.toggle('hidden', v !== 'donate');
-}
-
+/* ---------------- UI ---------------- */
 window.addEventListener('scroll', () => {
-  el('backToTop').classList.toggle('show', window.scrollY > 500);
+  $('backToTop').classList.toggle('show', scrollY > 600);
 });
 </script>
-
 
 </body>
 </html>
