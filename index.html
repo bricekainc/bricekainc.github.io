@@ -1,220 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <title>Briceka — Official Hub</title>
+
   <!-- SEO -->
-  <meta charset="UTF-8">
-  <title>Briceka Enterprise Inc</title>
-  <meta name="description" content="Briceka Enterprise is where creativity runs wild, technology connects, and innovation reshapes every niche we touch. Latest stories from Briceka, OnlyCrave Blog, and Creators. Fast, searchable, and beautifully curated media panel.">
-  <meta name="keywords" content="Briceka, OnlyCrave, Creators, Blog, Media Panel">
+  <meta name="description" content="Official Briceka hub. Explore Briceka, OnlyCrave, Creators, and support our work through donations.">
+  <meta name="keywords" content="Briceka, OnlyCrave, Creators, Donate, Blog">
   <meta name="author" content="Briceka">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="https://bricekainc.github.io/">
-
-  <!-- Social -->
-  <meta property="og:title" content="Briceka Media Panel">
-  <meta property="og:description" content="Latest stories from Briceka & OnlyCrave">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://bricekainc.github.io/">
-
-  <!-- Performance -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preconnect" href="https://cdn.tailwindcss.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <!-- Tailwind (CDN is OK for GH Pages) -->
-  <script src="https://cdn.tailwindcss.com" defer></script>
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  <!-- Tailwind CDN (safe for GH Pages) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
-    :root { --brand:#0102FD; }
-    body { font-family:'Plus Jakarta Sans',sans-serif; background:#f8fafc; }
-    .card { display:none; }
-    .card.is-visible { display:flex; animation:fadeUp .45s ease both; }
-    @keyframes fadeUp {
-      from { opacity:0; transform:translateY(20px); }
-      to { opacity:1; transform:none; }
-    }
-    .back-to-top { opacity:0; visibility:hidden; transition:.3s; }
-    .back-to-top.show { opacity:1; visibility:visible; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
   </style>
 </head>
 
-<body class="antialiased">
+<body class="bg-slate-50 text-slate-800">
 
-<!-- Back to top -->
-<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"
-  class="back-to-top fixed bottom-8 right-8 w-14 h-14 bg-[var(--brand)] text-white rounded-2xl shadow-xl flex items-center justify-center">
-  <i class="fas fa-arrow-up"></i>
-</button>
-
-<header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b">
-  <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center gap-6">
-    <div class="flex items-center gap-3">
-      <div class="w-10 h-10 bg-[var(--brand)] rounded-xl flex items-center justify-center text-white font-black">B</div>
-      <h1 class="font-black tracking-tight text-lg hidden sm:block">Briceka Panel</h1>
+<!-- HERO -->
+<header class="bg-white border-b">
+  <div class="max-w-7xl mx-auto px-6 py-16 text-center">
+    <div class="w-16 h-16 mx-auto mb-6 bg-[#0102FD] rounded-2xl flex items-center justify-center shadow-lg">
+      <span class="text-white text-3xl font-black">B</span>
     </div>
-
-    <div class="flex-1 max-w-md relative">
-      <input id="searchInput" placeholder="Search stories..."
-        class="w-full bg-slate-100 rounded-2xl py-2.5 pl-5 pr-12 text-sm"
-      >
-      <i class="fas fa-search absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
-    </div>
-  </nav>
+    <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-4">
+      Briceka
+    </h1>
+    <p class="text-slate-500 max-w-xl mx-auto text-lg">
+      The official hub for Briceka, OnlyCrave, and our Creators ecosystem.
+    </p>
+  </div>
 </header>
 
-<main class="max-w-7xl mx-auto px-6 py-10">
+<!-- LINKS -->
+<main class="max-w-7xl mx-auto px-6 py-20">
 
-<section aria-label="Filters" class="flex flex-wrap gap-2 justify-center mb-12">
-  <button id="filter-all" class="filter-btn bg-[var(--brand)] text-white px-6 py-3 rounded-xl text-[10px] font-black" data-filter="all">All Stories</button>
-  <button id="filter-Briceka" class="filter-btn bg-white border px-6 py-3 rounded-xl text-[10px] font-black" data-filter="Briceka">Briceka</button>
-  <button id="filter-Onlycrave Blog" class="filter-btn bg-white border px-6 py-3 rounded-xl text-[10px] font-black" data-filter="Onlycrave Blog">Onlycrave</button>
-  <button id="filter-Creators" class="filter-btn bg-white border px-6 py-3 rounded-xl text-[10px] font-black text-orange-600" data-filter="Creators">🔥 Creators</button>
-</section>
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-24">
 
-<section>
-  <div id="itemGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    <!-- Briceka -->
+    <a href="https://briceka.com" target="_blank"
+       class="group bg-white rounded-[2.5rem] p-10 shadow hover:shadow-2xl transition">
+      <h2 class="text-2xl font-black mb-4 group-hover:text-[#0102FD] transition">
+        Briceka
+      </h2>
+      <p class="text-slate-500 mb-6">
+        Official Briceka website featuring news, tools, and updates.
+      </p>
+      <span class="font-black text-xs uppercase tracking-widest text-[#0102FD]">
+        Visit Website →
+      </span>
+    </a>
 
-  <div class="mt-16 flex justify-center">
-    <button id="loadMoreBtn"
-      class="bg-white border px-10 py-4 rounded-2xl font-black text-xs uppercase transition hover:scale-105">
-      Load More Stories
-    </button>
-  </div>
-</section>
+    <!-- OnlyCrave -->
+    <a href="https://onlycrave.com" target="_blank"
+       class="group bg-white rounded-[2.5rem] p-10 shadow hover:shadow-2xl transition">
+      <h2 class="text-2xl font-black mb-4 group-hover:text-pink-500 transition">
+        OnlyCrave
+      </h2>
+      <p class="text-slate-500 mb-6">
+        Discover creators, exclusive content, and community features.
+      </p>
+      <span class="font-black text-xs uppercase tracking-widest text-pink-500">
+        Explore OnlyCrave →
+      </span>
+    </a>
+
+    <!-- Creators -->
+    <a href="https://onlycrave.com/creators" target="_blank"
+       class="group bg-white rounded-[2.5rem] p-10 shadow hover:shadow-2xl transition">
+      <h2 class="text-2xl font-black mb-4 group-hover:text-orange-500 transition">
+        Creators
+      </h2>
+      <p class="text-slate-500 mb-6">
+        Follow our creators and support their work.
+      </p>
+      <span class="font-black text-xs uppercase tracking-widest text-orange-500">
+        View Creators →
+      </span>
+    </a>
+
+  </section>
+
+  <!-- DONATE -->
+  <section class="bg-white rounded-[3rem] shadow-2xl p-14 text-center">
+    <h2 class="text-3xl font-black mb-6">
+      Support Our Work
+    </h2>
+    <p class="text-slate-500 max-w-xl mx-auto mb-10">
+      Donations help keep Briceka and OnlyCrave running, improving tools,
+      and supporting creators.
+    </p>
+
+    <a href="https://briceka.com/tools/donate/" target="_blank"
+       class="inline-flex items-center justify-center gap-4 bg-[#0102FD] text-white px-12 py-6 rounded-2xl font-black text-xs uppercase tracking-[0.2em] shadow-xl hover:scale-105 transition">
+      <i class="fas fa-heart"></i>
+      Donate Now
+    </a>
+  </section>
 
 </main>
 
-<!-- Modal -->
-<div id="viewModal" class="fixed inset-0 hidden z-[200] bg-black/70 backdrop-blur flex items-center justify-center p-4">
-  <div class="bg-white max-w-5xl w-full rounded-[2.5rem] overflow-hidden flex flex-col h-[90vh]">
-    <header class="flex justify-between items-center px-8 py-4 border-b">
-      <h2 id="mv-title" class="font-black text-xl"></h2>
-      <button onclick="closeView()" class="text-slate-400 hover:text-red-500">
-        <i class="fas fa-times"></i>
-      </button>
-    </header>
-    <div class="flex-grow overflow-y-auto p-10">
-      <img id="mv-img" class="w-full h-96 object-cover rounded-2xl mb-8">
-      <div id="mv-content" class="prose max-w-none"></div>
-    </div>
-    <footer class="p-6 border-t text-center">
-      <a id="mv-link" target="_blank"
-        class="inline-block bg-[var(--brand)] text-white px-10 py-4 rounded-xl font-black text-xs uppercase">
-        Read on Official Site
-      </a>
-    </footer>
-  </div>
-</div>
+<!-- FOOTER -->
+<footer class="text-center py-10 text-slate-400 text-sm">
+  © <span id="year"></span> Briceka. All rights reserved.
+</footer>
 
 <script>
-/* ---------------- STATE ---------------- */
-let allItems = [];
-let filteredItems = [];
-let visibleCount = 0;
-const batchSize = 12;
-
-/* ---------------- HELPERS ---------------- */
-const $ = id => document.getElementById(id);
-const params = new URLSearchParams(location.search);
-
-/* ---------------- FETCH DATA ---------------- */
-fetch('./panel_cache.json')
-  .then(r => r.json())
-  .then(data => {
-    allItems = data;
-    initFromURL();
-    applyFilters();
-    renderNext();
-  });
-
-/* ---------------- FILTER + SEARCH ---------------- */
-function applyFilters() {
-  const filter = params.get('filter') || 'all';
-  const q = (params.get('q') || '').toLowerCase();
-
-  filteredItems = allItems.filter(i =>
-    (filter === 'all' || i.source === filter) &&
-    i.title.toLowerCase().includes(q)
-  );
-
-  visibleCount = 0;
-  $('itemGrid').innerHTML = '';
-}
-
-function renderNext() {
-  const slice = filteredItems.slice(visibleCount, visibleCount + batchSize);
-  slice.forEach(renderCard);
-  visibleCount += slice.length;
-  $('loadMoreBtn').style.display = visibleCount >= filteredItems.length ? 'none' : 'block';
-}
-
-function renderCard(item) {
-  $('itemGrid').insertAdjacentHTML('beforeend', `
-    <article class="card is-visible bg-white rounded-3xl border overflow-hidden shadow hover:shadow-xl transition">
-      <img src="${item.image}" alt="${item.title}" class="h-56 w-full object-cover">
-      <div class="p-6 flex flex-col h-full">
-        <h3 class="font-black mb-2">${item.title}</h3>
-        <p class="text-slate-500 text-sm mb-6">${item.preview}</p>
-        <button onclick='openView(${JSON.stringify(item).replace(/'/g,"&apos;")})'
-          class="mt-auto text-xs font-black uppercase text-[var(--brand)]">
-          Open →
-        </button>
-      </div>
-    </article>
-  `);
-}
-
-/* ---------------- EVENTS ---------------- */
-$('loadMoreBtn').onclick = renderNext;
-
-$('searchInput').oninput = e => {
-  params.set('q', e.target.value);
-  history.replaceState(null, '', '?' + params);
-  applyFilters();
-  renderNext();
-};
-
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.onclick = () => {
-    params.set('filter', btn.dataset.filter);
-    history.replaceState(null, '', '?' + params);
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('bg-[var(--brand)]','text-white'));
-    btn.classList.add('bg-[var(--brand)]','text-white');
-    applyFilters();
-    renderNext();
-  };
-});
-
-/* ---------------- MODAL ---------------- */
-function openView(item){
-  $('mv-img').src = item.image;
-  $('mv-title').textContent = item.title;
-  $('mv-content').innerHTML = item.full_html;
-  $('mv-link').href = item.link;
-  $('viewModal').classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
-}
-function closeView(){
-  $('viewModal').classList.add('hidden');
-  document.body.style.overflow = '';
-}
-
-/* ---------------- INIT ---------------- */
-function initFromURL(){
-  const f = params.get('filter');
-  if(f){
-    const b = document.querySelector(`[data-filter="${f}"]`);
-    b && b.click();
-  }
-}
-
-/* ---------------- UI ---------------- */
-window.addEventListener('scroll', () => {
-  $('backToTop').classList.toggle('show', scrollY > 600);
-});
+  document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
 </body>
