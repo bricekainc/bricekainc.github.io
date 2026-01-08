@@ -120,69 +120,120 @@ let currentFilter = 'all';
 let visibleCount = 0;
 const batchSize = 12;
 
+const el = id => document.getElementById(id);
+
 fetch('./panel_cache.json')
   .then(r => r.json())
   .then(data => {
     allItems = data;
     renderItems();
     renderFeed();
-  });
+  })
+  .catch(err => console.error('Failed to load feed:', err));
 
 function renderItems() {
-  const grid = document.getElementById('itemGrid');
+  const grid = el('itemGrid');
   grid.innerHTML = '';
+
   allItems.forEach(item => {
-    const isNew = (Date.now()/1000 - item.date) < 86400;
-    grid.innerHTML += `
+    const isNew = (Date.now() / 1000 - item.date) < 86400;
+
+    grid.insertAdjacentHTML('beforeend', `
       <div class="card article-box" data-source="${item.source}" data-title="${item.title.toLowerCase()}">
-        <div class="h-60 overflow-hidden relative">
-          <img src="${item.image}" class="w-full h-full object-cover">
+        <div class="h-60 overflow-hidden relative group">
+          <img src="${item.image}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
           ${isNew ? `<div class="absolute top-4 right-4 bg-[#0102FD] text-white text-[9px] px-3 py-1 rounded-full">NEW</div>` : ''}
+          <div class="absolute top-4 left-4 px-2 py-1 bg-white/80 rounded text-[8px] font-bold uppercase">
+            ${item.source}
+          </div>
         </div>
         <div class="p-8 flex flex-col flex-grow">
           <h2 class="text-lg font-black mb-3">${item.title}</h2>
           <p class="text-slate-500 text-xs mb-8">${item.preview}</p>
-          <button onclick='openView(${JSON.stringify(item)})'
+          <button onclick='openView(${JSON.stringify(item).replace(/'/g, "&apos;")})'
             class="mt-auto bg-slate-900 text-white px-6 py-2.5 rounded-xl text-[9px] font-black uppercase">
             Open
           </button>
         </div>
-      </div>`;
+      </div>
+    `);
   });
 }
 
-function renderFeed(reset=true) {
+function renderFeed(reset = true) {
   const cards = [...document.querySelectorAll('.article-box')];
-  if(reset){visibleCount=0;cards.forEach(c=>c.classList.remove('is-visible'))}
-  let shown=0;
-  cards.forEach(c=>{
-    if((currentFilter==='all'||c.dataset.source===currentFilter)&&shown<batchSize){
-      if(!c.classList.contains('is-visible')){c.classList.add('is-visible');shown++;visibleCount++}
+  if (reset) {
+    visibleCount = 0;
+    cards.forEach(c => c.classList.remove('is-visible'));
+  }
+
+  let shown = 0;
+  cards.forEach(card => {
+    const match =
+      (currentFilter === 'all' || card.dataset.source === currentFilter);
+
+    if (match && !card.classList.contains('is-visible') && shown < batchSize) {
+      card.classList.add('is-visible');
+      shown++;
+      visibleCount++;
     }
   });
+
+  el('loadMoreBtn').style.display =
+    visibleCount >= cards.filter(c =>
+      currentFilter === 'all' || c.dataset.source === currentFilter
+    ).length
+      ? 'none'
+      : 'block';
 }
 
-function setFilter(f){currentFilter=f;renderFeed(true)}
-function globalSearch(){const q=searchInput.value;if(q)window.open(`https://www.google.com/search?q=site:briceka.com OR site:onlycrave.com ${q}`)}
-function openView(i){
-  mv-img.src=i.image;
-  mv-title.innerText=i.title;
-  mv-content.innerHTML=i.full_html;
-  live-view.src=i.link;
-  mv-link.href=i.link;
-  viewModal.classList.remove('hidden');
+function setFilter(src) {
+  currentFilter = src;
+  renderFeed(true);
 }
-function closeView(){viewModal.classList.add('hidden');live-view.src=''}
-function toggleMode(m){
-  reader-view.classList.toggle('hidden',m==='live');
-  live-view.classList.toggle('hidden',m==='reader');
+
+function globalSearch() {
+  const q = el('searchInput').value.trim();
+  if (!q) return;
+  window.open(
+    `https://www.google.com/search?q=site:briceka.com OR site:onlycrave.com ${encodeURIComponent(q)}`,
+    '_blank'
+  );
 }
-function switchTab(v){
-  feedSection.classList.toggle('hidden',v!=='feed');
-  donateSection.classList.toggle('hidden',v!=='donate');
+
+function openView(item) {
+  el('mv-img').src = item.image;
+  el('mv-title').innerText = item.title;
+  el('mv-content').innerHTML = item.full_html;
+  el('live-view').src = item.link;
+  el('mv-link').href = item.link;
+
+  toggleMode('reader');
+  el('viewModal').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
 }
-window.onscroll=()=>backToTop.classList.toggle('show',scrollY>500);
+
+function closeView() {
+  el('viewModal').classList.add('hidden');
+  el('live-view').src = '';
+  document.body.style.overflow = 'auto';
+}
+
+function toggleMode(mode) {
+  el('reader-view').classList.toggle('hidden', mode === 'live');
+  el('live-view').classList.toggle('hidden', mode === 'reader');
+}
+
+function switchTab(v) {
+  el('feedSection').classList.toggle('hidden', v !== 'feed');
+  el('donateSection').classList.toggle('hidden', v !== 'donate');
+}
+
+window.addEventListener('scroll', () => {
+  el('backToTop').classList.toggle('show', window.scrollY > 500);
+});
 </script>
+
 
 </body>
 </html>
