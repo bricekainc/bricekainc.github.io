@@ -3,17 +3,28 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Briceka Enterprise Inc. | Innovating Digital Infrastructure</title>
+    <title>Briceka Enterprise Inc. | The Vanguard of Digital Infrastructure</title>
     
-    <meta name="description" content="Briceka Enterprise Inc. is a digital innovation powerhouse managing a portfolio of high-growth platforms including OnlyCrave (creator economy), Trimd (URL management), and Briceka (SaaS solutions).">
-    <meta name="keywords" content="Briceka Enterprise, OnlyCrave platform, Trimd URL shortener, Digital Innovation, Creator Economy, SaaS portfolio">
-    <link rel="canonical" href="https://bricekainc.github.io/">
+    <meta name="description" content="Briceka Enterprise Inc. is a diversified technology conglomerate specializing in creator economy platforms, link management systems, and scalable SaaS infrastructure.">
+    <meta name="keywords" content="Briceka Enterprise, OnlyCrave, Trimd, Digital Ecosystem, SaaS Portfolio, Creator Economy Infrastructure">
+    <meta name="author" content="Briceka Enterprise Inc.">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Briceka Enterprise Inc.",
+      "url": "https://bricekainc.github.io/",
+      "logo": "https://bricekainc.github.io/logo.png",
+      "subOrganization": [
+        { "@type": "Organization", "name": "OnlyCrave", "url": "https://onlycrave.com" },
+        { "@type": "Organization", "name": "Trimd", "url": "https://trimd.cc" },
+        { "@type": "Organization", "name": "Briceka", "url": "https://briceka.com" }
+      ]
+    }
+    </script>
 
-    <meta property="og:title" content="Briceka Enterprise Inc.">
-    <meta property="og:description" content="Leading the next generation of digital tools and creator platforms.">
-    <meta property="og:type" content="website">
-
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -21,93 +32,114 @@
                 extend: {
                     colors: {
                         bricekaBlue: '#0102FD',
+                        premiumDark: '#0A0A0B',
                     }
                 }
             }
         }
     </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); }
+        .hero-gradient { background: radial-gradient(circle at top right, rgba(1, 2, 253, 0.08), transparent 40%), radial-gradient(circle at bottom left, rgba(1, 2, 253, 0.05), transparent 40%); }
+    </style>
 </head>
 
-<body class="bg-slate-50 text-slate-900 font-['Plus_Jakarta_Sans']">
+<body class="bg-[#FAFAFB] text-premiumDark selection:bg-bricekaBlue selection:text-white">
 
-    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-bricekaBlue rounded-lg flex items-center justify-center text-white font-bold">B</div>
-                <span class="font-extrabold tracking-tighter text-xl">BRICEKA ENTERPRISE</span>
+    <nav class="glass sticky top-0 z-50 border-b border-slate-200/50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-bricekaBlue rounded-xl flex items-center justify-center text-white font-black shadow-[0_8px_20px_rgba(1,2,253,0.3)]">B</div>
+                <span class="font-extrabold tracking-tighter text-xl uppercase italic">Briceka<span class="font-light text-slate-400">Enterprise</span></span>
             </div>
-            <div class="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest">
-                <a href="#portfolio" class="hover:text-bricekaBlue transition">Portfolio</a>
-                <a href="https://briceka.com/tools/donate/" class="text-bricekaBlue">Support</a>
+            <div class="hidden md:flex items-center gap-10 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500">
+                <a href="briceka.html" class="hover:text-bricekaBlue transition">Infrastructure</a>
+                <a href="onlycrave.html" class="hover:text-bricekaBlue transition">Creator platform</a>
+                <a href="trimd.html" class="hover:text-bricekaBlue transition">Connectivity</a>
+                <a href="donate.html" class="bg-premiumDark text-white px-6 py-3 rounded-full hover:bg-bricekaBlue transition shadow-lg">Support Inc.</a>
             </div>
         </div>
     </nav>
 
-    <header class="py-20 px-6 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
-                Architecting the <span class="text-bricekaBlue">Digital Future.</span>
-            </h1>
-            <p class="text-xl text-slate-600 leading-relaxed mb-10">
-                Briceka Enterprise Inc. is a multi-sector technology umbrella dedicated to building tools that empower creators, streamline digital connectivity, and redefine user engagement across the web.
-            </p>
-        </div>
-    </header>
-
-    <main class="max-w-7xl mx-auto px-6 pb-20">
-        
-        <section id="portfolio" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-            
-            <article class="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl border border-slate-100 transition group">
-                <div class="w-12 h-12 bg-bricekaBlue/10 rounded-xl flex items-center justify-center mb-6 text-bricekaBlue">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-                </div>
-                <h2 class="text-2xl font-black mb-3 group-hover:text-bricekaBlue transition">Briceka Company</h2>
-                <p class="text-slate-500 mb-6 leading-relaxed">
-                    The core technological hub of the enterprise, providing robust infrastructure and SaaS tools designed for high-performance digital environments.
+    <main class="hero-gradient">
+        <header class="pt-28 pb-20 px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <span class="inline-block py-2 px-4 rounded-full bg-bricekaBlue/5 text-bricekaBlue text-[10px] font-bold uppercase tracking-[0.3em] mb-8 border border-bricekaBlue/10">
+                    Est. 2026 • Digital Conglomerate
+                </span>
+                <h1 class="text-6xl md:text-8xl font-[800] mb-8 tracking-tight leading-[0.95] text-slate-900">
+                    The intersection of <br/><span class="text-bricekaBlue">logic & creativity.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-500 leading-relaxed max-w-2xl mx-auto font-light">
+                    Managing a diversified portfolio of high-growth digital assets. We build the systems that allow the modern world to connect, share, and scale.
                 </p>
-                <a href="./briceka.html" class="inline-block font-extrabold text-sm text-bricekaBlue underline decoration-2 underline-offset-4">EXPLORE BRICEKA →</a>
-            </article>
+            </div>
+        </header>
 
-            <article class="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl border border-slate-100 transition group">
-                <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-6 text-orange-600">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                </div>
-                <h2 class="text-2xl font-black mb-3 group-hover:text-orange-600 transition">OnlyCrave</h2>
-                <p class="text-slate-500 mb-6 leading-relaxed">
-                    A premier creator monetization platform allowing influencers to share exclusive content and build direct-to-fan revenue streams.
-                </p>
-                <a href="./onlycrave.html" class="inline-block font-extrabold text-sm text-orange-600 underline decoration-2 underline-offset-4">JOIN THE CRAVE →</a>
-            </article>
+        <section class="max-w-7xl mx-auto px-6 py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                
+                <article class="group relative bg-white border border-slate-100 p-12 rounded-[3rem] hover:border-bricekaBlue/20 transition-all duration-500 hover:shadow-[0_30px_60px_-15px_rgba(1,2,253,0.1)]">
+                    <div class="mb-10 w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center group-hover:bg-bricekaBlue/10 transition-colors">
+                        <svg class="w-6 h-6 text-bricekaBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    <h2 class="text-3xl font-extrabold mb-4">Briceka</h2>
+                    <p class="text-slate-500 mb-8 font-light leading-relaxed">The bedrock of our enterprise. Specialized SaaS solutions and advanced web infrastructure for the modern tech stack.</p>
+                    <a href="briceka.html" class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-bricekaBlue group-hover:gap-4 transition-all">
+                        Explore Entity <span>→</span>
+                    </a>
+                </article>
 
-            <article class="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl border border-slate-100 transition group">
-                <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-6 text-emerald-600">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
-                </div>
-                <h2 class="text-2xl font-black mb-3 group-hover:text-emerald-600 transition">Trimd</h2>
-                <p class="text-slate-500 mb-6 leading-relaxed">
-                    Advanced URL shortening and bio-link management tool optimized for marketing analytics and brand recognition.
-                </p>
-                <a href="./trimd.html" class="inline-block font-extrabold text-sm text-emerald-600 underline decoration-2 underline-offset-4">MANAGE LINKS →</a>
-            </article>
+                <article class="group relative bg-white border border-slate-100 p-12 rounded-[3rem] hover:border-orange-500/20 transition-all duration-500 hover:shadow-[0_30px_60px_-15px_rgba(249,115,22,0.1)]">
+                    <div class="mb-10 w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center group-hover:bg-orange-50 transition-colors">
+                        <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h2 class="text-3xl font-extrabold mb-4">OnlyCrave</h2>
+                    <p class="text-slate-500 mb-8 font-light leading-relaxed">A specialized monetization ecosystem for the creator economy, focusing on high-engagement subscription models.</p>
+                    <a href="onlycrave.html" class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-orange-500 group-hover:gap-4 transition-all">
+                        View Platform <span>→</span>
+                    </a>
+                </article>
 
+                <article class="group relative bg-white border border-slate-100 p-12 rounded-[3rem] hover:border-emerald-500/20 transition-all duration-500 hover:shadow-[0_30px_60px_-15px_rgba(16,185,129,0.1)]">
+                    <div class="mb-10 w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center group-hover:bg-emerald-50 transition-colors">
+                        <svg class="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                    </div>
+                    <h2 class="text-3xl font-extrabold mb-4">Trimd</h2>
+                    <p class="text-slate-500 mb-8 font-light leading-relaxed">The next generation of URL management. Dynamic bio-links and marketing analytics for global brands.</p>
+                    <a href="trimd.html" class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-600 group-hover:gap-4 transition-all">
+                        Access Tools <span>→</span>
+                    </a>
+                </article>
+
+            </div>
         </section>
 
-        <section class="bg-slate-900 text-white rounded-[3rem] p-12 text-center overflow-hidden relative">
-            <div class="relative z-10">
-                <h2 class="text-3xl font-black mb-6">Support Global Innovation</h2>
-                <p class="text-slate-400 max-w-2xl mx-auto mb-8 text-lg">
-                    By supporting Briceka Enterprise, you are investing in the development of open, efficient, and creative tools for the modern web.
-                </p>
-                <a href="https://briceka.com/tools/donate/" class="bg-bricekaBlue hover:bg-blue-600 px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-widest inline-block transition transform hover:scale-105">
-                    Make a Contribution
+        <section class="max-w-4xl mx-auto px-6 py-24 text-center">
+            <h3 class="text-sm font-bold uppercase tracking-[0.4em] text-slate-400 mb-6">Partner With Us</h3>
+            <p class="text-3xl font-light mb-12 text-slate-600">Interested in the tech behind the enterprise? Join us in shaping the digital frontier.</p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                <a href="donate.html" class="px-12 py-6 bg-bricekaBlue text-white rounded-2xl font-black shadow-2xl hover:bg-blue-700 transition transform hover:-translate-y-1">
+                    SUPPORT THE MISSION
+                </a>
+                <a href="https://briceka.com" class="px-12 py-6 bg-white text-premiumDark border border-slate-200 rounded-2xl font-black hover:bg-slate-50 transition">
+                    CORPORATE SITE
                 </a>
             </div>
         </section>
     </main>
 
-    <footer class="text-center py-10 text-slate-400 text-sm">
-        &copy; 2026 Briceka Enterprise Inc. All rights reserved.
+    <footer class="border-t border-slate-100 py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-slate-400 text-[10px] font-bold uppercase tracking-widest">&copy; 2026 Briceka Enterprise Inc.</p>
+            <div class="flex gap-8 text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                <a href="index.html" class="text-bricekaBlue">Home</a>
+                <a href="briceka.html" class="hover:text-premiumDark transition">Briceka</a>
+                <a href="onlycrave.html" class="hover:text-premiumDark transition">OnlyCrave</a>
+                <a href="trimd.html" class="hover:text-premiumDark transition">Trimd</a>
+            </div>
+        </div>
     </footer>
 
 </body>
