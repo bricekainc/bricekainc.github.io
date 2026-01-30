@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support Briceka Enterprise | Contribute to Innovation</title>
+    <title>Support Briceka Enterprise | Integrated Contribution Portal</title>
     
-    <meta name="description" content="Support the development of Briceka, OnlyCrave, and Trimd. Your contributions help us build better tools for creators and users worldwide.">
+    <meta name="description" content="Contribute directly to the growth of Briceka, OnlyCrave, and Trimd. Securely support digital innovation within the Briceka Enterprise ecosystem.">
     
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,53 +16,69 @@
             }
         }
     </script>
+    <style>
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 800px;
+            border-radius: 2rem;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 
-<body class="bg-slate-50 text-slate-900 font-['Plus_Jakarta_Sans'] min-h-screen flex flex-col">
+<body class="bg-[#FAFAFB] text-slate-900 font-['Plus_Jakarta_Sans']">
 
-    <nav class="bg-white border-b">
-        <div class="max-w-7xl mx-auto px-6 py-4">
-            <a href="index.html" class="font-extrabold tracking-tighter text-sm uppercase flex items-center gap-2">
-                <span class="text-bricekaBlue">←</span> Back to Hub
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center">
+            <a href="index.html" class="font-extrabold tracking-tighter text-xs uppercase flex items-center gap-2 text-slate-500 hover:text-bricekaBlue transition">
+                <span class="text-bricekaBlue text-lg">←</span> Back to Enterprise Hub
             </a>
         </div>
     </nav>
 
-    <main class="flex-grow flex items-center justify-center px-6 py-20">
-        <div class="max-w-2xl w-full bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-slate-100">
-            <div class="bg-bricekaBlue p-12 text-white text-center">
-                <h1 class="text-4xl font-black mb-4">Support Our Work</h1>
-                <p class="text-blue-100 opacity-90">Helping us build a better digital ecosystem for everyone.</p>
+    <main class="max-w-5xl mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-black mb-4 tracking-tight">Support the <strong>Enterprise</strong></h1>
+            <p class="text-slate-500 max-w-2xl mx-auto text-lg">
+                Your contributions directly fund the <strong>infrastructure</strong> for Briceka, 
+                the <strong>creator tools</strong> on OnlyCrave, and the <strong>link systems</strong> at Trimd.
+            </p>
+        </div>
+
+        <div class="iframe-container bg-white border border-slate-200">
+            <iframe 
+                src="https://briceka.com/tools/donate/" 
+                title="Briceka Donation Portal"
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div>
+                <h3 class="font-black uppercase tracking-widest text-[10px] text-slate-400 mb-2">Secure</h3>
+                <p class="text-sm text-slate-600">All transactions are processed via <strong>encrypted SSL</strong> channels.</p>
             </div>
-            
-            <div class="p-12 text-center">
-                <p class="text-slate-600 mb-10 leading-relaxed">
-                    Donations allow us to keep our tools free or affordable, maintain high-speed servers, and continue developing new features for **OnlyCrave**, **Trimd**, and the **Briceka** platform.
-                </p>
-
-                <div class="space-y-6">
-                    <a href="https://briceka.com/tools/donate/" class="block w-full bg-bricekaBlue text-white py-6 rounded-2xl font-black text-lg hover:scale-[1.02] transition shadow-lg">
-                        DONATE VIA OFFICIAL PORTAL
-                    </a>
-                    <p class="text-xs text-slate-400 uppercase tracking-widest font-bold">Secure checkout via Briceka.com</p>
-                </div>
-
-                <div class="mt-12 pt-12 border-t border-slate-100 grid grid-cols-2 gap-4">
-                    <div class="text-left">
-                        <h4 class="font-bold text-sm mb-1">Infrastructure</h4>
-                        <p class="text-xs text-slate-500">Keeping servers fast and secure.</p>
-                    </div>
-                    <div class="text-left">
-                        <h4 class="font-bold text-sm mb-1">Development</h4>
-                        <p class="text-xs text-slate-500">Creating new tools and features.</p>
-                    </div>
-                </div>
+            <div>
+                <h3 class="font-black uppercase tracking-widest text-[10px] text-slate-400 mb-2">Direct</h3>
+                <p class="text-sm text-slate-600">Funds go directly to <strong>server maintenance</strong> and R&D.</p>
+            </div>
+            <div>
+                <h3 class="font-black uppercase tracking-widest text-[10px] text-slate-400 mb-2">Global</h3>
+                <p class="text-sm text-slate-600">Supporting creators and users in <strong>over 100 countries</strong>.</p>
             </div>
         </div>
     </main>
 
-    <footer class="text-center py-10 text-slate-400 text-sm">
-        &copy; 2026 Briceka Enterprise Inc.
+    <footer class="text-center py-10 text-slate-400 text-[10px] font-bold uppercase tracking-[0.2em]">
+        &copy; 2026 Briceka Enterprise Inc. | Unified Support Page
     </footer>
+
 </body>
 </html>
