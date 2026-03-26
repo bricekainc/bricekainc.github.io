@@ -24,6 +24,7 @@ NEWS_DIR = BASE_DIR / "news"            # individual article HTML pages
 SITEMAP   = BASE_DIR / "sitemap.xml"
 
 RSS_FEEDS = [
+    {"name": "Google News",           "url": "https://news.google.com/rss"},
     {"name": "TechCrunch",           "url": "https://techcrunch.com/feed/"},
     {"name": "The Verge",            "url": "https://www.theverge.com/rss/index.xml"},
     {"name": "MIT Tech Review",      "url": "https://www.technologyreview.com/feed/"},
@@ -37,7 +38,7 @@ RSS_FEEDS = [
     {"name": "Kenyans",     "url": "https://www.kenyans.co.ke/feeds/news/all"},
 ]
 
-MAX_ARTICLES_PER_FEED = 10   # cap per feed
+MAX_ARTICLES_PER_FEED = 50000   # cap per feed
 SUMMARY_MAX_CHARS     = 300  # truncate summaries
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
