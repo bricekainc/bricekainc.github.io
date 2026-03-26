@@ -2,12 +2,16 @@ name: Update News Feed
 
 on:
   schedule:
-    - cron: "0 6 * * *"   # 06:00 UTC  (morning)
-    - cron: "0 18 * * *"  # 18:00 UTC  (evening)
-  workflow_dispatch:        # allow manual trigger from GitHub UI
+    - cron: "0 6 * * *"   # 06:00 UTC
+    - cron: "0 18 * * *"  # 18:00 UTC
+  workflow_dispatch:      # Allow manual trigger
 
 permissions:
-  contents: write           # needed to commit & push generated files
+  contents: write         # Needed to commit & push
+
+env:
+  # FIX: Addresses the Node.js 20 deprecation warning
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   aggregate:
@@ -19,17 +23,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1    # shallow clone is fine — we only need HEAD
+          fetch-depth: 1
 
       # ── 2. Python setup ──────────────────────────────────────────────────
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: "pip"
-
-      # No third-party packages needed — script uses stdlib only.
-      # If you later add feedparser, add: pip install feedparser
+          # FIX: Removed cache: "pip" because it causes an error when no packages are installed
 
       # ── 3. Run the aggregator ────────────────────────────────────────────
       - name: Fetch RSS feeds and generate files
@@ -41,7 +42,8 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add data/news.json news/ sitemap.xml
+          # Add folders/files if they exist
+          git add data/news.json news/ sitemap.xml || true
 
           # Only commit if there are actual changes
           if git diff --cached --quiet; then
