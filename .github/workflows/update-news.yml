@@ -1,0 +1,54 @@
+name: Update News Feed
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # 06:00 UTC  (morning)
+    - cron: "0 18 * * *"  # 18:00 UTC  (evening)
+  workflow_dispatch:        # allow manual trigger from GitHub UI
+
+permissions:
+  contents: write           # needed to commit & push generated files
+
+jobs:
+  aggregate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      # ── 1. Checkout ──────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1    # shallow clone is fine — we only need HEAD
+
+      # ── 2. Python setup ──────────────────────────────────────────────────
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      # No third-party packages needed — script uses stdlib only.
+      # If you later add feedparser, add: pip install feedparser
+
+      # ── 3. Run the aggregator ────────────────────────────────────────────
+      - name: Fetch RSS feeds and generate files
+        run: python scripts/fetch_news.py
+
+      # ── 4. Commit changes ────────────────────────────────────────────────
+      - name: Commit and push updated files
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add data/news.json news/ sitemap.xml
+
+          # Only commit if there are actual changes
+          if git diff --cached --quiet; then
+            echo "No changes to commit — feeds unchanged."
+          else
+            TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
+            git commit -m "chore: update news feed [${TIMESTAMP}] [skip ci]"
+            git push
+            echo "✓ Changes pushed to repository."
+          fi
