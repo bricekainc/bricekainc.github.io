@@ -29,6 +29,12 @@ RSS_FEEDS = [
     {"name": "MIT Tech Review",      "url": "https://www.technologyreview.com/feed/"},
     {"name": "Hacker News (Top)",    "url": "https://hnrss.org/frontpage"},
     {"name": "Wired Innovation",     "url": "https://www.wired.com/feed/tag/innovation/rss"},
+    {"name": "Tuko",     "url": "https://www.tuko.co.ke/rss/all.rss"},
+    {"name": "Legit",     "url": "https://www.legit.ng/rss/all.rss"},
+    {"name": "Briefly",     "url": "https://briefly.co.za/rss/all.rss"},
+    {"name": "Tuko Swahili",     "url": "https://kiswahili.tuko.co.ke/rss/all.rss"},
+    {"name": "Yen",     "url": "https://yen.com.gh/rss/all.rss"},
+    {"name": "Kenyans",     "url": "https://www.kenyans.co.ke/feeds/news/all"},
 ]
 
 MAX_ARTICLES_PER_FEED = 10   # cap per feed
