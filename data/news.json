@@ -1,0 +1,276 @@
+{
+  "generated": "2026-03-26T12:24:44.021561+00:00",
+  "total": 30,
+  "articles": [
+    {
+      "title": "A ‘pound of flesh’ from data centers: one senator’s answer to AI job losses",
+      "link": "https://techcrunch.com/2026/03/26/a-pound-of-flesh-from-data-centers-one-senators-answer-to-ai-job-losses/",
+      "date": "2026-03-26",
+      "summary": "Fears of AI-driven job loss are growing fast, and they’re fueling backlash against data centers. Sen. Mark Warner suggests taxing them to help workers survive the transition.",
+      "source": "TechCrunch",
+      "id": "8ba3ea30",
+      "slug": "a-pound-of-flesh-from-data-centers-one-senators-answer-to-ai-job-losses"
+    },
+    {
+      "title": "Mistral releases a new open-source model for speech generation",
+      "link": "https://techcrunch.com/2026/03/26/mistral-releases-a-new-open-source-model-for-speech-generation/",
+      "date": "2026-03-26",
+      "summary": "Mistral's new speech model can run on a smartwatch or a smartphone.",
+      "source": "TechCrunch",
+      "id": "b87dbb63",
+      "slug": "mistral-releases-a-new-open-source-model-for-speech-generation"
+    },
+    {
+      "title": "A little-known Croatian startup is coming for the robotaxi market with help from Uber",
+      "link": "https://techcrunch.com/2026/03/26/a-little-known-croatian-startup-is-coming-for-the-robotaxi-market-with-help-from-uber/",
+      "date": "2026-03-26",
+      "summary": "Verne, the robotaxi company launched under Rimac Group, is starting with a service in Zagreb, Croatia.",
+      "source": "TechCrunch",
+      "id": "f7253a56",
+      "slug": "a-little-known-croatian-startup-is-coming-for-the-robotaxi-market-with-help-from"
+    },
+    {
+      "title": "The least surprising chapter of the Manus story is what’s happening right now",
+      "link": "https://techcrunch.com/2026/03/25/the-least-surprising-chapter-of-the-manus-story-is-whats-happening-right-now/",
+      "date": "2026-03-26",
+      "summary": "Did anyone think there would not be a reckoning over this tie-up?",
+      "source": "TechCrunch",
+      "id": "2b918f8c",
+      "slug": "the-least-surprising-chapter-of-the-manus-story-is-whats-happening-right-now"
+    },
+    {
+      "title": "Mercor competitor Deccan AI raises $25M, sources experts from India",
+      "link": "https://techcrunch.com/2026/03/25/deccan-ai-raises-25m-as-ai-training-push-relies-on-india-based-workforce/",
+      "date": "2026-03-26",
+      "summary": "Deccan AI concentrates its workforce in India to manage quality in a fast-growing but fragmented AI training market.",
+      "source": "TechCrunch",
+      "id": "4c23be2e",
+      "slug": "mercor-competitor-deccan-ai-raises-25m-sources-experts-from-india"
+    },
+    {
+      "title": "Delve did the security compliance on LiteLLM, an AI project hit by malware",
+      "link": "https://techcrunch.com/2026/03/25/delve-did-the-security-compliance-on-litellm-an-ai-project-hit-by-malware/",
+      "date": "2026-03-26",
+      "summary": "LiteLLM offers an AI open source project used by millions that was infected by credential harvesting malware.",
+      "source": "TechCrunch",
+      "id": "f900fd5f",
+      "slug": "delve-did-the-security-compliance-on-litellm-an-ai-project-hit-by-malware"
+    },
+    {
+      "title": "The AI skills gap is here, says AI company, and power users are pulling ahead",
+      "link": "https://techcrunch.com/2026/03/25/the-ai-skills-gap-is-here-says-ai-company-and-power-users-are-pulling-ahead/",
+      "date": "2026-03-26",
+      "summary": "Anthropic finds AI isn’t replacing jobs yet, but early data shows growing inequality as experienced users gain an edge, raising concerns about future displacement and workforce divides.",
+      "source": "TechCrunch",
+      "id": "99987d70",
+      "slug": "the-ai-skills-gap-is-here-says-ai-company-and-power-users-are-pulling-ahead"
+    },
+    {
+      "title": "Convicted spyware chief hints that Greece’s government was behind dozens of phone hacks",
+      "link": "https://techcrunch.com/2026/03/25/convicted-spyware-chief-hints-that-greeces-government-was-behind-dozens-of-phone-hacks/",
+      "date": "2026-03-26",
+      "summary": "The spyware founder's comments are the most direct suggestion yet from anyone inside Intellexa that the Mitsotakis government authorized the hacking of dozens of phones belonging to senior Greek government ministers, opposition leaders, military officials, and journalists.",
+      "source": "TechCrunch",
+      "id": "2c93c5b7",
+      "slug": "convicted-spyware-chief-hints-that-greeces-government-was-behind-dozens-of-phone"
+    },
+    {
+      "title": "Who’s driving Waymo’s self-driving cars? Sometimes, the police.",
+      "link": "https://techcrunch.com/2026/03/25/waymo-robotaxi-roadside-assistance-emergency-first-responders/",
+      "date": "2026-03-26",
+      "summary": "First responders have had to take control of Waymo vehicles and move them during emergency situations, including in at least two active crime scenes, TechCrunch found.",
+      "source": "TechCrunch",
+      "id": "0dd456d3",
+      "slug": "whos-driving-waymos-self-driving-cars-sometimes-the-police"
+    },
+    {
+      "title": "Google unveils TurboQuant, a new AI memory compression algorithm — and yes, the internet is calling it ‘Pied Piper’",
+      "link": "https://techcrunch.com/2026/03/25/google-turboquant-ai-memory-compression-silicon-valley-pied-piper/",
+      "date": "2026-03-26",
+      "summary": "Google’s TurboQuant has the internet joking about Pied Piper from HBO's \"Silicon Valley.\" The compression algorithm promises to shrink AI’s “working memory” by up to 6x, but it’s still just a lab experiment for now.",
+      "source": "TechCrunch",
+      "id": "c8de106d",
+      "slug": "google-unveils-turboquant-a-new-ai-memory-compression-algorithm-and-yes-the-inte"
+    },
+    {
+      "title": "The snow gods: How a couple of ski bums built the internet’s best weather app",
+      "link": "https://www.technologyreview.com/2026/03/26/1134470/the-snow-gods-how-a-couple-of-ski-bums-built-the-internets-best-weather-app/",
+      "date": "2026-03-26",
+      "summary": "The best snow-forecasting app for skiers and snowboarders isn’t from any of the federally funded weather services. Nor from any of the big-name brands. It’s an independent app startup that leverages government data, its own AI models, and decades of alpine-life experience to offer better snow (and s",
+      "source": "MIT Tech Review",
+      "id": "1a67c37c",
+      "slug": "the-snow-gods-how-a-couple-of-ski-bums-built-the-internets-best-weather-app"
+    },
+    {
+      "title": "Are high gas prices good news for EVs? It’s complicated.",
+      "link": "https://www.technologyreview.com/2026/03/26/1134677/gas-prices-electric-vehicles/",
+      "date": "2026-03-26",
+      "summary": "I live in a dense city with plentiful public transportation options and limited parking, so I don’t own a car. I’m often utterly clueless about the current price of gasoline. But as the conflict in Iran has escalated, fossil-fuel prices have been on a roller-coaster, and I’ve started paying attentio",
+      "source": "MIT Tech Review",
+      "id": "9de0ac1c",
+      "slug": "are-high-gas-prices-good-news-for-evs-its-complicated"
+    },
+    {
+      "title": "Roundtables: The Next Era of Space Exploration",
+      "link": "https://www.technologyreview.com/2026/03/25/1134664/roundtables-the-next-era-of-space-exploration/",
+      "date": "2026-03-26",
+      "summary": "Listen to the session or watch below Whether it’s the race to find life on Mars, the campaign to outsmart killer asteroids, or the quest to make the moon a permanent home to astronauts, scientists’ efforts in space can tell us more about where humanity is headed. This subscriber-only discussion exam",
+      "source": "MIT Tech Review",
+      "id": "a2f0d2ed",
+      "slug": "roundtables-the-next-era-of-space-exploration"
+    },
+    {
+      "title": "Why this battery company is pivoting to AI",
+      "link": "https://www.technologyreview.com/2026/03/25/1134657/battery-company-ai-pivot-ses/",
+      "date": "2026-03-26",
+      "summary": "Qichao Hu doesn’t mince words about how he sees the state of the battery industry. “Almost every Western battery company has either died or is going to die. It’s kind of the reality,” he says. Hu is the CEO of SES AI, a Massachusetts-based battery company. It once had aims of making huge amounts of ",
+      "source": "MIT Tech Review",
+      "id": "f3500499",
+      "slug": "why-this-battery-company-is-pivoting-to-ai"
+    },
+    {
+      "title": "This startup wants to change how mathematicians do math",
+      "link": "https://www.technologyreview.com/2026/03/25/1134642/this-startup-wants-to-change-how-mathematicians-do-math/",
+      "date": "2026-03-26",
+      "summary": "Axiom Math, a startup based in Palo Alto, California, has released a free new AI tool for mathematicians , designed to discover mathematical patterns that could unlock solutions to long-standing problems. The tool, called Axplorer, is a redesign of an existing one called PatternBoost that François C",
+      "source": "MIT Tech Review",
+      "id": "84656a83",
+      "slug": "this-startup-wants-to-change-how-mathematicians-do-math"
+    },
+    {
+      "title": "The Download: reawakening frozen brains, and the AI Hype Index returns",
+      "link": "https://www.technologyreview.com/2026/03/25/1134636/the-download-reawakening-frozen-brains-and-the-ai-hype-index-returns/",
+      "date": "2026-03-26",
+      "summary": "This is today’s edition of The Download , our weekday newsletter that provides a daily dose of what’s going on in the world of technology. This scientist rewarmed and studied pieces of his friend’s cryopreserved brain L. Stephen Coles’s brain sits in a vat at a storage facility in Arizona. It has be",
+      "source": "MIT Tech Review",
+      "id": "b8be43d0",
+      "slug": "the-download-reawakening-frozen-brains-and-the-ai-hype-index-returns"
+    },
+    {
+      "title": "Agentic commerce runs on truth and context",
+      "link": "https://www.technologyreview.com/2026/03/25/1134516/agentic-commerce-runs-on-truth-and-context/",
+      "date": "2026-03-26",
+      "summary": "Imagine telling a digital agent, “Use my points and book a family trip to Italy. Keep it within budget, pick hotels we’ve liked before, and handle the details.” Instead of returning a list of links, the agent assembles an itinerary and executes the purchase. That shift, from assistance to execution,",
+      "source": "MIT Tech Review",
+      "id": "dbb0252a",
+      "slug": "agentic-commerce-runs-on-truth-and-context"
+    },
+    {
+      "title": "The AI Hype Index: AI goes to war",
+      "link": "https://www.technologyreview.com/2026/03/25/1134571/the-ai-hype-index-ai-goes-to-war/",
+      "date": "2026-03-26",
+      "summary": "AI is at war. Anthropic and the Pentagon feuded over how to weaponize Anthropic’s AI model Claude; then OpenAI swept the Pentagon off its feet with an “ opportunistic and sloppy ” deal. Users quit ChatGPT in droves. People marched through London in the biggest protest against AI to date. If you’re k",
+      "source": "MIT Tech Review",
+      "id": "3e6a6fc7",
+      "slug": "the-ai-hype-index-ai-goes-to-war"
+    },
+    {
+      "title": "Exclusive eBook: Are we ready to hand AI agents the keys?",
+      "link": "https://www.technologyreview.com/2026/03/24/1134531/exclusive-ebook-are-we-ready-to-hand-ai-agents-the-keys/",
+      "date": "2026-03-26",
+      "summary": "We’re starting to give AI agents real autonomy, but are we prepared for what could happen next? This subscriber-only eBook explores this and angles from experts, such as “If we continue on the current path … we are basically playing Russian roulette with humanity.” by Grace Huckins June 12, 2025 ACC",
+      "source": "MIT Tech Review",
+      "id": "d8230d80",
+      "slug": "exclusive-ebook-are-we-ready-to-hand-ai-agents-the-keys"
+    },
+    {
+      "title": "This scientist rewarmed and studied pieces of his friend’s cryopreserved brain",
+      "link": "https://www.technologyreview.com/2026/03/24/1134562/cryopreservation-brain-cryonics-organ-transplantation/",
+      "date": "2026-03-26",
+      "summary": "L. Stephen Coles’s brain sits cushioned in a vat at a storage facility in Arizona. It has been held there at a temperature of around −146 degrees °C for over a decade, largely undisturbed. That is, apart from the time, a little over a year ago, when scientists slowly lifted the brain to take photos ",
+      "source": "MIT Tech Review",
+      "id": "5cf89d15",
+      "slug": "this-scientist-rewarmed-and-studied-pieces-of-his-friends-cryopreserved-brain"
+    },
+    {
+      "title": "The widely reported \"hole in the Universe\" is a lie",
+      "link": "https://bigthink.com/starts-with-a-bang/hole-in-universe/",
+      "date": "2026-03-26",
+      "summary": "Article URL: https://bigthink.com/starts-with-a-bang/hole-in-universe/ Comments URL: https://news.ycombinator.com/item?id=47529100 Points: 5 # Comments: 0",
+      "source": "Hacker News (Top)",
+      "id": "8d0133c5",
+      "slug": "the-widely-reported-hole-in-the-universe-is-a-lie"
+    },
+    {
+      "title": "LibreOffice and the Art of Overreacting",
+      "link": "https://blog.documentfoundation.org/blog/2026/03/25/libreoffice-and-the-art-of-overreacting/",
+      "date": "2026-03-26",
+      "summary": "Article URL: https://blog.documentfoundation.org/blog/2026/03/25/libreoffice-and-the-art-of-overreacting/ Comments URL: https://news.ycombinator.com/item?id=47528605 Points: 50 # Comments: 18",
+      "source": "Hacker News (Top)",
+      "id": "f4e6ceb8",
+      "slug": "libreoffice-and-the-art-of-overreacting"
+    },
+    {
+      "title": "Swift 6.3",
+      "link": "https://www.swift.org/blog/swift-6.3-released/",
+      "date": "2026-03-26",
+      "summary": "Article URL: https://www.swift.org/blog/swift-6.3-released/ Comments URL: https://news.ycombinator.com/item?id=47527590 Points: 112 # Comments: 50",
+      "source": "Hacker News (Top)",
+      "id": "d623eeb3",
+      "slug": "swift-63"
+    },
+    {
+      "title": "Ashby (YC W19) Is Hiring Engineers Who Make Product Decisions",
+      "link": "https://www.ashbyhq.com/careers?ashby_jid=c3c7125d-7883-4dff-a2bf-f5a55de4a364&utm_source=hn",
+      "date": "2026-03-26",
+      "summary": "Article URL: https://www.ashbyhq.com/careers?ashby_jid=c3c7125d-7883-4dff-a2bf-f5a55de4a364&utm_source=hn Comments URL: https://news.ycombinator.com/item?id=47527399 Points: 0 # Comments: 0",
+      "source": "Hacker News (Top)",
+      "id": "c29e0e81",
+      "slug": "ashby-yc-w19-is-hiring-engineers-who-make-product-decisions"
+    },
+    {
+      "title": "Government agencies buy commercial data about Americans in bulk",
+      "link": "https://www.npr.org/2026/03/25/nx-s1-5752369/ice-surveillance-data-brokers-congress-anthropic",
+      "date": "2026-03-26",
+      "summary": "Article URL: https://www.npr.org/2026/03/25/nx-s1-5752369/ice-surveillance-data-brokers-congress-anthropic Comments URL: https://news.ycombinator.com/item?id=47527130 Points: 85 # Comments: 34",
+      "source": "Hacker News (Top)",
+      "id": "e27590c3",
+      "slug": "government-agencies-buy-commercial-data-about-americans-in-bulk"
+    },
+    {
+      "title": "Show HN: Robust LLM Extractor for Websites in TypeScript",
+      "link": "https://github.com/lightfeed/extractor",
+      "date": "2026-03-26",
+      "summary": "We've been building data pipelines that scrape websites and extract structured data for a while now. If you've done this, you know the drill: you write CSS selectors, the site changes its layout, everything breaks at 2am, and you spend your morning rewriting parsers. LLMs seemed like the obvious fix",
+      "source": "Hacker News (Top)",
+      "id": "88c31242",
+      "slug": "show-hn-robust-llm-extractor-for-websites-in-typescript"
+    },
+    {
+      "title": "Obsolete Sounds",
+      "link": "https://citiesandmemory.com/obsolete-sounds/",
+      "date": "2026-03-26",
+      "summary": "Article URL: https://citiesandmemory.com/obsolete-sounds/ Comments URL: https://news.ycombinator.com/item?id=47526478 Points: 56 # Comments: 8",
+      "source": "Hacker News (Top)",
+      "id": "fd343383",
+      "slug": "obsolete-sounds"
+    },
+    {
+      "title": "The Last Contract: William T. Vollmann's Battle to Publish an Epic (2025)",
+      "link": "https://www.metropolitanreview.org/p/the-last-contract",
+      "date": "2026-03-26",
+      "summary": "Article URL: https://www.metropolitanreview.org/p/the-last-contract Comments URL: https://news.ycombinator.com/item?id=47526473 Points: 16 # Comments: 0",
+      "source": "Hacker News (Top)",
+      "id": "c3918ce2",
+      "slug": "the-last-contract-william-t-vollmanns-battle-to-publish-an-epic-2025"
+    },
+    {
+      "title": "The Cassandra of 'The Machine'",
+      "link": "https://www.thenewatlantis.com/publications/the-cassandra-of-the-machine",
+      "date": "2026-03-26",
+      "summary": "Article URL: https://www.thenewatlantis.com/publications/the-cassandra-of-the-machine Comments URL: https://news.ycombinator.com/item?id=47526467 Points: 17 # Comments: 3",
+      "source": "Hacker News (Top)",
+      "id": "b79e538c",
+      "slug": "the-cassandra-of-the-machine"
+    },
+    {
+      "title": "False claims in a widely-cited paper",
+      "link": "https://statmodeling.stat.columbia.edu/2026/03/24/false-claims-in-a-published-no-corrections-no-consequences-welcome-to-the-business-school/",
+      "date": "2026-03-26",
+      "summary": "Article URL: https://statmodeling.stat.columbia.edu/2026/03/24/false-claims-in-a-published-no-corrections-no-consequences-welcome-to-the-business-school/ Comments URL: https://news.ycombinator.com/item?id=47525378 Points: 301 # Comments: 123",
+      "source": "Hacker News (Top)",
+      "id": "35c17ff4",
+      "slug": "false-claims-in-a-widely-cited-paper"
+    }
+  ]
+}
