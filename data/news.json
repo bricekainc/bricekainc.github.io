@@ -1,6 +1,6 @@
 {
-  "generated": "2026-03-26T12:24:44.021561+00:00",
-  "total": 30,
+  "generated": "2026-03-26T12:40:47.226322+00:00",
+  "total": 90,
   "articles": [
     {
       "title": "A ‘pound of flesh’ from data centers: one senator’s answer to AI job losses",
@@ -183,6 +183,15 @@
       "slug": "this-scientist-rewarmed-and-studied-pieces-of-his-friends-cryopreserved-brain"
     },
     {
+      "title": "Landmark L.A. jury verdict finds Instagram, YouTube were designed to addict kids",
+      "link": "https://www.latimes.com/california/story/2026-03-25/social-media-lawsuit-trial-meta-google-verdict",
+      "date": "2026-03-26",
+      "summary": "Article URL: https://www.latimes.com/california/story/2026-03-25/social-media-lawsuit-trial-meta-google-verdict Comments URL: https://news.ycombinator.com/item?id=47529534 Points: 7 # Comments: 0",
+      "source": "Hacker News (Top)",
+      "id": "fcfc1860",
+      "slug": "landmark-la-jury-verdict-finds-instagram-youtube-were-designed-to-addict-kids"
+    },
+    {
       "title": "The widely reported \"hole in the Universe\" is a lie",
       "link": "https://bigthink.com/starts-with-a-bang/hole-in-universe/",
       "date": "2026-03-26",
@@ -195,7 +204,7 @@
       "title": "LibreOffice and the Art of Overreacting",
       "link": "https://blog.documentfoundation.org/blog/2026/03/25/libreoffice-and-the-art-of-overreacting/",
       "date": "2026-03-26",
-      "summary": "Article URL: https://blog.documentfoundation.org/blog/2026/03/25/libreoffice-and-the-art-of-overreacting/ Comments URL: https://news.ycombinator.com/item?id=47528605 Points: 50 # Comments: 18",
+      "summary": "Article URL: https://blog.documentfoundation.org/blog/2026/03/25/libreoffice-and-the-art-of-overreacting/ Comments URL: https://news.ycombinator.com/item?id=47528605 Points: 66 # Comments: 29",
       "source": "Hacker News (Top)",
       "id": "f4e6ceb8",
       "slug": "libreoffice-and-the-art-of-overreacting"
@@ -204,7 +213,7 @@
       "title": "Swift 6.3",
       "link": "https://www.swift.org/blog/swift-6.3-released/",
       "date": "2026-03-26",
-      "summary": "Article URL: https://www.swift.org/blog/swift-6.3-released/ Comments URL: https://news.ycombinator.com/item?id=47527590 Points: 112 # Comments: 50",
+      "summary": "Article URL: https://www.swift.org/blog/swift-6.3-released/ Comments URL: https://news.ycombinator.com/item?id=47527590 Points: 130 # Comments: 61",
       "source": "Hacker News (Top)",
       "id": "d623eeb3",
       "slug": "swift-63"
@@ -222,7 +231,7 @@
       "title": "Government agencies buy commercial data about Americans in bulk",
       "link": "https://www.npr.org/2026/03/25/nx-s1-5752369/ice-surveillance-data-brokers-congress-anthropic",
       "date": "2026-03-26",
-      "summary": "Article URL: https://www.npr.org/2026/03/25/nx-s1-5752369/ice-surveillance-data-brokers-congress-anthropic Comments URL: https://news.ycombinator.com/item?id=47527130 Points: 85 # Comments: 34",
+      "summary": "Article URL: https://www.npr.org/2026/03/25/nx-s1-5752369/ice-surveillance-data-brokers-congress-anthropic Comments URL: https://news.ycombinator.com/item?id=47527130 Points: 95 # Comments: 38",
       "source": "Hacker News (Top)",
       "id": "e27590c3",
       "slug": "government-agencies-buy-commercial-data-about-americans-in-bulk"
@@ -240,7 +249,7 @@
       "title": "Obsolete Sounds",
       "link": "https://citiesandmemory.com/obsolete-sounds/",
       "date": "2026-03-26",
-      "summary": "Article URL: https://citiesandmemory.com/obsolete-sounds/ Comments URL: https://news.ycombinator.com/item?id=47526478 Points: 56 # Comments: 8",
+      "summary": "Article URL: https://citiesandmemory.com/obsolete-sounds/ Comments URL: https://news.ycombinator.com/item?id=47526478 Points: 76 # Comments: 10",
       "source": "Hacker News (Top)",
       "id": "fd343383",
       "slug": "obsolete-sounds"
@@ -249,28 +258,559 @@
       "title": "The Last Contract: William T. Vollmann's Battle to Publish an Epic (2025)",
       "link": "https://www.metropolitanreview.org/p/the-last-contract",
       "date": "2026-03-26",
-      "summary": "Article URL: https://www.metropolitanreview.org/p/the-last-contract Comments URL: https://news.ycombinator.com/item?id=47526473 Points: 16 # Comments: 0",
+      "summary": "Article URL: https://www.metropolitanreview.org/p/the-last-contract Comments URL: https://news.ycombinator.com/item?id=47526473 Points: 17 # Comments: 0",
       "source": "Hacker News (Top)",
       "id": "c3918ce2",
       "slug": "the-last-contract-william-t-vollmanns-battle-to-publish-an-epic-2025"
     },
     {
-      "title": "The Cassandra of 'The Machine'",
-      "link": "https://www.thenewatlantis.com/publications/the-cassandra-of-the-machine",
-      "date": "2026-03-26",
-      "summary": "Article URL: https://www.thenewatlantis.com/publications/the-cassandra-of-the-machine Comments URL: https://news.ycombinator.com/item?id=47526467 Points: 17 # Comments: 3",
-      "source": "Hacker News (Top)",
-      "id": "b79e538c",
-      "slug": "the-cassandra-of-the-machine"
-    },
-    {
       "title": "False claims in a widely-cited paper",
       "link": "https://statmodeling.stat.columbia.edu/2026/03/24/false-claims-in-a-published-no-corrections-no-consequences-welcome-to-the-business-school/",
       "date": "2026-03-26",
-      "summary": "Article URL: https://statmodeling.stat.columbia.edu/2026/03/24/false-claims-in-a-published-no-corrections-no-consequences-welcome-to-the-business-school/ Comments URL: https://news.ycombinator.com/item?id=47525378 Points: 301 # Comments: 123",
+      "summary": "Article URL: https://statmodeling.stat.columbia.edu/2026/03/24/false-claims-in-a-published-no-corrections-no-consequences-welcome-to-the-business-school/ Comments URL: https://news.ycombinator.com/item?id=47525378 Points: 305 # Comments: 125",
       "source": "Hacker News (Top)",
       "id": "35c17ff4",
       "slug": "false-claims-in-a-widely-cited-paper"
+    },
+    {
+      "title": "Harmonize, Kajala's romantic workout video sparks envy: \"Mtaachana tu\"",
+      "link": "https://www.tuko.co.ke/entertainment/celebrities/621447-harmonize-kajalas-romantic-workout-video-sparks-envy-mtaachana-tu/",
+      "date": "2026-03-26",
+      "summary": "Harmonize and Kajala heat up social media with a playful workout video. Fans react to their romantic moments, sparking envy and excitement online.",
+      "source": "Tuko",
+      "id": "9dc3cd13",
+      "slug": "harmonize-kajalas-romantic-workout-video-sparks-envy-mtaachana-tu"
+    },
+    {
+      "title": "Kenya strengthens military relations with US after high-level defence talks: \"Enhancing readiness\"",
+      "link": "https://www.tuko.co.ke/kenya/621553-kenya-strengthens-military-relations-high-level-defence-talks-enhancing-readiness/",
+      "date": "2026-03-26",
+      "summary": "Kenya reaffirms its military partnership with the USA after talks focusing on regional security, counterterrorism, and maritime cooperation for enhanced readiness.",
+      "source": "Tuko",
+      "id": "f52676f2",
+      "slug": "kenya-strengthens-military-relations-with-us-after-high-level-defence-talks-enha"
+    },
+    {
+      "title": "KCAA addresses Claims Wilson Airport is secretly used as hub to ferry illegal ssubstances",
+      "link": "https://www.tuko.co.ke/kenya/621568-kcaa-denies-claims-wilson-airport-secretly-hub-ferry-illegal-substances/",
+      "date": "2026-03-26",
+      "summary": "KCAA has denied claims Wilson Airport is used for contraband cargo, insisting after-hours flights are medical emergencies and all operations remain monitored.",
+      "source": "Tuko",
+      "id": "75d8eee6",
+      "slug": "kcaa-addresses-claims-wilson-airport-is-secretly-used-as-hub-to-ferry-illegal-ss"
+    },
+    {
+      "title": "Makueni county advertises 41 vacancies for ECDE teachers, other positions for job seekers",
+      "link": "https://www.tuko.co.ke/business-economy/621567-makueni-county-advertises-41-vacancies-ecde-teachers-positions-job-seekers/",
+      "date": "2026-03-26",
+      "summary": "Makueni county government, through its Public Service Board, has advertised 41 vacancies for Early Childhood Development Education (ECDE) Teachers and other posts.",
+      "source": "Tuko",
+      "id": "375889d6",
+      "slug": "makueni-county-advertises-41-vacancies-for-ecde-teachers-other-positions-for-job"
+    },
+    {
+      "title": "Luhya “taboo” deaths: Instances when coffins are passed through the wall instead of the door",
+      "link": "https://www.tuko.co.ke/people/family/621571-luhya-taboo-deaths-coffins-carried-wall-door/",
+      "date": "2026-03-26",
+      "summary": "TUKO.co.ke shares instances in the Luhya culture where some coffins are taken through a broken wall during “unnatural” deaths, and the reasons behind it.",
+      "source": "Tuko",
+      "id": "72fb8758",
+      "slug": "luhya-taboo-deaths-instances-when-coffins-are-passed-through-the-wall-instead-of"
+    },
+    {
+      "title": "Why Tom Hanks and Rita Wilson are one of Hollywood’s strongest couples",
+      "link": "https://www.tuko.co.ke/entertainment/celebrities/621389-why-tom-hanks-rita-wilson-hollywoods-strongest-couples/",
+      "date": "2026-03-26",
+      "summary": "Tom Hanks and Rita Wilson are one of Hollywood’s strongest couples. Read on to find out more interesting details about their love life, children, careers and more.",
+      "source": "Tuko",
+      "id": "a0c611eb",
+      "slug": "why-tom-hanks-and-rita-wilson-are-one-of-hollywoods-strongest-couples"
+    },
+    {
+      "title": "Beauty in Black: Meet handsome men turning heads in Tyler Perry's viral series",
+      "link": "https://www.tuko.co.ke/world/us/621548-beauty-black-meet-handsome-men-turning-heads-tyler-perrys-viral-series/",
+      "date": "2026-03-26",
+      "summary": "Beauty In Black on Netflix has been trending since the second season aired. TUKO.co.ke featured the top eye-candy men on the show who have been going viral.",
+      "source": "Tuko",
+      "id": "c64bb093",
+      "slug": "beauty-in-black-meet-handsome-men-turning-heads-in-tyler-perrys-viral-series"
+    },
+    {
+      "title": "Nairobi: Suspect in KSh 77m gold scam arrested, released on bond",
+      "link": "https://www.tuko.co.ke/kenya/counties/621569-nairobi-suspect-ksh-77m-gold-scam-arrested-released-bond/",
+      "date": "2026-03-26",
+      "summary": "DCI detectives arrested Daniel Okonji for allegedly scamming an Australian out of KSh 77 million. He was released on KSh 5 million bond after denying the charges.",
+      "source": "Tuko",
+      "id": "e6e667f4",
+      "slug": "nairobi-suspect-in-ksh-77m-gold-scam-arrested-released-on-bond"
+    },
+    {
+      "title": "Nairobi: Police arrest 2 robbery-with-violence suspects, recover several stolen mobile phones",
+      "link": "https://www.tuko.co.ke/kenya/621566-nairobi-police-arrest-2-robbery-violence-suspects-recover-stolen-mobile-phones/",
+      "date": "2026-03-26",
+      "summary": "Nairobi police apprehend two robbery suspects in South B, recovering stolen mobile phones and a motorcycle after a swift response to a distress call.",
+      "source": "Tuko",
+      "id": "9744b568",
+      "slug": "nairobi-police-arrest-2-robbery-with-violence-suspects-recover-several-stolen-mo"
+    },
+    {
+      "title": "Mike Sonko breaks into worship after court frees his KSh537M in frozen accounts: \"Nashukuru Mungu\"",
+      "link": "https://www.tuko.co.ke/kenya/621564-mike-sonko-breaks-worship-court-frees-ksh537m-frozen-accounts-nashukuru-mungu/",
+      "date": "2026-03-26",
+      "summary": "Former Nairobi governor Mike Sonko celebrates after the Court of Appeal clears him to access over KSh537 million, dismissing the Assets Recovery Agency's appeal.",
+      "source": "Tuko",
+      "id": "53c85244",
+      "slug": "mike-sonko-breaks-into-worship-after-court-frees-his-ksh537m-in-frozen-accounts-"
+    },
+    {
+      "title": "Group reveals how petrol import licence could encourage dumping in Nigeria",
+      "link": "https://www.legit.ng/business-economy/energy/1702800-petrol-import-licences-spark-outcry-experts-warn-quality-fuel-threat-local-refineries/",
+      "date": "2026-03-26",
+      "summary": "NMDPRA's petrol import licences raise concerns over fuel quality, threatening local refining investments and consumer safety. Advocates demand transparency.",
+      "source": "Legit",
+      "id": "00cfe1c2",
+      "slug": "group-reveals-how-petrol-import-licence-could-encourage-dumping-in-nigeria"
+    },
+    {
+      "title": "Full list: Amount Nigerians will pay for UK visas, citizenship from April",
+      "link": "https://www.legit.ng/world/europe/1702791-uk-releases-list-what-nigerians-pay-visas-citizenship-april/",
+      "date": "2026-03-26",
+      "summary": "The United Kingdom government has released a lits of new amount for visas and citizenship Nigerians and other foreign nationals from Wednesday, April 8, 2026.",
+      "source": "Legit",
+      "id": "1f0b8602",
+      "slug": "full-list-amount-nigerians-will-pay-for-uk-visas-citizenship-from-april"
+    },
+    {
+      "title": "\"I rethink my career: Funke Akindele names the one actress who scares her",
+      "link": "https://www.legit.ng/entertainment/celebrities/1702794-funke-akindele-finally-names-nollywood-star-tremble-set-i-rethink-career/",
+      "date": "2026-03-26",
+      "summary": "Funke Akindele reveals Bimbo Akintola's profound emotional depth makes her \"shake\" and re-evaluate her craft, highlighting the pressures of Nollywood excellence.",
+      "source": "Legit",
+      "id": "a91f8d68",
+      "slug": "i-rethink-my-career-funke-akindele-names-the-one-actress-who-scares-her"
+    },
+    {
+      "title": "VeryDarkMan reacts to Blessing CEO's stage 4 cancer claim, demands hospital proof",
+      "link": "https://www.legit.ng/entertainment/celebrities/1702787-medical-report-proof-verydarkman-questions-blessing-ceos-cancer-claim/",
+      "date": "2026-03-26",
+      "summary": "VeryDarkMan reacted to Blessing CEO’s stage 4 cancer claim, questioned the lack of proof, and warned against chasing clout with sensitive health issues",
+      "source": "Legit",
+      "id": "fb6388e4",
+      "slug": "verydarkman-reacts-to-blessing-ceos-stage-4-cancer-claim-demands-hospital-proof"
+    },
+    {
+      "title": "CAF rejects Morocco's request to withdraw AFCON trophy, medal and prize money from Senegal",
+      "link": "https://www.legit.ng/sports/football/1702782-caf-decision-afcon-2025-trophy-prize-money-morocco-senegal-battle/",
+      "date": "2026-03-26",
+      "summary": "CAF rejected two requests from Morocco regarding the AFCON 2025 trophy, medals and prize money, as Senegal appeals the ruling to retain its title.",
+      "source": "Legit",
+      "id": "2d1981b6",
+      "slug": "caf-rejects-moroccos-request-to-withdraw-afcon-trophy-medal-and-prize-money-from"
+    },
+    {
+      "title": "Video: Blessing CEO speaks out on doubts about her cancer battle",
+      "link": "https://www.legit.ng/entertainment/celebrities/1702785-blessing-ceo-addresses-critics-stage-4-cancer-prank-speculations-shows-ignorant/",
+      "date": "2026-03-26",
+      "summary": "Blessing CEO addresses critics over her stage 4 cancer claims, sharing her fear, denial, and reactions to social media skepticism in a new video.",
+      "source": "Legit",
+      "id": "f7e22b68",
+      "slug": "video-blessing-ceo-speaks-out-on-doubts-about-her-cancer-battle"
+    },
+    {
+      "title": "\"I stopped my lawyers\": Konga exposes Burna Boy in alleged theft scandal",
+      "link": "https://www.legit.ng/entertainment/celebrities/1702786-singer-konga-slams-burna-boy-alleged-unpaid-royalties-pay/",
+      "date": "2026-03-26",
+      "summary": "Konga accuses Burna Boy of sampling his work in \"Update\" without permission, highlighting royalty disparities while revealing his own plans to address the issue.",
+      "source": "Legit",
+      "id": "514267a8",
+      "slug": "i-stopped-my-lawyers-konga-exposes-burna-boy-in-alleged-theft-scandal"
+    },
+    {
+      "title": "Joy as lady graduates from University of Ibadan as best student in faculty with 8 distinctions",
+      "link": "https://www.legit.ng/people/1702776-university-ibadan-graduate-emerges-faculty-veterinary-medicine-8-distinctions/",
+      "date": "2026-03-26",
+      "summary": "A lady has graduated from the University of Ibadan as the best graduating student in her faculty with eight distinctions. Her photos have gone viral online.",
+      "source": "Legit",
+      "id": "91fa2bc4",
+      "slug": "joy-as-lady-graduates-from-university-of-ibadan-as-best-student-in-faculty-with-"
+    },
+    {
+      "title": "Read what frustrated Nigerian lady in UK shares about her basic salary and living expenses",
+      "link": "https://www.legit.ng/people/1702763-nigerian-woman-laments-shares-her-living-expenses-salary-in-the-uk/",
+      "date": "2026-03-26",
+      "summary": "A Nigerian lady in the UK shared her frustration after receiving her salary, revealing how high living costs left her struggling despite earning in pounds.",
+      "source": "Legit",
+      "id": "a612af22",
+      "slug": "read-what-frustrated-nigerian-lady-in-uk-shares-about-her-basic-salary-and-livin"
+    },
+    {
+      "title": "Netanyahu and his wife mourn fallen Israeli soldier, voicing profound sorrow over his death",
+      "link": "https://www.legit.ng/world/1702784-prime-minister-benjamin-netanyahu-wife-mourn-express-deep-sorrow-death-israeli-soldier/",
+      "date": "2026-03-26",
+      "summary": "Benjamin Netanyahu and his wife mourned Sergeant Uri Greenberg, expressing deep sorrow and honouring his bravery in protecting Israel’s northern border.",
+      "source": "Legit",
+      "id": "f78af741",
+      "slug": "netanyahu-and-his-wife-mourn-fallen-israeli-soldier-voicing-profound-sorrow-over"
+    },
+    {
+      "title": "\"Keep the lungs going\": Black mamba bite in Pretoria sends man to hospital and has SA shaken",
+      "link": "https://briefly.co.za/people/238298-lungs-black-mamba-bite-pretoria-sends-man-hospital-sa-shaken/",
+      "date": "2026-03-26",
+      "summary": "An adult male was bitten by a black mamba in Pretoria, was intubated on the scene, and taken to hospital where 15 vials of antivenom were administered.",
+      "source": "Briefly",
+      "id": "d360ece5",
+      "slug": "keep-the-lungs-going-black-mamba-bite-in-pretoria-sends-man-to-hospital-and-has-"
+    },
+    {
+      "title": "Liam Williams Ends 15-Year Career With Wales and British & Irish Lions",
+      "link": "https://briefly.co.za/sports/rugby/238296-wales-lions-star-liam-williams-announces-retirement-rugby/",
+      "date": "2026-03-26",
+      "summary": "Former Wales and Lions rugby star Liam Williams retires after 15 years and 93 caps, citing ongoing knee issues. Reflecting on a remarkable career and legacy.",
+      "source": "Briefly",
+      "id": "6ba66bc9",
+      "slug": "liam-williams-ends-15-year-career-with-wales-and-british-irish-lions"
+    },
+    {
+      "title": "Professor Cachalia says charges against General Masemola not linked to corruption, SA weighs in",
+      "link": "https://briefly.co.za/south-africa/238299-professor-cachalia-charges-general-masemola-linked-corruption-sa-weighs-in/",
+      "date": "2026-03-26",
+      "summary": "Acting Police Minister Firoz Cachalia has clarified that National Police Commissioner Fannie Masemola was not charged with corruption, sparking a debate online.",
+      "source": "Briefly",
+      "id": "cb8e3d71",
+      "slug": "professor-cachalia-says-charges-against-general-masemola-not-linked-to-corruptio"
+    },
+    {
+      "title": "Mom With Toddler Finds Food Among Other Things in Toilet Bowl in TikTok Video",
+      "link": "https://briefly.co.za/people/238293-woman-finds-loaf-bread-items-toddlers-put-toilet-bowl/",
+      "date": "2026-03-26",
+      "summary": "A mom shares her toddler's mischief on TikTok, revealing a loaf of bread and more in the toilet, leaving South Africans in stitches over relatable parenting chaos.",
+      "source": "Briefly",
+      "id": "16a494ee",
+      "slug": "mom-with-toddler-finds-food-among-other-things-in-toilet-bowl-in-tiktok-video"
+    },
+    {
+      "title": "I found a photo of my son in my neighbor's wallet – The caption made my blood run cold",
+      "link": "https://briefly.co.za/people/confessions/238297-i-a-photo-son-neighbors-wallet-blood-run-cold/",
+      "date": "2026-03-26",
+      "summary": "I thought my neighbor was kind—until I found my son’s photo in her wallet with three chilling words. What followed revealed shocking secrets about love and safety.",
+      "source": "Briefly",
+      "id": "d7b0de83",
+      "slug": "i-found-a-photo-of-my-son-in-my-neighbors-wallet-the-caption-made-my-blood-run-c"
+    },
+    {
+      "title": "Lebo M blasts Zim comedian Learnmore Jonasi in explosive Interview",
+      "link": "https://briefly.co.za/entertainment/celebrities/238295-lebo-m-speaks-time-suing-zimbabwean-comedian-learnmore-jonasi-i-generous/",
+      "date": "2026-03-26",
+      "summary": "Lebo M responds after suing Zimbabwean comedian Learnmore Jonasi for $20 million, citing disrespect towards South Africa and the value of African content.",
+      "source": "Briefly",
+      "id": "1f2471e3",
+      "slug": "lebo-m-blasts-zim-comedian-learnmore-jonasi-in-explosive-interview"
+    },
+    {
+      "title": "Nation responds to shocking Durban attack captured on video",
+      "link": "https://briefly.co.za/south-africa/238283-sa-condemns-violence-viral-video-shows-foreign-national-beaten-durban/",
+      "date": "2026-03-26",
+      "summary": "A viral video from Durban shows a man brutally attacked amidst a march, igniting outrage over Afrophobia and vigilante justice targeting foreign nationals.",
+      "source": "Briefly",
+      "id": "66561cc3",
+      "slug": "nation-responds-to-shocking-durban-attack-captured-on-video"
+    },
+    {
+      "title": "\"Same destiny\": Identical twins graduate medical school together and land jobs at the same hospital",
+      "link": "https://briefly.co.za/people/family-relationships/238291-destiny-identical-twins-graduate-medical-school-land-jobs-hospital/",
+      "date": "2026-03-26",
+      "summary": "Identical twin brothers Kyle and Kendall Lewis graduated from medical school together, matched into the same programme, and are now both working together.",
+      "source": "Briefly",
+      "id": "07026f05",
+      "slug": "same-destiny-identical-twins-graduate-medical-school-together-and-land-jobs-at-t"
+    },
+    {
+      "title": "\"Cleaner in Korea earns more than SAPS\": South African Woman Compares Korea's Minimum Wage with Mzansi's",
+      "link": "https://briefly.co.za/people/238285-sa-woman-shares-koreas-minimum-salary-employed-people/",
+      "date": "2026-03-26",
+      "summary": "A South African woman in Korea shares insights on the country's minimum wage, sparking comparisons with South Africa's pay standards in a revealing TikTok video.",
+      "source": "Briefly",
+      "id": "7e10f68f",
+      "slug": "cleaner-in-korea-earns-more-than-saps-south-african-woman-compares-koreas-minimu"
+    },
+    {
+      "title": "CCTV company can have footage of slain lawyer Chinette Gallichan's killers",
+      "link": "https://briefly.co.za/south-africa/238289-cctv-company-footage-slain-lawyer-chinette-gallichans-killers/",
+      "date": "2026-03-26",
+      "summary": "CCTV company Vumacam may have vital footage in the investigation of lawyer Chinette Gallichan's murder, shocking South Africa and urging police action.",
+      "source": "Briefly",
+      "id": "1cce7eb2",
+      "slug": "cctv-company-can-have-footage-of-slain-lawyer-chinette-gallichans-killers"
+    },
+    {
+      "title": "Video ya TBT ya harusi ya kifahari ya Fridah Mwaka yazuka, Wakenya wamuona Lofty Matambo alihudhuria",
+      "link": "https://kiswahili.tuko.co.ke/burudani/621486-video-ya-tbt-ya-harusi-ya-kifahari-ya-fridah-mwaka-yazuka-wakenya-wamuona-lofty-matambo-alihudhuria/",
+      "date": "2026-03-26",
+      "summary": "Kumeibuka video inayomuonyesha Fridah Mwaka akifunga ndoa Wakenya wenye macho ya mwewe walimtambua swabhiba wake Lofty Matambo katika hafla hiyo.",
+      "source": "Tuko Swahili",
+      "id": "c9f0c490",
+      "slug": "video-ya-tbt-ya-harusi-ya-kifahari-ya-fridah-mwaka-yazuka-wakenya-wamuona-lofty-"
+    },
+    {
+      "title": "Millicent Omanga Aanika Picha na Ex, Awazima Wanaomrushia Mistari: \"DMs Zipungue Kidogo\"",
+      "link": "https://kiswahili.tuko.co.ke/burudani/621529-millicent-omanga-aanika-picha-na-awazima-wanaomrushia-mistari-dms-zipungue-kidogo/",
+      "date": "2026-03-26",
+      "summary": "Ujumbe wa Millicent Omanga akiwa na aliyekuwa mume wake Francis Nyamiombo uliibua gumzo mtandaoni, ukiangazia mafanikio yake huku akiwaonya watu wanaomshangaa.",
+      "source": "Tuko Swahili",
+      "id": "3f937fd8",
+      "slug": "millicent-omanga-aanika-picha-na-ex-awazima-wanaomrushia-mistari-dms-zipungue-ki"
+    },
+    {
+      "title": "Machakos: Mjane Afariki Katika Ajali Barabarani Akiwa na Wanawe Siku Chache Baada ya Kumpoteza Mume",
+      "link": "https://kiswahili.tuko.co.ke/watu/621545-machakos-mjane-afariki-katika-ajali-barabarani-akiwa-na-wanawe-siku-chache-baada-ya-kumpoteza-mume/",
+      "date": "2026-03-26",
+      "summary": "Familia ya Machakos inaomboleza baada ya mwanamke mmoja kufariki kwenye ajali ya barabarani akisafiri na wanawe, siku chache tu baada ya kumpoteza mumewe.",
+      "source": "Tuko Swahili",
+      "id": "12635d9f",
+      "slug": "machakos-mjane-afariki-katika-ajali-barabarani-akiwa-na-wanawe-siku-chache-baada"
+    },
+    {
+      "title": "Wazazi Mombasa Wachanganyikiwa Wasichana 4 wa Gedi ya 9 Wakihepa na Kupatikana TZ Wakitafuta Kazi",
+      "link": "https://kiswahili.tuko.co.ke/watu/621527-wazazi-mombasa-wachanganyikiwa-wasichana-4-wa-gedi-ya-9-wakihepa-na-kupatikana-tz-wakitafuta-kazi/",
+      "date": "2026-03-26",
+      "summary": "Wasichana wanne wa shule ya Mombasa walitoweka nyumbani na kuvuka boda hadi Tanzania. Familia zinahofia kuna mtu anayepelekea watu wengi kutoweka katika eneo hilo.",
+      "source": "Tuko Swahili",
+      "id": "69c4e670",
+      "slug": "wazazi-mombasa-wachanganyikiwa-wasichana-4-wa-gedi-ya-9-wakihepa-na-kupatikana-t"
+    },
+    {
+      "title": "Rigathi Gachagua Aeleza Kwa Nini Alisusia Mazishi ya Raila Odinga: \"Nilikuwa Tayari na Wazee Wangu\"",
+      "link": "https://kiswahili.tuko.co.ke/siasa/621526-rigathi-gachagua-aeleza-kwa-nini-alisusia-mazishi-ya-raila-odinga-nilikuwa-tayari-na-wazee-wangu/",
+      "date": "2026-03-26",
+      "summary": "Aliyekuwa DP Rigathi Gachagua amefafahua kukosekana kwake kwenye mazishi ya Raila Odinga, akitaja vitisho vya usalama na heshima kwa itifaki ya familia",
+      "source": "Tuko Swahili",
+      "id": "5a37aea1",
+      "slug": "rigathi-gachagua-aeleza-kwa-nini-alisusia-mazishi-ya-raila-odinga-nilikuwa-tayar"
+    },
+    {
+      "title": "Makachero wa DCI wawafumania na kuwakamata maafisa wa KDF wakifanya ujambazi Kitengela",
+      "link": "https://kiswahili.tuko.co.ke/kenya/621536-makachero-wa-dci-wawakamata-na-kuwakamata-maafisa-wa-kdf-kwa-ujambazi-kitengela/",
+      "date": "2026-03-26",
+      "summary": "Makachero walitibua wizi huko Kitengela uliomlenga afisa mkuu wa jeshi, lakini wakawakamata washukiwa sita wanaohusishwa na KDF. Walipata silaha, sare za kijeshi.",
+      "source": "Tuko Swahili",
+      "id": "e2a6e0b2",
+      "slug": "makachero-wa-dci-wawafumania-na-kuwakamata-maafisa-wa-kdf-wakifanya-ujambazi-kit"
+    },
+    {
+      "title": "Mama wa Uasin Gishu Amtaka Mwanawe Aliyeendea Kupigania Vita vya Urusi Miezi 6 Iliyopita Arejee",
+      "link": "https://kiswahili.tuko.co.ke/watu/621485-mama-wa-uasin-gishu-amtaka-mwanawe-aliyeendea-kupigania-vita-vya-urusi-miezi-6-iliyopita-arejee/",
+      "date": "2026-03-26",
+      "summary": "Familia yajamaa wa Uasin Gishu Andrew Kiprono Limo yaomba usaidizi baada ya mwanao huyo kukaa kimya kwa muda wa miezi sita tangu aliposafiri kwenda Urusi",
+      "source": "Tuko Swahili",
+      "id": "dc76580c",
+      "slug": "mama-wa-uasin-gishu-amtaka-mwanawe-aliyeendea-kupigania-vita-vya-urusi-miezi-6-i"
+    },
+    {
+      "title": "Bahati awazia kugombea tena ubunge Mathare baada ya kushindwa vibaya katika Uchaguzi Mkuu wa 2022",
+      "link": "https://kiswahili.tuko.co.ke/siasa/621534-bahati-awazia-kugombea-tena-ubunge-wa-mathare-baada-ya-kushindwa-katika-uchaguzi-mkuu-wa-2022/",
+      "date": "2026-03-26",
+      "summary": "Kevin Bahati anawazia kujitosa tena katika siasa ili kusaka ubunge wa Mathare mwaka wa 2027. Alishindwa kwenye kura ya mwaka wa 2022. Alidai kulikuwa na udanganyifu.",
+      "source": "Tuko Swahili",
+      "id": "ed253bf5",
+      "slug": "bahati-awazia-kugombea-tena-ubunge-mathare-baada-ya-kushindwa-vibaya-katika-ucha"
+    },
+    {
+      "title": "Jamaa wa Utawala Ashtuka CCTV Ikiwanasa Wanaume 2 Wakifanya Kitendo cha Kuchukiza Dukani Mwake Usiku",
+      "link": "https://kiswahili.tuko.co.ke/watu/621484-jamaa-wa-utawala-ashtuka-cctv-ikiwanasa-wanaume-2-wakifanya-kitendo-cha-kuchukiza-dukani-mwake-usiku/",
+      "date": "2026-03-26",
+      "summary": "Mfanyabiashara mmoja Utawala alianika video ya cctv za wanaume wawili ndani ya duka lake usiku. Waliiba mitungi ya gesi katika hatua iliyomwacha na huzuni.",
+      "source": "Tuko Swahili",
+      "id": "3deedda9",
+      "slug": "jamaa-wa-utawala-ashtuka-cctv-ikiwanasa-wanaume-2-wakifanya-kitendo-cha-kuchukiz"
+    },
+    {
+      "title": "Babu Owino ajibu madai kuhusu urithi wa Kihindi, asimulia historia ya familia yao: \"Siasa ina mambo\"",
+      "link": "https://kiswahili.tuko.co.ke/siasa/621515-babu-owino-azungumzia-madai-kuhusu-urithi-wa-kihindi-afichua-historia-ya-familia-siasa-ina-mambo/",
+      "date": "2026-03-26",
+      "summary": "Babu Owino amezungumzia madai ya urithi huku kukiwa na uvumi kuhusu kabila lake, akitoa ufafanuzi kuhusu historia ya familia yake inayotoka Yimbo.",
+      "source": "Tuko Swahili",
+      "id": "691f3345",
+      "slug": "babu-owino-ajibu-madai-kuhusu-urithi-wa-kihindi-asimulia-historia-ya-familia-yao"
+    },
+    {
+      "title": "Young Ghanaian in Germany shares regrettable story of how poor decisions left him homeless",
+      "link": "https://yen.com.gh/people/family-relationships/301858-young-ghanaian-germany-shares-regrettable-story-how-poor-decision-led-streets/",
+      "date": "2026-03-26",
+      "summary": "The story of a Ghanaian boy in Germany has reignited debates about how some African youths lose touch with traditional values after migrating to Europe.",
+      "source": "Yen",
+      "id": "c86c6ff9",
+      "slug": "young-ghanaian-in-germany-shares-regrettable-story-of-how-poor-decisions-left-hi"
+    },
+    {
+      "title": "NDC's Asiedu Nketia scolds security officers conversing with girls while on duty, video",
+      "link": "https://yen.com.gh/people/301862-ndcs-asiedu-nketia-shows-mercy-security-posing-pictures-video-evokes-reactions/",
+      "date": "2026-03-26",
+      "summary": "NDC Chairman Asiedu Nketia addressed a security officer's negligence during his Ashanti tour, prompting discussions on discipline in the profession.",
+      "source": "Yen",
+      "id": "5ce92291",
+      "slug": "ndcs-asiedu-nketia-scolds-security-officers-conversing-with-girls-while-on-duty-"
+    },
+    {
+      "title": "Young doctor who relocated to the UK discloses how much she now earns, video evokes joy",
+      "link": "https://yen.com.gh/people/301864-doctor-relocted-uk-discloses-amount-earns-monthly-video-inspires-netizens/",
+      "date": "2026-03-26",
+      "summary": "A young medical doctor has left many feeling inspired after she opened up about her journey to success, relocating to the UK, where she currently practices",
+      "source": "Yen",
+      "id": "9adba02d",
+      "slug": "young-doctor-who-relocated-to-the-uk-discloses-how-much-she-now-earns-video-evok"
+    },
+    {
+      "title": "New Lumba family Abusuapanin outdoored, speaks at Kofi Lumba's funeral",
+      "link": "https://yen.com.gh/people/301865-new-lumba-family-abusuapanin-outdoored-speaks-kofi-lumbas-funeral/",
+      "date": "2026-03-26",
+      "summary": "A new head of Daddy Lumba's family has been introduced during Kofi Lumba's burial. The new family head called for unity and love in a heartfelt address.",
+      "source": "Yen",
+      "id": "efa80df7",
+      "slug": "new-lumba-family-abusuapanin-outdoored-speaks-at-kofi-lumbas-funeral"
+    },
+    {
+      "title": "Shatta Wale's manager Sammy Flex gives Stonebwoy 48-hour ultimatum to provide evidence over recent allegations",
+      "link": "https://yen.com.gh/entertainment/celebrities/301860-shatta-wales-manager-stonebwoy-48-hour-ultimatum-provide-allegations/",
+      "date": "2026-03-26",
+      "summary": "Sammy Flex, Shatta Wale's manager, has issued a 48-hour ultimatum to Stonebwoy for evidence, sparking reactions from fans after their staged hug.",
+      "source": "Yen",
+      "id": "31b0d203",
+      "slug": "shatta-wales-manager-sammy-flex-gives-stonebwoy-48-hour-ultimatum-to-provide-evi"
+    },
+    {
+      "title": "Queen Hiba: GMB 1st Runner-Up, declares intent to contest NDC communications officer position",
+      "link": "https://yen.com.gh/politics/301855-queen-hiba-gmb-1st-runner-declares-intent-contest-ndc-communications-officer-position/",
+      "date": "2026-03-26",
+      "summary": "Queen Hiba, Ghana's Most Beautiful 2016 1st Runner-Up, has announced her bid to contest the NDC Savannah Regional Communication Officer position.",
+      "source": "Yen",
+      "id": "4f19877f",
+      "slug": "queen-hiba-gmb-1st-runner-up-declares-intent-to-contest-ndc-communications-offic"
+    },
+    {
+      "title": "\"I make GH¢200k during bumper catches\": Elderly fisherman shares his earnings in the business",
+      "link": "https://yen.com.gh/people/301861-i-ghc200k-bumper-catches-elderly-fisherman-shares-earnings-business/",
+      "date": "2026-03-26",
+      "summary": "An elderly fisherman's surprising earnings of GH¢200,000 on a bumper catch sparked debate on social media, highlighting the highs and lows of fishing income.",
+      "source": "Yen",
+      "id": "743977a1",
+      "slug": "i-make-gh200k-during-bumper-catches-elderly-fisherman-shares-his-earnings-in-the"
+    },
+    {
+      "title": "Adwenepahene’s widow rejoices as Ibrahim Mahama settles debt owed by late husband in Germany",
+      "link": "https://yen.com.gh/people/301833-adwenpahenes-widow-rejoices-ibrahim-mahama-settles-debt-owed-by-late-husband-germany/",
+      "date": "2026-03-26",
+      "summary": "Renowned Ghanaian business mogul Ibrahim Mahama is trending for all the right reasons after settling all debts owed by the late content creator Adwenepahene",
+      "source": "Yen",
+      "id": "61e6df23",
+      "slug": "adwenepahenes-widow-rejoices-as-ibrahim-mahama-settles-debt-owed-by-late-husband"
+    },
+    {
+      "title": "Donald Trump makes major call affecting 5 African Nations before 2026 World Cup",
+      "link": "https://yen.com.gh/sports/football/301847-fifa-world-cup-drama-donald-trump-targets-5-african-countries/",
+      "date": "2026-03-26",
+      "summary": "Fans and players from five African nations may face $15,000 visa bonds for the 2026 World Cup in the US, posing significant entry challenges amid new regulations.",
+      "source": "Yen",
+      "id": "bc9fa6c8",
+      "slug": "donald-trump-makes-major-call-affecting-5-african-nations-before-2026-world-cup"
+    },
+    {
+      "title": "National service military training: First batch of National service personnel completes army training at top infantry camp",
+      "link": "https://yen.com.gh/ghana/301857-national-service-military-training-batch-completes-army-training-top-infantry-camp/",
+      "date": "2026-03-26",
+      "summary": "The first batch of NSS personnel has graduated after a military training adventure at a ceremony at the Ghana Armed Forces’ 1st Infantry Battalion at Michel Camp",
+      "source": "Yen",
+      "id": "09df6c7c",
+      "slug": "national-service-military-training-first-batch-of-national-service-personnel-com"
+    },
+    {
+      "title": "Pope Leo XIV Appoints New Auxiliary Bishop of Nairobi",
+      "link": "https://www.kenyans.co.ke/news/122022-pope-leo-xiv-appoints-new-auxiliary-bishop-nairobi",
+      "date": "2026-03-26",
+      "summary": "His appointment shows the Vatican's continued focus on strengthening Kenya’s church leadership, ensuring that pastoral care remains responsive to the needs of the community.",
+      "source": "Kenyans",
+      "id": "fb6495db",
+      "slug": "pope-leo-xiv-appoints-new-auxiliary-bishop-of-nairobi"
+    },
+    {
+      "title": "EACC Recovers Ksh 13M From Ex-Nairobi Official in Cemetery Land Scandal",
+      "link": "https://www.kenyans.co.ke/news/122021-eacc-recovers-ksh13m-ex-nairobi-official-cemetery-land-scandal",
+      "date": "2026-03-26",
+      "summary": "The commission revealed that the individual allegedly received the money as a kickback for facilitating the fraudulent procurement process of the land, which is worth Ksh283 million.",
+      "source": "Kenyans",
+      "id": "d6e5157d",
+      "slug": "eacc-recovers-ksh-13m-from-ex-nairobi-official-in-cemetery-land-scandal"
+    },
+    {
+      "title": "CS Mbadi Rules Out New Taxes in Finance Bill 2026 as Govt Targets KRA Efficiency",
+      "link": "https://www.kenyans.co.ke/news/122020-cs-mbadi-rules-out-new-taxes-finance-bill-2026-govt-targets-kra-efficiency",
+      "date": "2026-03-26",
+      "summary": "Introduction of new taxes and levies has, in the past, sparked public resistance and contributed to widespread Gen Z-led demonstrations in 2024 and 2025.",
+      "source": "Kenyans",
+      "id": "1a798dde",
+      "slug": "cs-mbadi-rules-out-new-taxes-in-finance-bill-2026-as-govt-targets-kra-efficiency"
+    },
+    {
+      "title": "Three Petitions Filed to Oppose COTU Election Results, Atwoli Reveals",
+      "link": "https://www.kenyans.co.ke/news/122019-three-petitions-filed-oppose-cotu-election-results-atwoli-reveals",
+      "date": "2026-03-26",
+      "summary": "Atwoli was re-elected unopposed as COTU SG during the 15th Quinquennial Governing Council Delegates Conference and elections held in Kisumu.",
+      "source": "Kenyans",
+      "id": "84529e51",
+      "slug": "three-petitions-filed-to-oppose-cotu-election-results-atwoli-reveals"
+    },
+    {
+      "title": "Court of Appeal Revokes SRC Decision Reviewing Judges’ Taxable Car Allowance",
+      "link": "https://www.kenyans.co.ke/news/122016-court-appeal-revokes-src-decision-reviewing-judges-taxable-car-allowance",
+      "date": "2026-03-26",
+      "summary": "The ruling was based on a historical factor that spans decades, with both parties, SRC and judges being at loggerheads for years.",
+      "source": "Kenyans",
+      "id": "e7689c7b",
+      "slug": "court-of-appeal-revokes-src-decision-reviewing-judges-taxable-car-allowance"
+    },
+    {
+      "title": "Treasury to Use Petroleum Development Levy to Stabilise Prices Amid Calls for a Fuel Hike",
+      "link": "https://www.kenyans.co.ke/news/122018-treasury-use-petroleum-development-levy-stabilise-prices-amid-calls-fuel-hike",
+      "date": "2026-03-26",
+      "summary": "Several fuel vendors and stakeholders have raised concerns on return of subsidies, fuel shortages, and pricing mechanisms.",
+      "source": "Kenyans",
+      "id": "27ec860d",
+      "slug": "treasury-to-use-petroleum-development-levy-to-stabilise-prices-amid-calls-for-a-"
+    },
+    {
+      "title": "PS Belio Kipsang Directs Collection of Over 460,000 Uncollected ID Cards",
+      "link": "https://www.kenyans.co.ke/news/122017-ps-belio-kipsang-directs-collection-over-460000-uncollected-id-cards",
+      "date": "2026-03-26",
+      "summary": "Members of the public are encouraged to check the status of their applications and pick up their IDs without delay to fully benefit from government services.",
+      "source": "Kenyans",
+      "id": "f8388f57",
+      "slug": "ps-belio-kipsang-directs-collection-of-over-460000-uncollected-id-cards"
+    },
+    {
+      "title": "NTSA to Reduce Speed Limits Near Special Schools Along Thika Road",
+      "link": "https://www.kenyans.co.ke/news/122015-ntsa-reduce-speed-limits-near-special-schools-along-thika-road",
+      "date": "2026-03-26",
+      "summary": "The authority has said that the speed limit in these areas will be reduced to 30Km/h to guarantee the safety of all motorists and pedestrians.",
+      "source": "Kenyans",
+      "id": "b62474e7",
+      "slug": "ntsa-to-reduce-speed-limits-near-special-schools-along-thika-road"
+    },
+    {
+      "title": "Regional Airlines to Include Fuel Surcharges on Ticket Prices Starting April 1 Amid Shortage Concerns",
+      "link": "https://www.kenyans.co.ke/news/122014-regional-airlines-include-fuel-surcharges-ticket-prices-starting-april-1-amid-shortage",
+      "date": "2026-03-26",
+      "summary": "The Strait of Hormuz accounts for 21 per cent of global fuel supply, a resource Kenya is heavily dependent on, and it is now in a dire predicament.",
+      "source": "Kenyans",
+      "id": "7f98bb8a",
+      "slug": "regional-airlines-to-include-fuel-surcharges-on-ticket-prices-starting-april-1-a"
+    },
+    {
+      "title": "TelPosta Pension Announces Sale of Flats, Bungalows & Plots in Major Towns for as Low as Ksh600,000",
+      "link": "https://www.kenyans.co.ke/news/122013-telposta-pension-announces-sale-flats-bungalows-plots-major-towns-low-ksh600000",
+      "date": "2026-03-26",
+      "summary": "The prospective bidders were advised to carefully review the purchase requirements and ensure they meet all conditions before participating in the bidding process.",
+      "source": "Kenyans",
+      "id": "1d9c318f",
+      "slug": "telposta-pension-announces-sale-of-flats-bungalows-plots-in-major-towns-for-as-l"
     }
   ]
 }
