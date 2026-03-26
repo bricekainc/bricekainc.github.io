@@ -25,6 +25,8 @@ SITEMAP   = BASE_DIR / "sitemap.xml"
 
 RSS_FEEDS = [
     {"name": "Google News",           "url": "https://news.google.com/rss"},
+    {"name": "Yahoo News",           "url": "https://news.yahoo.com/rss"},
+    {"name": "Yahoo Sports",           "url": "https://sports.yahoo.com/rss"},
     {"name": "TechCrunch",           "url": "https://techcrunch.com/feed/"},
     {"name": "The Verge",            "url": "https://www.theverge.com/rss/index.xml"},
     {"name": "MIT Tech Review",      "url": "https://www.technologyreview.com/feed/"},
