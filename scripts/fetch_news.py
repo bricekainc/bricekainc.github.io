@@ -24,23 +24,10 @@ NEWS_DIR = BASE_DIR / "news"            # individual article HTML pages
 SITEMAP   = BASE_DIR / "sitemap.xml"
 
 RSS_FEEDS = [
-    {"name": "Google News",           "url": "https://news.google.com/rss"},
-    {"name": "Yahoo News",           "url": "https://news.yahoo.com/rss"},
-    {"name": "Yahoo Sports",           "url": "https://sports.yahoo.com/rss"},
-    {"name": "TechCrunch",           "url": "https://techcrunch.com/feed/"},
-    {"name": "The Verge",            "url": "https://www.theverge.com/rss/index.xml"},
-    {"name": "MIT Tech Review",      "url": "https://www.technologyreview.com/feed/"},
-    {"name": "Hacker News (Top)",    "url": "https://hnrss.org/frontpage"},
-    {"name": "Wired Innovation",     "url": "https://www.wired.com/feed/tag/innovation/rss"},
-    {"name": "Tuko",     "url": "https://www.tuko.co.ke/rss/all.rss"},
-    {"name": "Legit",     "url": "https://www.legit.ng/rss/all.rss"},
-    {"name": "Briefly",     "url": "https://briefly.co.za/rss/all.rss"},
-    {"name": "Tuko Swahili",     "url": "https://kiswahili.tuko.co.ke/rss/all.rss"},
-    {"name": "Yen",     "url": "https://yen.com.gh/rss/all.rss"},
-    {"name": "Kenyans",     "url": "https://www.kenyans.co.ke/feeds/news/all"},
+    {"name": "Briceka Digest",           "url": "https://briceka.com/rss.xml"},
 ]
 
-MAX_ARTICLES_PER_FEED = 50000   # cap per feed
+MAX_ARTICLES_PER_FEED = 1000000   # cap per feed
 SUMMARY_MAX_CHARS     = 300  # truncate summaries
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
