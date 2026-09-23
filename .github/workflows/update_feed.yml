@@ -1,4 +1,4 @@
-name: Patreon RSS Feed updater
+name: Combined Patreon RSS Feed Updater
 
 permissions:
   contents: write
@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -25,14 +25,14 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4
+          pip install requests feedparser
 
       - name: Run python script
         env:
-          PATREON_RSS_URL: ${{ secrets.PATREON_RSS_URL }}
+          PATREON_RSS_URLS: ${{ secrets.PATREON_RSS_URLS }}
         run: python update_feed.py
 
-      - name: Commit feed.xml
+      - name: Commit patreon/rss.xml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -40,6 +40,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git config pull.rebase false
           git pull origin main || true
-          git add feed.xml
-          git diff --cached --quiet || git commit -m "Updated the RSS feed with new posts"
+          mkdir -p patreon
+          git add patreon/rss.xml
+          git diff --cached --quiet || git commit -m "Updated combined Patreon RSS feed"
           git push
